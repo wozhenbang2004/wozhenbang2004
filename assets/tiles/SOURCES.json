@@ -1,0 +1,58 @@
+{
+  "source": "devicons/devicon",
+  "commit": "32fe1d3b3f36ad11f90ab94f7db59738139c2bf6",
+  "retrieved": "2026-10-29",
+  "license": "MIT; brand trademarks remain with respective owners",
+  "files": [
+    {
+      "file": "java-original.svg",
+      "source": "https://raw.githubusercontent.com/devicons/devicon/32fe1d3b3f36ad11f90ab94f7db59738139c2bf6/icons/java/java-original.svg",
+      "bytes": 1540
+    },
+    {
+      "file": "spring-original.svg",
+      "source": "https://raw.githubusercontent.com/devicons/devicon/32fe1d3b3f36ad11f90ab94f7db59738139c2bf6/icons/spring/spring-original.svg",
+      "bytes": 943
+    },
+    {
+      "file": "mysql-original.svg",
+      "source": "https://raw.githubusercontent.com/devicons/devicon/32fe1d3b3f36ad11f90ab94f7db59738139c2bf6/icons/mysql/mysql-original.svg",
+      "bytes": 2765
+    },
+    {
+      "file": "python-original.svg",
+      "source": "https://raw.githubusercontent.com/devicons/devicon/32fe1d3b3f36ad11f90ab94f7db59738139c2bf6/icons/python/python-original.svg",
+      "bytes": 2300
+    },
+    {
+      "file": "react-original.svg",
+      "source": "https://raw.githubusercontent.com/devicons/devicon/32fe1d3b3f36ad11f90ab94f7db59738139c2bf6/icons/react/react-original.svg",
+      "bytes": 2387
+    },
+    {
+      "file": "javascript-original.svg",
+      "source": "https://raw.githubusercontent.com/devicons/devicon/32fe1d3b3f36ad11f90ab94f7db59738139c2bf6/icons/javascript/javascript-original.svg",
+      "bytes": 1144
+    },
+    {
+      "file": "html5-original.svg",
+      "source": "https://raw.githubusercontent.com/devicons/devicon/32fe1d3b3f36ad11f90ab94f7db59738139c2bf6/icons/html5/html5-original.svg",
+      "bytes": 607
+    },
+    {
+      "file": "css3-original.svg",
+      "source": "https://raw.githubusercontent.com/devicons/devicon/32fe1d3b3f36ad11f90ab94f7db59738139c2bf6/icons/css3/css3-original.svg",
+      "bytes": 778
+    },
+    {
+      "file": "git-original.svg",
+      "source": "https://raw.githubusercontent.com/devicons/devicon/32fe1d3b3f36ad11f90ab94f7db59738139c2bf6/icons/git/git-original.svg",
+      "bytes": 778
+    }
+  ],
+  "local_changes": {
+    "all": "Original paths scaled into 48px rounded tiles with 4px transparent bottom spacing.",
+    "java-original.svg": "Blue and red lightened to #63c5ef / #ff8175 for dark-background contrast.",
+    "mysql-original.svg": "Blue lightened to #79bee0 for dark-background contrast."
+  }
+}
