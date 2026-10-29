@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="海报待替换">
+<rect x="1" y="1" width="1198" height="298" rx="8" fill="#f6f8fa" stroke="#c8d0d8"/>
+<path d="M40 70V40h30m1060 0h30v30M40 230v30h30m1060 0h30v-30" fill="none" stroke="#c8d0d8" stroke-width="2"/>
+<g fill="none" stroke="#657080" stroke-width="2" opacity=".65"><rect x="578" y="75" width="44" height="34" rx="3"/><path d="m581 104 13-12 9 8 7-6 10 10"/><circle cx="610" cy="85" r="3"/></g>
+<text x="600" y="160" text-anchor="middle" fill="#657080" font-family="system-ui,-apple-system,sans-serif" font-size="29" letter-spacing="5">海报待替换</text>
+<text x="600" y="199" text-anchor="middle" fill="#657080" font-family="system-ui,-apple-system,sans-serif" font-size="14" letter-spacing="4">ILLUSTRATION SPACE</text>
+</svg>
