@@ -1,4 +1,4 @@
-<h1 align="center">Hi, I'm Kayokoi.</h1>
+<h1 align="center">你好呀，我是 Kayokoi 👋</h1>
 
 <p align="center">
   <picture>
@@ -8,14 +8,48 @@
 </p>
 
 <p align="center">
-  <samp>JAVA · AI · OPEN SOURCE</samp>
+  <sub>二次元图集 · <a href="./assets/gallery.gif">七张收藏</a></sub>
 </p>
-<p align="center"><a href="https://kayokoi.online">个人小站 ↗</a></p>
 
-## Open-source contributions
+## 🌸 关于我
+
+- ☕ Java 开发者。
+- 🛠️ 做 AI 工具，也参与开源项目。
+- 🧩 **[AddonScope](https://github.com/wozhenbang2004/AddonScope)** · 给 Blender 插件做依赖诊断的小工具。
+
+<details>
+  <summary>🧰 展开我的工具箱</summary>
+
+<p>
+  <img src="./assets/tiles/java-original.svg" width="48" height="52" alt="Java" />
+  <img src="./assets/tiles/spring-original.svg" width="48" height="52" alt="Spring" />
+  <img src="./assets/tiles/mysql-original.svg" width="48" height="52" alt="MySQL" />
+  <img src="./assets/tiles/python-original.svg" width="48" height="52" alt="Python" />
+  <img src="./assets/tiles/git-original.svg" width="48" height="52" alt="Git" /><br />
+  <img src="./assets/tiles/react-original.svg" width="48" height="52" alt="React" />
+  <img src="./assets/tiles/javascript-original.svg" width="48" height="52" alt="JavaScript" />
+  <img src="./assets/tiles/html5-original.svg" width="48" height="52" alt="HTML5" />
+  <img src="./assets/tiles/css3-original.svg" width="48" height="52" alt="CSS3" />
+</p>
+
+</details>
+
+## 🌱 GitHub 日常
+
+<p align="center">
+  <img src="./metrics.plugin.isocalendar.svg" alt="近一年 GitHub 贡献日历" width="520" />
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/github-contribution-grid-snake.svg" />
+    <img alt="贡献记录动画" src="./assets/github-contribution-grid-snake.svg" width="100%" />
+  </picture>
+</p>
 
 <!-- PR_SUMMARY_START -->
-**提交 36** · **已合并 6** · **待处理 30**
+**已合并 6** · **待处理 29**
 <!-- PR_SUMMARY_END -->
 
 <!-- MERGED_TABLE_START -->
@@ -31,7 +65,7 @@
 
 <!-- PR_LIST_START -->
 <details>
-<summary>查看全部 36 条 PR</summary>
+<summary>查看 35 条 PR</summary>
 
 #### 已合并 · 6
 
@@ -47,7 +81,7 @@
 
 - **[lich0821/ccNexus#157](https://github.com/lich0821/ccNexus/pull/157)** · `master`<br />fix: respect configured API versions in endpoint URLs
 
-#### 待处理 · 30（含 1 条 Draft）
+#### 待处理 · 29（含 1 条 Draft）
 
 - **[spring-projects/spring-ai#7267](https://github.com/spring-projects/spring-ai/pull/7267)**<br />Fix optional auto-configuration metadata introspection
 
@@ -107,28 +141,10 @@
 
 - **[looplj/axonhub#2798](https://github.com/looplj/axonhub/pull/2798)**<br />fix(gemini): accept GenerateContent field aliases
 
-- **[router-for-me/CLIProxyAPI#3003](https://github.com/router-for-me/CLIProxyAPI/pull/3003)**<br />fix(codex): stabilize OpenCode prompt caching
 
 </details>
 <!-- PR_LIST_END -->
 
-## Languages & tools
+## 📬 来找我
 
-<p>
-  <img src="./assets/tiles/java-original.svg" width="48" height="52" alt="Java" />
-  <img src="./assets/tiles/spring-original.svg" width="48" height="52" alt="Spring" />
-  <img src="./assets/tiles/mysql-original.svg" width="48" height="52" alt="MySQL" />
-  <img src="./assets/tiles/python-original.svg" width="48" height="52" alt="Python" />
-  <img src="./assets/tiles/git-original.svg" width="48" height="52" alt="Git" /><br />
-  <img src="./assets/tiles/react-original.svg" width="48" height="52" alt="React" />
-  <img src="./assets/tiles/javascript-original.svg" width="48" height="52" alt="JavaScript" />
-  <img src="./assets/tiles/html5-original.svg" width="48" height="52" alt="HTML5" />
-  <img src="./assets/tiles/css3-original.svg" width="48" height="52" alt="CSS3" />
-</p>
-
-
-## On my desk
-
-**[AddonScope](https://github.com/wozhenbang2004/AddonScope)** · 给 Blender 插件做依赖诊断的小工具。
-
-<p align="center"><img src="./assets/divider.svg" width="100%" alt="" /></p>
+[GitHub](https://github.com/wozhenbang2004) · [个人小站](https://kayokoi.online)
