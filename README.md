@@ -1,17 +1,18 @@
+<h1 align="center">Hi, I'm Kayokoi.</h1>
+
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/poster-placeholder-dark.svg" />
-    <img src="./assets/poster-placeholder-light.svg" width="100%" alt="海报待替换，稍后放上喜欢的二次元图片。" />
+    <source media="(prefers-reduced-motion: reduce)" srcset="./assets/gallery-still.jpg" />
+    <img src="./assets/gallery.gif" width="520" alt="二次元图集" />
   </picture>
 </p>
 
-<h3 align="center">Hi, I'm Kayokoi.</h3>
 <p align="center">
   <samp>JAVA · AI · OPEN SOURCE</samp>
 </p>
 <p align="center"><a href="https://kayokoi.online">个人小站 ↗</a></p>
 
-<h3>✦ Open-source contributions</h3>
+## Open-source contributions
 
 <!-- PR_SUMMARY_START -->
 **提交 36** · **已合并 6** · **待处理 30**
@@ -111,7 +112,7 @@
 </details>
 <!-- PR_LIST_END -->
 
-<h3>✦ Languages & tools</h3>
+## Languages & tools
 
 <p>
   <img src="./assets/tiles/java-original.svg" width="48" height="52" alt="Java" />
@@ -126,7 +127,7 @@
 </p>
 
 
-<h3>✦ On my desk</h3>
+## On my desk
 
 **[AddonScope](https://github.com/wozhenbang2004/AddonScope)** · 给 Blender 插件做依赖诊断的小工具。
 
