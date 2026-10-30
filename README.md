@@ -7,18 +7,9 @@
   </picture>
 </p>
 
-<p align="center">
-  <sub>二次元图集 · <a href="./assets/gallery.gif">七张收藏</a></sub>
-</p>
-
 ## 🌸 关于我
 
-- ☕ Java 开发者。
-- 🛠️ 做 AI 工具，也参与开源项目。
-- 🧩 **[AddonScope](https://github.com/wozhenbang2004/AddonScope)** · 给 Blender 插件做依赖诊断的小工具。
-
-<details>
-  <summary>🧰 展开我的工具箱</summary>
+全栈开发 · AI 应用 · 开源贡献
 
 <p>
   <img src="./assets/tiles/java-original.svg" width="48" height="52" alt="Java" />
@@ -31,8 +22,6 @@
   <img src="./assets/tiles/html5-original.svg" width="48" height="52" alt="HTML5" />
   <img src="./assets/tiles/css3-original.svg" width="48" height="52" alt="CSS3" />
 </p>
-
-</details>
 
 ## 🌱 GitHub 日常
 
