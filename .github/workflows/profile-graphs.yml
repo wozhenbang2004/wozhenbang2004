@@ -1,0 +1,44 @@
+name: Generate profile graphs
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Render contribution snake
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3
+        with:
+          github_user_name: wozhenbang2004
+          github_token: ${{ github.token }}
+          outputs: |
+            assets/github-contribution-grid-snake.svg
+            assets/github-contribution-grid-snake-dark.svg?palette=github-dark
+      - name: Render contribution calendar
+        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6
+        with:
+          user: wozhenbang2004
+          token: ${{ github.token }}
+          base: ""
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+          filename: metrics.plugin.isocalendar.svg
+          output_action: none
+          plugins_errors_fatal: yes
+      - name: Collect images
+        run: |
+          mkdir -p profile-graphs/assets
+          cp assets/github-contribution-grid-snake*.svg profile-graphs/assets/
+          cp /metrics_renders/metrics.plugin.isocalendar.svg profile-graphs/
+          test -s profile-graphs/metrics.plugin.isocalendar.svg
+      - name: Save profile graph images
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: profile-graphs
+          path: profile-graphs/
+          if-no-files-found: error
+          retention-days: 7
