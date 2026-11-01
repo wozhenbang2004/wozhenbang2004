@@ -38,9 +38,9 @@
 </p>
 
 <!-- PR_SUMMARY_START -->
-**上游已采纳 13 项修复** · **本人 PR 合并 11** · **其他 PR 采纳 2** · **待跟进 46**
+**上游已采纳 13 项修复** · **本人 PR 合并 11** · **其他 PR 采纳 2** · **待跟进 45**
 
-<sub>状态核查于 2026-11-01（北京时间）。已采纳 = 11 条本人 PR 直接合并 + SolidJS、Guava 两项经其他 PR 合入。SolidJS 原 PR #4539 已由维护者在 #4558 合入后关闭；其采纳记录单列，当前待跟进 46 条。仅统计外部上游，同一修复不重复计数。</sub>
+<sub>状态核查于 2026-11-01（北京时间）。已采纳 = 11 条本人 PR 直接合并 + SolidJS、Guava 两项经其他 PR 合入。SolidJS 原 PR #4539 已由维护者在 #4558 合入后关闭；其采纳记录单列，当前待跟进 45 条。仅统计外部上游，同一修复不重复计数。</sub>
 <!-- PR_SUMMARY_END -->
 
 <sub>另有 1 项修复被第三方 fork 正式采用（Sub2API，原上游仍待合并），在下方对应记录单列。</sub>
@@ -97,7 +97,7 @@
 
 - **[google/guava#8807](https://github.com/google/guava/pull/8807)** · 原 PR 已关闭；修复经 [Copybara PR #8811](https://github.com/google/guava/pull/8811) 合入 `master`。原生 [commit c0a8a1e](https://github.com/google/guava/commit/c0a8a1edc69393e8141424037571d9825f5fc0f4) 的 author 关联本账号，可在[本人 Guava 提交记录](https://github.com/google/guava/commits?author=wozhenbang2004)中查到。
 
-#### 待跟进 · 46
+#### 待跟进 · 45
 
 - **[brettwooldridge/HikariCP#2424](https://github.com/brettwooldridge/HikariCP/pull/2424)**<br />Allow shutdown when close starts with an interrupt
 
@@ -189,9 +189,9 @@
 
 - **[danielmiessler/Fabric#2321](https://github.com/danielmiessler/Fabric/pull/2321)**<br />fix: report configured vendor initialization failures
 
-- **[router-for-me/CLIProxyAPI#3003](https://github.com/router-for-me/CLIProxyAPI/pull/3003)**<br />fix(codex): stabilize OpenCode prompt caching
+#### 已关闭 · 2（替代或撤回）
 
-#### 已关闭 · 1（由新 PR 接续，尚未采纳）
+- **[router-for-me/CLIProxyAPI#3003](https://github.com/router-for-me/CLIProxyAPI/pull/3003)** · 已对照当前 v8 架构撤回旧混合 PR；核心缓存身份目标已有不同实现覆盖，时间改写与 HTTP 续传策略需新的复现。保留[关闭说明](https://github.com/router-for-me/CLIProxyAPI/pull/3003#issuecomment-6553195159)，不计为已采纳。
 
 - **[mark3labs/mcp-go#1142](https://github.com/mark3labs/mcp-go/pull/1142)** · 因缺少关联 issue 关闭；补充 issue 后由 [#1144](https://github.com/mark3labs/mcp-go/pull/1144) 接续，当前仍为 Open。
 
