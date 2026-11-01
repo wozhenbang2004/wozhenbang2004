@@ -38,14 +38,15 @@
 </p>
 
 <!-- PR_SUMMARY_START -->
-**上游已采纳 12 项修复** · **本人 PR 合并 11** · **导入采纳 1** · **Open 47**
+**上游已采纳 13 项修复** · **本人 PR 合并 11** · **其他 PR 采纳 2** · **待跟进 46**
 
-<sub>状态核查于 2026-11-01（北京时间）。已采纳 = 11 条本人 PR 直接合并 + 1 项 Guava 导入采纳；原 PR 关闭但修复实际进入上游的贡献同样展示，并附最终 commit。仅统计外部上游，不含本人仓库及 fork 验证 PR，同一修复不重复计数。</sub>
+<sub>状态核查于 2026-11-01（北京时间）。已采纳 = 11 条本人 PR 直接合并 + SolidJS、Guava 两项经其他 PR 合入。GitHub 原 PR 的 Open 数为 47，其中 SolidJS #4539 已被 #4558 采纳，实际待跟进 46 条。仅统计外部上游，同一修复不重复计数。</sub>
 <!-- PR_SUMMARY_END -->
 
 <!-- MERGED_TABLE_START -->
 | 项目 | PR / 修复 | 状态 |
 | :--- | :--- | :--- |
+| [SolidJS](https://github.com/solidjs/solid) | [原 PR #4539](https://github.com/solidjs/solid/pull/4539) · [采纳 PR #4558](https://github.com/solidjs/solid/pull/4558)<br />修复乐观更新期间问题与数据帧不一致 | 修复已合入 `next`，由 Ryan 的 PR 接续并完善<br /><sub><a href="https://github.com/solidjs/solid/commit/22cc9e4c6b097a0b6d7d149013f52f7568fab88d">原始作者 commit 22cc9e4</a> · <a href="https://github.com/solidjs/solid/commit/718ec9c218643dfe9943f05d33ccb66db53621c6">合入 commit 718ec9c</a></sub> |
 | [TokenHub](https://github.com/astaxie/TokenHub) | [#408](https://github.com/astaxie/TokenHub/pull/408)<br />移除 Anthropic 系统消息对旧版 beta 标记的依赖 | <img src="https://img.shields.io/badge/Merged-8957e5?style=flat-square&logo=git&logoColor=white" alt="Merged" width="90" height="26" /><br /><sub>main</sub> |
 | [Guava](https://github.com/google/guava) | [原 PR #8807](https://github.com/google/guava/pull/8807) · [导入 PR #8811](https://github.com/google/guava/pull/8811)<br />修复基本类型数组旋转的 Integer.MIN_VALUE 溢出边界 | 修复已合入 `master`，经 Copybara 导入<br /><sub>[作者 commit c0a8a1e](https://github.com/google/guava/commit/c0a8a1edc69393e8141424037571d9825f5fc0f4) · 原 PR 为 Closed</sub> |
 | [VS Code](https://github.com/microsoft/vscode) | [#344892](https://github.com/microsoft/vscode/pull/344892)<br />输入筛选与快捷键冲突 | <img src="https://img.shields.io/badge/Merged-8957e5?style=flat-square&logo=git&logoColor=white" alt="Merged" width="90" height="26" /><br /><sub>main</sub> |
@@ -88,9 +89,13 @@
 
 - **[lich0821/ccNexus#157](https://github.com/lich0821/ccNexus/pull/157)**<br />fix: respect configured API versions in endpoint URLs
 
-#### Open · 47
+#### 经其他 PR 采纳 · 2
 
-- **[solidjs/solid#4539](https://github.com/solidjs/solid/pull/4539)**<br />fix(signals): retain query observation during optimistic rerenders
+- **[solidjs/solid#4539](https://github.com/solidjs/solid/pull/4539)** · Ryan 的 [#4558](https://github.com/solidjs/solid/pull/4558) 已合入 `next`。采纳 PR 明确注明采用原修复并保留 [作者 commit 22cc9e4](https://github.com/solidjs/solid/commit/22cc9e4c6b097a0b6d7d149013f52f7568fab88d)，在此基础上补充修正；最终 [合入 commit 718ec9c](https://github.com/solidjs/solid/commit/718ec9c218643dfe9943f05d33ccb66db53621c6)。原 PR 仍显示 Open，本项不计入待跟进列表。
+
+- **[google/guava#8807](https://github.com/google/guava/pull/8807)** · 原 PR 已关闭；修复经 [Copybara PR #8811](https://github.com/google/guava/pull/8811) 合入 `master`。原生 [commit c0a8a1e](https://github.com/google/guava/commit/c0a8a1edc69393e8141424037571d9825f5fc0f4) 的 author 关联本账号，可在[本人 Guava 提交记录](https://github.com/google/guava/commits?author=wozhenbang2004)中查到。
+
+#### 待跟进 · 46
 
 - **[brettwooldridge/HikariCP#2424](https://github.com/brettwooldridge/HikariCP/pull/2424)**<br />Allow shutdown when close starts with an interrupt
 
@@ -184,9 +189,7 @@
 
 - **[router-for-me/CLIProxyAPI#3003](https://github.com/router-for-me/CLIProxyAPI/pull/3003)**<br />fix(codex): stabilize OpenCode prompt caching
 
-#### 已关闭 · 2（导入 / 替代）
-
-- **[google/guava#8807](https://github.com/google/guava/pull/8807)** · 原 PR 已关闭；修复经 [Copybara PR #8811](https://github.com/google/guava/pull/8811) 合入 `master`。原生 [commit c0a8a1e](https://github.com/google/guava/commit/c0a8a1edc69393e8141424037571d9825f5fc0f4) 的 author 关联本账号，可在[本人 Guava 提交记录](https://github.com/google/guava/commits?author=wozhenbang2004)中查到。
+#### 已关闭 · 1（由新 PR 接续，尚未采纳）
 
 - **[mark3labs/mcp-go#1142](https://github.com/mark3labs/mcp-go/pull/1142)** · 因缺少关联 issue 关闭；补充 issue 后由 [#1144](https://github.com/mark3labs/mcp-go/pull/1144) 接续，当前仍为 Open。
 
