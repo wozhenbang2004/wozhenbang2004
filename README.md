@@ -40,8 +40,10 @@
 <!-- PR_SUMMARY_START -->
 **上游已采纳 13 项修复** · **本人 PR 合并 11** · **其他 PR 采纳 2** · **待跟进 46**
 
-<sub>状态核查于 2026-11-01（北京时间）。已采纳 = 11 条本人 PR 直接合并 + SolidJS、Guava 两项经其他 PR 合入。GitHub 原 PR 的 Open 数为 47，其中 SolidJS #4539 已被 #4558 采纳，实际待跟进 46 条。仅统计外部上游，同一修复不重复计数。</sub>
+<sub>状态核查于 2026-11-01（北京时间）。已采纳 = 11 条本人 PR 直接合并 + SolidJS、Guava 两项经其他 PR 合入。SolidJS 原 PR #4539 已由维护者在 #4558 合入后关闭；其采纳记录单列，当前待跟进 46 条。仅统计外部上游，同一修复不重复计数。</sub>
 <!-- PR_SUMMARY_END -->
+
+<sub>另有 1 项修复被第三方 fork 正式采用（Sub2API，原上游仍待合并），在下方对应记录单列。</sub>
 
 <!-- MERGED_TABLE_START -->
 | 项目 | PR / 修复 | 状态 |
@@ -91,7 +93,7 @@
 
 #### 经其他 PR 采纳 · 2
 
-- **[solidjs/solid#4539](https://github.com/solidjs/solid/pull/4539)** · Ryan 的 [#4558](https://github.com/solidjs/solid/pull/4558) 已合入 `next`。采纳 PR 明确注明采用原修复并保留 [作者 commit 22cc9e4](https://github.com/solidjs/solid/commit/22cc9e4c6b097a0b6d7d149013f52f7568fab88d)，在此基础上补充修正；最终 [合入 commit 718ec9c](https://github.com/solidjs/solid/commit/718ec9c218643dfe9943f05d33ccb66db53621c6)。原 PR 仍显示 Open，本项不计入待跟进列表。
+- **[solidjs/solid#4539](https://github.com/solidjs/solid/pull/4539)** · Ryan 的 [#4558](https://github.com/solidjs/solid/pull/4558) 已合入 `next`。采纳 PR 明确注明采用原修复并保留 [作者 commit 22cc9e4](https://github.com/solidjs/solid/commit/22cc9e4c6b097a0b6d7d149013f52f7568fab88d)，在此基础上补充修正；最终 [合入 commit 718ec9c](https://github.com/solidjs/solid/commit/718ec9c218643dfe9943f05d33ccb66db53621c6)。原 PR 已由 Ryan 关闭，并明确确认修复已合入；本项单列为已采纳。
 
 - **[google/guava#8807](https://github.com/google/guava/pull/8807)** · 原 PR 已关闭；修复经 [Copybara PR #8811](https://github.com/google/guava/pull/8811) 合入 `master`。原生 [commit c0a8a1e](https://github.com/google/guava/commit/c0a8a1edc69393e8141424037571d9825f5fc0f4) 的 author 关联本账号，可在[本人 Guava 提交记录](https://github.com/google/guava/commits?author=wozhenbang2004)中查到。
 
@@ -161,7 +163,7 @@
 
 - **[PrefectHQ/fastmcp#6137](https://github.com/PrefectHQ/fastmcp/pull/6137)**<br />Fix hydration of mutually recursive schema types
 
-- **[Wei-Shaw/sub2api#8408](https://github.com/Wei-Shaw/sub2api/pull/8408)**<br />fix(gateway): honor explicit zero Anthropic input usage
+- **[Wei-Shaw/sub2api#8408](https://github.com/Wei-Shaw/sub2api/pull/8408)**<br />fix(gateway): honor explicit zero Anthropic input usage<br /><sub>原上游仍待合并；另被第三方 fork <a href="https://github.com/youxuanxue/sub2api/pull/2989">youxuanxue/sub2api#2989</a> 重新实现并正式采用，<a href="https://github.com/youxuanxue/sub2api/commit/c108c772b192992c70e77291e06a1c3b949d09fc">已合入 main</a>。来源有明确引用，未保留本人 commit；不计入上方目标上游的 13 项。</sub>
 
 - **[microsoft/vscode#344888](https://github.com/microsoft/vscode/pull/344888)**<br />agentHost: preserve selection answer kinds for freeform replies
 
