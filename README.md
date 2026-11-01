@@ -38,14 +38,15 @@
 </p>
 
 <!-- PR_SUMMARY_START -->
-**上游 PR 已合并 10** · **另有修复已导入 1** · **Open 44**
+**上游已采纳 12 项修复** · **本人 PR 合并 11** · **导入采纳 1** · **Open 47**
 
-<sub>状态核查于 2026-10-31。仅统计本人向外部上游提交的 PR，不含本人仓库及 fork 验证 PR；Guava 的导入 commit 单列，不计入本人直接合并的 10 条 PR。</sub>
+<sub>状态核查于 2026-11-01（北京时间）。已采纳 = 11 条本人 PR 直接合并 + 1 项 Guava 导入采纳；原 PR 关闭但修复实际进入上游的贡献同样展示，并附最终 commit。仅统计外部上游，不含本人仓库及 fork 验证 PR，同一修复不重复计数。</sub>
 <!-- PR_SUMMARY_END -->
 
 <!-- MERGED_TABLE_START -->
 | 项目 | PR / 修复 | 状态 |
 | :--- | :--- | :--- |
+| [TokenHub](https://github.com/astaxie/TokenHub) | [#408](https://github.com/astaxie/TokenHub/pull/408)<br />移除 Anthropic 系统消息对旧版 beta 标记的依赖 | <img src="https://img.shields.io/badge/Merged-8957e5?style=flat-square&logo=git&logoColor=white" alt="Merged" width="90" height="26" /><br /><sub>main</sub> |
 | [Guava](https://github.com/google/guava) | [原 PR #8807](https://github.com/google/guava/pull/8807) · [导入 PR #8811](https://github.com/google/guava/pull/8811)<br />修复基本类型数组旋转的 Integer.MIN_VALUE 溢出边界 | 修复已合入 `master`，经 Copybara 导入<br /><sub>[作者 commit c0a8a1e](https://github.com/google/guava/commit/c0a8a1edc69393e8141424037571d9825f5fc0f4) · 原 PR 为 Closed</sub> |
 | [VS Code](https://github.com/microsoft/vscode) | [#344892](https://github.com/microsoft/vscode/pull/344892)<br />输入筛选与快捷键冲突 | <img src="https://img.shields.io/badge/Merged-8957e5?style=flat-square&logo=git&logoColor=white" alt="Merged" width="90" height="26" /><br /><sub>main</sub> |
 | [MyBatis-Plus](https://github.com/baomidou/mybatis-plus) | [#7220](https://github.com/baomidou/mybatis-plus/pull/7220)<br />修复嵌套 Wrapper 条件的参数别名 | <img src="https://img.shields.io/badge/Merged-8957e5?style=flat-square&logo=git&logoColor=white" alt="Merged" width="90" height="26" /> |
@@ -53,7 +54,7 @@
 | [Haystack](https://github.com/deepset-ai/haystack) | [#13471](https://github.com/deepset-ai/haystack/pull/13471)<br />反序列化时保留 MockChatGenerator 输入 | <img src="https://img.shields.io/badge/Merged-8957e5?style=flat-square&logo=git&logoColor=white" alt="Merged" width="90" height="26" /> |
 | [ccNexus](https://github.com/lich0821/ccNexus) | [#158](https://github.com/lich0821/ccNexus/pull/158)<br />Chat 转 Responses 时保留工具调用历史 | <img src="https://img.shields.io/badge/Merged-8957e5?style=flat-square&logo=git&logoColor=white" alt="Merged" width="90" height="26" /> |
 | [CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI) | [#7095](https://github.com/router-for-me/CLIProxyAPI/pull/7095)<br />修复跨分块 SSE 重组 | <img src="https://img.shields.io/badge/Merged-8957e5?style=flat-square&logo=git&logoColor=white" alt="Merged" width="90" height="26" /><br /><sub>dev</sub> |
-| [ccstatusline](https://github.com/sirmalloc/ccstatusline) | [#757](https://github.com/sirmalloc/ccstatusline/pull/757)<br />回退到自动会话标题 | <img src="https://img.shields.io/badge/Merged-8957e5?style=flat-square&logo=git&logoColor=white" alt="Merged" width="90" height="26" /><br /><sub>main（后续已并入）</sub> |
+| [ccstatusline](https://github.com/sirmalloc/ccstatusline) | [#757](https://github.com/sirmalloc/ccstatusline/pull/757)<br />回退到自动会话标题 | <img src="https://img.shields.io/badge/Merged-8957e5?style=flat-square&logo=git&logoColor=white" alt="Merged" width="90" height="26" /><br /><sub>main · <a href="https://github.com/sirmalloc/ccstatusline/commit/528c6860a70bd8f8dea83f46466c7d43af19edca">采纳 commit 528c686</a></sub> |
 | [gptme](https://github.com/gptme/gptme) | [#4520](https://github.com/gptme/gptme/pull/4520)<br />清理工作区时保护无关分支 | <img src="https://img.shields.io/badge/Merged-8957e5?style=flat-square&logo=git&logoColor=white" alt="Merged" width="90" height="26" /><br /><sub>master</sub> |
 | [gptme](https://github.com/gptme/gptme) | [#4521](https://github.com/gptme/gptme/pull/4521)<br />隔离测试对本地 gh 的依赖 | <img src="https://img.shields.io/badge/Merged-8957e5?style=flat-square&logo=git&logoColor=white" alt="Merged" width="90" height="26" /><br /><sub>master</sub> |
 | [ccNexus](https://github.com/lich0821/ccNexus) | [#157](https://github.com/lich0821/ccNexus/pull/157)<br />版本化 API 路由修复 | <img src="https://img.shields.io/badge/Merged-8957e5?style=flat-square&logo=git&logoColor=white" alt="Merged" width="90" height="26" /><br /><sub>master</sub> |
@@ -61,9 +62,11 @@
 
 <!-- PR_LIST_START -->
 <details>
-<summary>查看 56 条上游 PR 及采纳记录</summary>
+<summary>查看 60 条上游 PR 及采纳记录</summary>
 
-#### 本人 PR 已合并 · 10
+#### 本人 PR 已合并 · 11
+
+- **[astaxie/TokenHub#408](https://github.com/astaxie/TokenHub/pull/408)**<br />fix(anthropic): accept system messages without legacy beta
 
 - **[baomidou/mybatis-plus#7220](https://github.com/baomidou/mybatis-plus/pull/7220)**<br />Fix parameter aliases in nested wrapper conditions
 
@@ -85,9 +88,15 @@
 
 - **[lich0821/ccNexus#157](https://github.com/lich0821/ccNexus/pull/157)**<br />fix: respect configured API versions in endpoint URLs
 
-#### Open · 44
+#### Open · 47
 
-- **[astaxie/TokenHub#408](https://github.com/astaxie/TokenHub/pull/408)**<br />fix(anthropic): accept system messages without legacy beta
+- **[solidjs/solid#4539](https://github.com/solidjs/solid/pull/4539)**<br />fix(signals): retain query observation during optimistic rerenders
+
+- **[brettwooldridge/HikariCP#2424](https://github.com/brettwooldridge/HikariCP/pull/2424)**<br />Allow shutdown when close starts with an interrupt
+
+- **[langchain-ai/langgraphjs#3171](https://github.com/langchain-ai/langgraphjs/pull/3171)**<br />fix(langgraph-checkpoint-postgres): stabilize paginated store searches
+
+- **[meta/lexical#9668](https://github.com/meta/lexical/pull/9668)**<br />\[lexical-selection\] Bug Fix: Preserve mixed-block content when wrapping selections
 
 - **[meta/lexical#9614](https://github.com/meta/lexical/pull/9614)**<br />\[lexical\]\[lexical-y\] Bug Fix: Continue notifying update listeners after failures
 
