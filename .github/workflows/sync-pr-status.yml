@@ -1,0 +1,51 @@
+name: Sync all PR statuses
+
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/sync-pr-status.yml'
+      - 'scripts/sync_prs.py'
+      - 'tests/test_sync_prs.py'
+      - 'data/pr-curation.json'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: profile-pr-status
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: github.repository == 'wozhenbang2004/wozhenbang2004'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - name: Check out profile
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+      - name: Test status synchronization
+        run: python3 -m unittest discover -s tests -v
+      - name: Read public upstream PRs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/sync_prs.py
+      - name: Publish changed status snapshot
+        run: |
+          git add README.md data/pull-requests.json
+          if git diff --cached --quiet; then
+            echo 'PR data has not changed.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'docs: sync all public upstream PR statuses'
+          # A concurrent change makes this fail safely; no force push or overwrite.
+          git push origin HEAD:main
