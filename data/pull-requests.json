@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-07T03:27:56+00:00",
+  "changed_at": "2026-11-07T03:35:53+00:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -350,7 +350,7 @@
   "repo_stars": {
     "apache/dubbo": 41571,
     "astaxie/TokenHub": 1424,
-    "AstrBotDevs/AstrBot": 46275,
+    "AstrBotDevs/AstrBot": 46276,
     "baomidou/mybatis-plus": 17486,
     "danielmiessler/Fabric": 44564,
     "deepset-ai/haystack": 26939,
@@ -362,7 +362,7 @@
     "lich0821/ccNexus": 973,
     "looplj/axonhub": 5435,
     "mark3labs/mcp-go": 9224,
-    "microsoft/vscode": 195049,
+    "microsoft/vscode": 195051,
     "mybatis/mybatis-3": 20436,
     "netty/netty": 35069,
     "postcss/autoprefixer": 22197,
