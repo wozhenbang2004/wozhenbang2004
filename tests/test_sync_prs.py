@@ -31,6 +31,17 @@ def page(items, total=None, incomplete=False):
 
 
 CURATION = {'adoptions': []}
+STARS = {'upstream/project': 12345}
+
+
+def repository_payload(stars=12345, repo='upstream/project'):
+    return {'full_name': repo, 'html_url': f'https://github.com/{repo}',
+            'private': False, 'stargazers_count': stars}
+
+
+def sync_payload(path):
+    return page([item()]) if path.startswith('/search/issues?') else repository_payload()
+
 TEMPLATE = '\n'.join('outside-' + s + f'\n<!-- {s}_START -->\nold\n<!-- {s}_END -->' for s in ['PR_SUMMARY', 'PR_LIST']) + '\noutside-end\n'
 
 
@@ -50,7 +61,7 @@ class SyncTests(unittest.TestCase):
             with self.subTest(p=p), self.assertRaises(ValueError):
                 m.fetch_prs(lambda _: page([p]))
             with self.assertRaises(ValueError):
-                m.render(TEMPLATE, [m.normalize(p)], [], CURATION, DATE)
+                m.render(TEMPLATE, [m.normalize(p)], [], STARS)
 
     def test_refuses_partial_and_truncated_search(self):
         for p in [page([item()], incomplete=True), page([item()], 1001), page([], 0)]:
@@ -127,10 +138,10 @@ class SyncTests(unittest.TestCase):
     def test_render_only_successes_preserves_context_and_evidence(self):
         prs = [m.normalize(item(title='<script>alert(1)</script> | [link](url)'))]
         a = dict(adoption(), source_repo='upstream/project', source_number=10, source_state='Closed', target_kind='pull')
-        result = m.render(TEMPLATE, prs, [a], CURATION, DATE)
+        result = m.render(TEMPLATE, prs, [a], STARS)
         self.assertIn('2 项贡献已被上游合入', result)
         self.assertIn('1 条本人 PR 直接合并', result)
-        self.assertIn('原 PR：Closed', result)
+        self.assertIn('(Closed) →', result)
         self.assertIn(a['source'], result)
         self.assertIn(a['target'], result)
         for absent in ['Open ·', 'Draft ·', 'Closed ·', '| Open |', '全部 PR']:
@@ -139,19 +150,90 @@ class SyncTests(unittest.TestCase):
         self.assertIn('&lt;script&gt;', result)
         self.assertIn('\\|', result)
         self.assertIn('outside-end', result)
-        self.assertEqual(result.count('<details>'), result.count('</details>'))
+        self.assertNotIn('<details>', result)
+        self.assertNotIn('<summary>', result)
+
+    def test_fetches_fresh_stars_once_per_unique_public_repository(self):
+        prs = [m.normalize(item(1)), m.normalize(item(2))]
+        a = dict(adoption(), source_repo='upstream/project')
+        b = dict(adoption(), source_repo='another/project')
+        calls = []
+        def get(path):
+            calls.append(path)
+            repo = path.removeprefix('/repos/')
+            return repository_payload(0 if repo.startswith('another/') else 12345, repo)
+        stars = m.fetch_repo_stars(prs, [a, b], get)
+        self.assertEqual(stars, {'another/project': 0, 'upstream/project': 12345})
+        self.assertEqual(calls, ['/repos/another/project', '/repos/upstream/project'])
+
+    def test_rejects_unverified_or_invalid_stars(self):
+        prs = [m.normalize(item())]
+        bad = [dict(repository_payload(), private=True),
+               dict(repository_payload(), full_name='someone/else'),
+               dict(repository_payload(), html_url='https://example.com/project')]
+        bad += [repository_payload(value) for value in [None, '100', True, -1, 1.5]]
+        for payload in bad:
+            with self.subTest(payload=payload), self.assertRaises(ValueError):
+                m.fetch_repo_stars(prs, [], lambda _: payload)
+        for stars in [{}, {'upstream/project': -1}, {'upstream/project': True},
+                      dict(STARS, unrelated=100)]:
+            with self.subTest(stars=stars), self.assertRaises(ValueError):
+                m.render(TEMPLATE, prs, [], stars)
+
+    def test_two_columns_show_all_prs_stars_and_commit_evidence_without_folding(self):
+        prs = [m.normalize(item(number)) for number in range(1, 102)]
+        sha = 'a' * 40
+        a = dict(adoption(200, target='https://github.com/upstream/project/commit/' + sha),
+                 source_repo='upstream/project', source_number=200, source_state='Closed',
+                 target_kind='commit', description='Fix a | b.\n[Commit evidence](https://github.com/upstream/project/commit/' + sha + ')')
+        text = m.render(TEMPLATE, prs, [a], STARS)
+        for p in prs:
+            self.assertEqual(text.count(f"(https://github.com/upstream/project/pull/{p['number']})"), 1)
+        self.assertIn('[⭐ 12,345](https://github.com/upstream/project/stargazers)', text)
+        self.assertIn('commit aaaaaaa', text)
+        self.assertIn(a['target'], text)
+        self.assertIn('(Closed) →', text)
+        self.assertIn('Fix a \\| b.', text)
+        for tag in ['<details>', '<summary>', '</details>']:
+            self.assertNotIn(tag, text)
+        rows = [row for row in text.splitlines() if row.startswith('|')]
+        self.assertEqual(len(rows), 106)  # Two headers/separators plus all 102 contributions.
+        for row in rows:
+            self.assertEqual(len(m.re.split(r'(?<!\\)\|', row)), 4)
+
+    def test_star_refresh_updates_snapshot_and_failure_preserves_files(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / 'data').mkdir()
+            (root / 'data/pr-curation.json').write_text(json.dumps(CURATION))
+            (root / 'README.md').write_text(TEMPLATE)
+            m.sync(root, sync_payload)
+            def refreshed(path):
+                return page([item()]) if path.startswith('/search/issues?') else repository_payload(99999)
+            m.sync(root, refreshed)
+            snapshot = json.loads((root / 'data/pull-requests.json').read_text())
+            self.assertEqual(snapshot['repo_stars'], {'upstream/project': 99999})
+            self.assertEqual(len(snapshot['pull_requests']), 1)
+            self.assertIn('⭐ 99,999', (root / 'README.md').read_text())
+            before = {p: (root / p).read_bytes() for p in ['README.md', 'data/pull-requests.json']}
+            def unavailable(path):
+                if path.startswith('/search/issues?'): return page([item()])
+                raise RuntimeError('Stars lookup unavailable')
+            with self.assertRaises(RuntimeError):
+                m.sync(root, unavailable)
+            self.assertEqual(before, {p: (root / p).read_bytes() for p in before})
 
     def test_missing_or_duplicate_markers_fail(self):
         for text in ['', TEMPLATE + '<!-- PR_SUMMARY_START -->']:
             with self.assertRaises(ValueError):
-                m.render(text, [m.normalize(item())], [], CURATION, DATE)
+                m.render(text, [m.normalize(item())], [], STARS)
 
     def test_removed_summary_explanation_stays_absent_on_regeneration(self):
         old_note = '<sub>每小时自动检查；数据变更于 2026-11-07 11:06（北京时间，UTC+8）。仅展示本人向公开外部上游提交且已合并的 PR，以及有明确来源与合入证据的接续采纳。接续采纳保留原 PR 的真实状态，不计作本人 PR 直接合并，同一贡献不重复计数。采纳关系由人工维护证据、自动核对合入状态；已合入开发分支不等于已经发布。GitHub 定时任务可能延迟。</sub>'
         text = TEMPLATE.replace('<!-- PR_SUMMARY_START -->\nold', '<!-- PR_SUMMARY_START -->\n' + old_note)
         prs = [m.normalize(item())]
-        for changed_at in (DATE, '2026-11-08T00:00:00Z'):
-            text = m.render(text, prs, [], CURATION, changed_at)
+        for _ in range(2):
+            text = m.render(text, prs, [], STARS)
             summary = text.split('<!-- PR_SUMMARY_START -->')[1].split('<!-- PR_SUMMARY_END -->')[0]
             self.assertNotIn('<sub>', summary)
             self.assertNotIn('每小时自动检查', text)
@@ -165,10 +247,10 @@ class SyncTests(unittest.TestCase):
             (root / 'data').mkdir()
             (root / 'data/pr-curation.json').write_text(json.dumps(CURATION))
             (root / 'README.md').write_text(TEMPLATE)
-            m.sync(root, lambda _: page([item()]))
+            m.sync(root, sync_payload)
             files = ['README.md', 'data/pull-requests.json']
             before = {p: (root / p).read_bytes() for p in files}
-            m.sync(root, lambda _: page([item()]))
+            m.sync(root, sync_payload)
             self.assertEqual(before, {p: (root / p).read_bytes() for p in files})
             with self.assertRaises(ValueError):
                 m.sync(root, lambda _: page([item()], incomplete=True))
@@ -177,33 +259,33 @@ class SyncTests(unittest.TestCase):
     def test_removed_manual_highlights_stay_absent_on_regeneration(self):
         old_section = '<details>\n<summary>部分已合入改进说明（人工整理）</summary>\n\n- Old manually written highlight.\n\n</details>'
         text = TEMPLATE.replace('<!-- PR_LIST_START -->\nold', '<!-- PR_LIST_START -->\n' + old_section)
-        # Even legacy configuration cannot restore the removed public section.
-        cur = dict(CURATION, projects={'upstream/project': {'name': 'Project', 'highlights': 'Old manually written highlight.'}})
         prs = [m.normalize(item())]
         a = dict(adoption(), source_repo='upstream/project', source_number=10, source_state='Closed', target_kind='pull')
         for _ in range(2):
-            text = m.render(text, prs, [a], cur, DATE)
+            text = m.render(text, prs, [a], STARS)
             self.assertNotIn('部分已合入改进说明', text)
             self.assertNotIn('Old manually written highlight.', text)
-            self.assertIn('查看本人已合并 PR · 1', text)
+            self.assertIn('### 已合并 PR', text)
+            self.assertIn(prs[0]['url'], text)
             self.assertIn('### 经维护者 PR / commit 采纳', text)
             self.assertIn(a['source'], text)
             self.assertIn(a['target'], text)
             self.assertIn('outside-end', text)
-            self.assertEqual(text.count('<details>'), 1)
-            self.assertEqual(text.count('</details>'), 1)
+            self.assertNotIn('<details>', text)
+            self.assertNotIn('</details>', text)
 
     def test_removed_project_table_stays_absent_and_pr_list_is_preserved(self):
         prs = [m.normalize(item())]
         a = dict(adoption(), source_repo='upstream/project', source_number=10, source_state='Closed', target_kind='pull')
         text = TEMPLATE
         for _ in range(2):
-            text = m.render(text, prs, [a], CURATION, DATE)
+            text = m.render(text, prs, [a], STARS)
             for removed in ['已合入的项目与贡献', 'MERGED_TABLE', '| 项目 |', '| :--- | ---: | ---: |']:
                 self.assertNotIn(removed, text)
             self.assertIn('2 项贡献已被上游合入', text)
             self.assertIn('覆盖 1 个公开上游仓库', text)
-            self.assertIn('查看本人已合并 PR · 1', text)
+            self.assertIn('### 已合并 PR', text)
+            self.assertIn(prs[0]['url'], text)
             self.assertIn(prs[0]['url'], text)
             self.assertIn('### 经维护者 PR / commit 采纳', text)
             self.assertIn(a['source'], text)

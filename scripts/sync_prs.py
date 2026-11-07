@@ -121,6 +121,29 @@ def escape(value):
     return re.sub(r'([\\`*_{}\[\]()|])', r'\\\1', value)
 
 
+def fetch_repo_stars(prs, adoptions, get=api):
+    repos = {p['repo'] for p in prs} | {a['source_repo'] for a in adoptions}
+    stars = {}
+    for repo in sorted(repos, key=str.lower):
+        if not re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+', repo):
+            raise ValueError('Invalid upstream repository name')
+        payload = get(f'/repos/{repo}')
+        count = payload.get('stargazers_count')
+        if (payload.get('private') is not False
+                or payload.get('full_name', '').lower() != repo.lower()
+                or payload.get('html_url', '').lower() != f'https://github.com/{repo}'.lower()
+                or type(count) is not int or count < 0):
+            raise ValueError('Missing or inconsistent public repository stars; keeping previous data')
+        stars[repo] = count
+    return stars
+
+
+def project_cell(repo, stars):
+    owner, name = repo.split('/')
+    return (f'**[{escape(name)}](https://github.com/{repo})**<br />'
+            f'<sub>{escape(owner)} · [⭐ {stars:,}](https://github.com/{repo}/stargazers)</sub>')
+
+
 def search_link(extra=''):
     return 'https://github.com/pulls?q=' + urllib.parse.quote(QUERY + (' ' + extra if extra else ''))
 
@@ -134,26 +157,29 @@ def replace_region(text, name, body):
     return left + start + '\n' + body.strip() + '\n' + end + right
 
 
-def render(text, prs, adoptions, curation, changed_at):
+def render(text, prs, adoptions, repo_stars):
     if any(p['state'] != 'Merged' for p in prs):
         raise ValueError('Only merged PRs belong in the published contribution list')
     all_repos = {p['repo'] for p in prs} | {a['source_repo'] for a in adoptions}
+    if (set(repo_stars) != all_repos
+            or any(type(value) is not int or value < 0 for value in repo_stars.values())):
+        raise ValueError('Every displayed repository needs verified stars')
     summary = (f"**{len(prs) + len(adoptions)} 项贡献已被上游合入** · **{len(prs)} 条本人 PR 直接合并** · **{len(adoptions)} 项经维护者 PR / commit 采纳**  \n"
                f"**覆盖 {len(all_repos)} 个公开上游仓库**\n\n"
                f"[本人 PR 直接合并记录]({search_link()}) · [同步记录](https://github.com/{REPO}/actions/workflows/sync-pr-status.yml)")
     text = replace_region(text, 'PR_SUMMARY', summary)
-    body = ['<details>', f'<summary>查看本人已合并 PR · {len(prs)}</summary>', '',
-            '<sub>按合并时间排序。</sub>', '']
+    body = ['### 已合并 PR', '', '| 项目 / Stars | PR |', '| :--- | :--- |']
     for p in sorted(prs, key=lambda p: (p['merged_at'], p['url']), reverse=True):
-        body += [f"- **[{p['repo']}#{p['number']}]({p['url']})**<br />{escape(p['title'])}", '']
-    body += ['</details>', '', '### 经维护者 PR / commit 采纳', '',
-             '<sub>以下原 PR 未直接合并；保留原始提交、维护者接续 PR 或合入 commit 的证据链接。</sub>', '']
+        body.append(f"| {project_cell(p['repo'], repo_stars[p['repo']])} | **[#{p['number']}]({p['url']})**<br />{escape(p['title'])} |")
+    body += ['', '### 经维护者 PR / commit 采纳', '',
+             '| 项目 / Stars | 原 PR → 采纳记录 |', '| :--- | :--- |']
     for a in adoptions:
-        target_label = ('#' + a['target'].rsplit('/', 1)[1] if a['target_kind'] == 'pull'
+        target_label = ('PR #' + a['target'].rsplit('/', 1)[1] if a['target_kind'] == 'pull'
                         else 'commit ' + a['target'].rsplit('/', 1)[1][:7])
-        body += [f"- **[{a['source_repo']}#{a['source_number']}]({a['source']})** → [{target_label}]({a['target']})：{a['description'].strip()}<br /><sub>原 PR：{a['source_state']}；采纳结果已合入上游，不计作本人 PR 直接合并。</sub>", '']
+        description = ' '.join(a['description'].split()).replace('|', r'\|')
+        body.append(f"| {project_cell(a['source_repo'], repo_stars[a['source_repo']])} | 原 PR **[#{a['source_number']}]({a['source']})** ({a['source_state']}) → **[{target_label}]({a['target']})**<br />{description} |")
     if not adoptions:
-        body += ['暂无已核实的接续采纳。', '']
+        body.append('| — | 暂无已核实的接续采纳。 |')
     return replace_region(text, 'PR_LIST', '\n'.join(body))
 
 
@@ -161,15 +187,17 @@ def sync(root=ROOT, get=api):
     curation = json.loads((root / 'data/pr-curation.json').read_text())
     prs = fetch_prs(get)
     adoptions = verified_adoptions(prs, curation, get)
+    repo_stars = fetch_repo_stars(prs, adoptions, get)
     snapshot_path = root / 'data/pull-requests.json'
     old = json.loads(snapshot_path.read_text()) if snapshot_path.exists() else {}
-    data = {'scope': 'merged-and-evidenced-adoptions', 'pull_requests': prs, 'verified_adoptions': adoptions}
+    data = {'scope': 'merged-and-evidenced-adoptions', 'pull_requests': prs,
+            'verified_adoptions': adoptions, 'repo_stars': repo_stars}
     same = all(old.get(k) == v for k, v in data.items())
     changed_at = old['changed_at'] if same else datetime.now(timezone.utc).isoformat(timespec='seconds')
     snapshot = dict(changed_at=changed_at, **data)
     readme_path = root / 'README.md'
     old_text = readme_path.read_text()
-    new_text = render(old_text, prs, adoptions, curation, changed_at)
+    new_text = render(old_text, prs, adoptions, repo_stars)
     # All API responses and marker validation have completed before any write.
     snapshot_path.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2) + '\n')
     readme_path.write_text(new_text)
