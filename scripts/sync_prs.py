@@ -8,7 +8,7 @@ import re
 import sys
 import urllib.parse
 import urllib.request
-from collections import Counter, defaultdict
+from collections import Counter
 from datetime import datetime, timezone
 
 OWNER = 'wozhenbang2004'
@@ -137,19 +137,11 @@ def replace_region(text, name, body):
 def render(text, prs, adoptions, curation, changed_at):
     if any(p['state'] != 'Merged' for p in prs):
         raise ValueError('Only merged PRs belong in the published contribution list')
-    repos = defaultdict(list)
-    for p in prs:
-        repos[p['repo']].append(p)
-    adopted_repos = Counter(a['source_repo'] for a in adoptions)
-    all_repos = set(repos) | set(adopted_repos)
+    all_repos = {p['repo'] for p in prs} | {a['source_repo'] for a in adoptions}
     summary = (f"**{len(prs) + len(adoptions)} 项贡献已被上游合入** · **{len(prs)} 条本人 PR 直接合并** · **{len(adoptions)} 项经维护者 PR / commit 采纳**  \n"
                f"**覆盖 {len(all_repos)} 个公开上游仓库**\n\n"
                f"[本人 PR 直接合并记录]({search_link()}) · [同步记录](https://github.com/{REPO}/actions/workflows/sync-pr-status.yml)")
     text = replace_region(text, 'PR_SUMMARY', summary)
-    table = ['| 项目 | 本人 PR 直接合并 | 经维护者 PR / commit 采纳 |', '| :--- | ---: | ---: |']
-    for repo in sorted(all_repos, key=str.lower):
-        table.append(f'| [{repo}](https://github.com/{repo}) | {len(repos[repo])} | {adopted_repos[repo]} |')
-    text = replace_region(text, 'MERGED_TABLE', '\n'.join(table))
     body = ['<details>', f'<summary>查看本人已合并 PR · {len(prs)}</summary>', '',
             '<sub>按合并时间排序。</sub>', '']
     for p in sorted(prs, key=lambda p: (p['merged_at'], p['url']), reverse=True):
@@ -162,11 +154,6 @@ def render(text, prs, adoptions, curation, changed_at):
         body += [f"- **[{a['source_repo']}#{a['source_number']}]({a['source']})** → [{target_label}]({a['target']})：{a['description'].strip()}<br /><sub>原 PR：{a['source_state']}；采纳结果已合入上游，不计作本人 PR 直接合并。</sub>", '']
     if not adoptions:
         body += ['暂无已核实的接续采纳。', '']
-    body += ['<details>', '<summary>部分已合入改进说明（人工整理）</summary>', '']
-    for repo, project in curation['projects'].items():
-        if repo in all_repos:
-            body.append(f"- [{project['name']}](https://github.com/{repo})：{project['highlights']}")
-    body += ['', '</details>']
     return replace_region(text, 'PR_LIST', '\n'.join(body))
 
 

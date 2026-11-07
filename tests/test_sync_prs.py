@@ -30,8 +30,8 @@ def page(items, total=None, incomplete=False):
     return {'items': items, 'total_count': len(items) if total is None else total, 'incomplete_results': incomplete}
 
 
-CURATION = {'adoptions': [], 'projects': {}}
-TEMPLATE = '\n'.join('outside-' + s + f'\n<!-- {s}_START -->\nold\n<!-- {s}_END -->' for s in ['PR_SUMMARY', 'MERGED_TABLE', 'PR_LIST']) + '\noutside-end\n'
+CURATION = {'adoptions': []}
+TEMPLATE = '\n'.join('outside-' + s + f'\n<!-- {s}_START -->\nold\n<!-- {s}_END -->' for s in ['PR_SUMMARY', 'PR_LIST']) + '\noutside-end\n'
 
 
 class SyncTests(unittest.TestCase):
@@ -173,6 +173,41 @@ class SyncTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 m.sync(root, lambda _: page([item()], incomplete=True))
             self.assertEqual(before, {p: (root / p).read_bytes() for p in files})
+
+    def test_removed_manual_highlights_stay_absent_on_regeneration(self):
+        old_section = '<details>\n<summary>部分已合入改进说明（人工整理）</summary>\n\n- Old manually written highlight.\n\n</details>'
+        text = TEMPLATE.replace('<!-- PR_LIST_START -->\nold', '<!-- PR_LIST_START -->\n' + old_section)
+        # Even legacy configuration cannot restore the removed public section.
+        cur = dict(CURATION, projects={'upstream/project': {'name': 'Project', 'highlights': 'Old manually written highlight.'}})
+        prs = [m.normalize(item())]
+        a = dict(adoption(), source_repo='upstream/project', source_number=10, source_state='Closed', target_kind='pull')
+        for _ in range(2):
+            text = m.render(text, prs, [a], cur, DATE)
+            self.assertNotIn('部分已合入改进说明', text)
+            self.assertNotIn('Old manually written highlight.', text)
+            self.assertIn('查看本人已合并 PR · 1', text)
+            self.assertIn('### 经维护者 PR / commit 采纳', text)
+            self.assertIn(a['source'], text)
+            self.assertIn(a['target'], text)
+            self.assertIn('outside-end', text)
+            self.assertEqual(text.count('<details>'), 1)
+            self.assertEqual(text.count('</details>'), 1)
+
+    def test_removed_project_table_stays_absent_and_pr_list_is_preserved(self):
+        prs = [m.normalize(item())]
+        a = dict(adoption(), source_repo='upstream/project', source_number=10, source_state='Closed', target_kind='pull')
+        text = TEMPLATE
+        for _ in range(2):
+            text = m.render(text, prs, [a], CURATION, DATE)
+            for removed in ['已合入的项目与贡献', 'MERGED_TABLE', '| 项目 |', '| :--- | ---: | ---: |']:
+                self.assertNotIn(removed, text)
+            self.assertIn('2 项贡献已被上游合入', text)
+            self.assertIn('覆盖 1 个公开上游仓库', text)
+            self.assertIn('查看本人已合并 PR · 1', text)
+            self.assertIn(prs[0]['url'], text)
+            self.assertIn('### 经维护者 PR / commit 采纳', text)
+            self.assertIn(a['source'], text)
+            self.assertIn(a['target'], text)
 
 
 if __name__ == '__main__':

@@ -32,37 +32,6 @@
 [本人 PR 直接合并记录](https://github.com/pulls?q=is%3Apr%20is%3Amerged%20author%3Awozhenbang2004%20is%3Apublic%20-user%3Awozhenbang2004) · [同步记录](https://github.com/wozhenbang2004/wozhenbang2004/actions/workflows/sync-pr-status.yml)
 <!-- PR_SUMMARY_END -->
 
-### 已合入的项目与贡献
-
-<!-- MERGED_TABLE_START -->
-| 项目 | 本人 PR 直接合并 | 经维护者 PR / commit 采纳 |
-| :--- | ---: | ---: |
-| [apache/dubbo](https://github.com/apache/dubbo) | 1 | 0 |
-| [astaxie/TokenHub](https://github.com/astaxie/TokenHub) | 1 | 0 |
-| [AstrBotDevs/AstrBot](https://github.com/AstrBotDevs/AstrBot) | 2 | 0 |
-| [baomidou/mybatis-plus](https://github.com/baomidou/mybatis-plus) | 2 | 0 |
-| [danielmiessler/Fabric](https://github.com/danielmiessler/Fabric) | 1 | 0 |
-| [deepset-ai/haystack](https://github.com/deepset-ai/haystack) | 1 | 0 |
-| [FasterXML/jackson-databind](https://github.com/FasterXML/jackson-databind) | 6 | 2 |
-| [FasterXML/jackson-dataformats-text](https://github.com/FasterXML/jackson-dataformats-text) | 1 | 0 |
-| [google/guava](https://github.com/google/guava) | 0 | 1 |
-| [gptme/gptme](https://github.com/gptme/gptme) | 2 | 0 |
-| [h2database/h2database](https://github.com/h2database/h2database) | 1 | 0 |
-| [lich0821/ccNexus](https://github.com/lich0821/ccNexus) | 2 | 0 |
-| [looplj/axonhub](https://github.com/looplj/axonhub) | 1 | 0 |
-| [mark3labs/mcp-go](https://github.com/mark3labs/mcp-go) | 1 | 0 |
-| [microsoft/vscode](https://github.com/microsoft/vscode) | 1 | 0 |
-| [mybatis/mybatis-3](https://github.com/mybatis/mybatis-3) | 2 | 0 |
-| [netty/netty](https://github.com/netty/netty) | 1 | 0 |
-| [postcss/autoprefixer](https://github.com/postcss/autoprefixer) | 1 | 0 |
-| [react-hook-form/react-hook-form](https://github.com/react-hook-form/react-hook-form) | 2 | 0 |
-| [router-for-me/CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI) | 1 | 0 |
-| [sirmalloc/ccstatusline](https://github.com/sirmalloc/ccstatusline) | 2 | 0 |
-| [solidjs/solid](https://github.com/solidjs/solid) | 0 | 1 |
-| [tlaplus/tlaplus](https://github.com/tlaplus/tlaplus) | 1 | 0 |
-| [Wei-Shaw/sub2api](https://github.com/Wei-Shaw/sub2api) | 1 | 0 |
-<!-- MERGED_TABLE_END -->
-
 <!-- PR_LIST_START -->
 <details>
 <summary>查看本人已合并 PR · 34</summary>
@@ -150,32 +119,6 @@
 - **[solidjs/solid#4539](https://github.com/solidjs/solid/pull/4539)** → [#4558](https://github.com/solidjs/solid/pull/4558)：Ryan 接续并完善原修复，保留[作者 commit 22cc9e4](https://github.com/solidjs/solid/commit/22cc9e4c6b097a0b6d7d149013f52f7568fab88d)，已通过 [commit 718ec9c](https://github.com/solidjs/solid/commit/718ec9c218643dfe9943f05d33ccb66db53621c6) 合入 `next`。<br /><sub>原 PR：Closed；采纳结果已合入上游，不计作本人 PR 直接合并。</sub>
 
 - **[google/guava#8807](https://github.com/google/guava/pull/8807)** → [#8811](https://github.com/google/guava/pull/8811)：经 Copybara 导入 `master`，[commit c0a8a1e](https://github.com/google/guava/commit/c0a8a1edc69393e8141424037571d9825f5fc0f4) 的 author 关联本账号。<br /><sub>原 PR：Closed；采纳结果已合入上游，不计作本人 PR 直接合并。</sub>
-
-<details>
-<summary>部分已合入改进说明（人工整理）</summary>
-
-- [Jackson Databind](https://github.com/FasterXML/jackson-databind)：不可变 Builder、Map.Entry 类型处理与过滤器边界；另有数组额外值跳过与非公开 Record 更新修复
-- [MyBatis](https://github.com/mybatis/mybatis-3)：泛型类型哈希一致性与 TypeHandlerRegistry 二进制兼容
-- [MyBatis-Plus](https://github.com/baomidou/mybatis-plus)：大整数条件比较与嵌套 Wrapper 参数别名
-- [VS Code](https://github.com/microsoft/vscode)：修复 Test Explorer 输入筛选与快捷键冲突
-- [Apache Dubbo](https://github.com/apache/dubbo)：使端口统一服务端遵循 TCP keep-alive 配置
-- [H2 Database](https://github.com/h2database/h2database)：使 ON DUPLICATE KEY UPDATE 遵循标识符大小写设置
-- [TLA+](https://github.com/tlaplus/tlaplus)：移除不安全的 TLC CurrentState JMX 轮询
-- [Jackson YAML](https://github.com/FasterXML/jackson-dataformats-text)：澄清 CORE schema 的八进制兼容配置
-- [Haystack](https://github.com/deepset-ai/haystack)：反序列化时保留 MockChatGenerator 输入
-- [MCP Go](https://github.com/mark3labs/mcp-go)：保留受保护资源元数据路径中的转义字符
-- [AstrBot](https://github.com/AstrBotDevs/AstrBot)：在搜索密钥相关失败后继续重试
-- [Fabric](https://github.com/danielmiessler/Fabric)：报告已配置供应商的初始化失败
-- [AxonHub](https://github.com/looplj/axonhub)：兼容 Gemini GenerateContent 字段别名
-- [TokenHub](https://github.com/astaxie/TokenHub)：移除 Anthropic 系统消息对旧版 beta 标记的依赖
-- [ccNexus](https://github.com/lich0821/ccNexus)：保留工具调用历史，修复版本化 API 路由
-- [CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI)：修复跨分块 SSE 帧重组
-- [ccstatusline](https://github.com/sirmalloc/ccstatusline)：会话名回退到自动生成的标题
-- [gptme](https://github.com/gptme/gptme)：保护无关 Git 分支，隔离测试对本地 gh 的依赖
-- [SolidJS](https://github.com/solidjs/solid)：乐观更新期间保持问题与数据帧一致
-- [Guava](https://github.com/google/guava)：修复基本类型数组旋转的 Integer.MIN_VALUE 溢出边界
-
-</details>
 <!-- PR_LIST_END -->
 
 ## 🌱 GitHub 日常
