@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Synchronize public upstream PR states; never infer adoption from a closed PR."""
+"""Synchronize merged upstream PRs and explicitly evidenced maintainer adoptions."""
 import html
 import json
 import os
@@ -14,10 +14,7 @@ from datetime import datetime, timezone, timedelta
 OWNER = 'wozhenbang2004'
 REPO = f'{OWNER}/{OWNER}'
 ROOT = Path(__file__).resolve().parents[1]
-QUERY = f'is:pr author:{OWNER} is:public -user:{OWNER}'
-STATES = ('Open', 'Draft', 'Merged', 'Closed')
-LABELS = {'Open': '🟢 Open · 等待合入', 'Draft': '⚪ Draft · 草稿',
-          'Merged': '🟣 Merged · 本人 PR 已合并', 'Closed': '🔴 Closed · 未直接合并'}
+QUERY = f'is:pr is:merged author:{OWNER} is:public -user:{OWNER}'
 
 
 def api(path):
@@ -71,24 +68,51 @@ def fetch_prs(get=api):
             raise ValueError('Missing search page')
     if not total or len(items) != total or len({p['id'] for p in items}) != total:
         raise ValueError('Empty, duplicated, or truncated PR results; keeping previous data')
-    return sorted((normalize(p) for p in items), key=lambda p: p['url'])
+    rows = [normalize(p) for p in items]
+    if any(p['state'] != 'Merged' for p in rows):
+        raise ValueError('Merged search returned an unmerged PR; refusing to publish it')
+    return sorted(rows, key=lambda p: p['url'])
 
 
 def verified_adoptions(prs, curation, get=api):
-    by_url = {p['url']: p for p in prs}
-    verified, seen_targets = [], set()
+    merged_urls = {p['url'] for p in prs}
+    verified, seen_targets, seen_sources = [], set(), set()
     for entry in curation['adoptions']:
-        source = by_url.get(entry['source'])
-        if source is None or source['state'] == 'Merged':
-            continue  # Avoid duplicating a directly merged source.
-        match = re.fullmatch(r'https://github.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)/pull/(\d+)', entry['target'])
-        if not match or match[1].lower() != source['repo'].lower():
+        if entry['source'] in merged_urls or entry['source'] in seen_sources:
+            continue  # A directly merged source must not be counted a second time.
+        source_match = re.fullmatch(r'https://github.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)/pull/(\d+)', entry['source'])
+        if not source_match or source_match[1].split('/')[0].lower() == OWNER.lower():
+            raise ValueError('Adoption source is outside the upstream scope')
+        raw = get(f'/repos/{source_match[1]}/pulls/{source_match[2]}')
+        if raw['base']['repo']['private'] is not False or raw['html_url'] != entry['source']:
+            raise ValueError('Adoption source is not the expected public PR')
+        source = normalize(dict(raw, pull_request={'merged_at': raw['merged_at']}))
+        if source['state'] == 'Merged':
+            raise ValueError('A curated source merged but is missing from search; retry later')
+        target_match = re.fullmatch(r'https://github.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)/(pull|commit)/([A-Za-z0-9]+)', entry['target'])
+        if not target_match or target_match[1].lower() != source['repo'].lower():
             raise ValueError('Adoption must point to the same target upstream repository')
-        target = get(f'/repos/{match[1]}/pulls/{match[2]}')
-        if (target.get('merged_at') and target['html_url'] == entry['target']
-                and entry['target'] not in by_url and entry['target'] not in seen_targets):
-            verified.append(entry)
+        kind, target_id = target_match[2], target_match[3]
+        if kind == 'pull':
+            if not target_id.isdigit():
+                raise ValueError('Invalid adoption PR number')
+            target = get(f'/repos/{target_match[1]}/pulls/{target_id}')
+            accepted = bool(target.get('merged_at')) and target['html_url'] == entry['target']
+        else:
+            # A commit existing in a repository is not enough: it must be on a
+            # named upstream branch. Attribution/equivalence remains curated.
+            branch = entry.get('target_branch')
+            if not re.fullmatch(r'[0-9a-fA-F]{40}', target_id) or not branch:
+                raise ValueError('Commit adoption needs a full SHA and target_branch')
+            target = get(f'/repos/{target_match[1]}/commits/{target_id}')
+            comparison = get(f'/repos/{target_match[1]}/compare/{target_id}...{urllib.parse.quote(branch, safe="")}')
+            accepted = (target.get('sha', '').lower() == target_id.lower()
+                        and comparison.get('status') in ('ahead', 'identical'))
+        if accepted and entry['target'] not in merged_urls and entry['target'] not in seen_targets:
+            verified.append(dict(entry, source_repo=source['repo'], source_number=source['number'],
+                                 source_state=source['state'], target_kind=kind))
             seen_targets.add(entry['target'])
+            seen_sources.add(entry['source'])
     return verified
 
 
@@ -111,50 +135,38 @@ def replace_region(text, name, body):
 
 
 def render(text, prs, adoptions, curation, changed_at):
-    counts = Counter(p['state'] for p in prs)
+    if any(p['state'] != 'Merged' for p in prs):
+        raise ValueError('Only merged PRs belong in the published contribution list')
     repos = defaultdict(list)
     for p in prs:
         repos[p['repo']].append(p)
+    adopted_repos = Counter(a['source_repo'] for a in adoptions)
+    all_repos = set(repos) | set(adopted_repos)
     timestamp = datetime.fromisoformat(changed_at).astimezone(timezone(timedelta(hours=8))).strftime('%Y-%m-%d %H:%M')
-    summary = (f"**{len(prs)} 条上游 PR · {len(repos)} 个公开仓库**  \n"
-               f"**🟢 Open {counts['Open']} · ⚪ Draft {counts['Draft']} · 🟣 Merged {counts['Merged']} · 🔴 Closed {counts['Closed']}**\n\n"
-               f"另有 **{len(adoptions)} 项经其他 PR 采纳**（保留原 PR 的真实状态，不重复计入 Merged）。\n\n"
-               f"<sub>每小时自动检查；数据变更于 {timestamp}（北京时间，UTC+8）。只统计本人向公开外部仓库提交的 PR，不含自有仓库或本人 fork 内的合并。Draft 从 Open 单列，Closed 指未直接合并；接续采纳由人工维护证据、自动核对目标 PR 已合并。GitHub 定时任务可能延迟；已合入开发分支不等于已经发布。</sub>\n\n"
-               f"[全部 PR]({search_link()}) · [Open]({search_link('is:open draft:false')}) · [Draft]({search_link('is:open draft:true')}) · [Merged]({search_link('is:merged')}) · [Closed]({search_link('is:closed is:unmerged')}) · [同步记录](https://github.com/{REPO}/actions/workflows/sync-pr-status.yml)")
+    summary = (f"**{len(prs) + len(adoptions)} 项贡献已被上游合入** · **{len(prs)} 条本人 PR 直接合并** · **{len(adoptions)} 项经维护者 PR / commit 采纳**  \n"
+               f"**覆盖 {len(all_repos)} 个公开上游仓库**\n\n"
+               f"<sub>每小时自动检查；数据变更于 {timestamp}（北京时间，UTC+8）。仅展示本人向公开外部上游提交且已合并的 PR，以及有明确来源与合入证据的接续采纳。接续采纳保留原 PR 的真实状态，不计作本人 PR 直接合并，同一贡献不重复计数。采纳关系由人工维护证据、自动核对合入状态；已合入开发分支不等于已经发布。GitHub 定时任务可能延迟。</sub>\n\n"
+               f"[本人 PR 直接合并记录]({search_link()}) · [同步记录](https://github.com/{REPO}/actions/workflows/sync-pr-status.yml)")
     text = replace_region(text, 'PR_SUMMARY', summary)
-    table = ['<details>', f'<summary>按项目查看全部 {len(repos)} 个仓库的 PR 状态</summary>', '',
-             '| 项目 | Open | Draft | Merged | Closed |', '| :--- | ---: | ---: | ---: | ---: |']
-    for repo, rows in sorted(repos.items(), key=lambda pair: pair[0].lower()):
-        c = Counter(p['state'] for p in rows)
-        table.append(f'| [{repo}](https://github.com/{repo}) | ' + ' | '.join(str(c[s]) for s in STATES) + ' |')
-    table.extend(['', '</details>'])
+    table = ['| 项目 | 本人 PR 直接合并 | 经维护者 PR / commit 采纳 |', '| :--- | ---: | ---: |']
+    for repo in sorted(all_repos, key=str.lower):
+        table.append(f'| [{repo}](https://github.com/{repo}) | {len(repos[repo])} | {adopted_repos[repo]} |')
     text = replace_region(text, 'MERGED_TABLE', '\n'.join(table))
-    body = []
-    adoption_by_source = {a['source']: a for a in adoptions}
-    for state in STATES:
-        rows = sorted((p for p in prs if p['state'] == state), key=lambda p: (p['updated_at'], p['url']), reverse=True)
-        body += ['<details>', f'<summary>{LABELS[state]} · {len(rows)}</summary>', '',
-                 '<sub>按 GitHub 最近更新时间排序。</sub>', '']
-        for p in rows:
-            body += [f"- **[{p['repo']}#{p['number']}]({p['url']})**<br />{escape(p['title'])}"]
-            if p['url'] in adoption_by_source:
-                a = adoption_by_source[p['url']]
-                body[-1] += f"<br /><sub>另经 [#{a['target'].rsplit('/', 1)[1]}]({a['target']}) 采纳；原 PR 状态仍为 {state}。</sub>"
-            if p['url'] in curation['notes']:
-                body[-1] += '<br /><sub>' + curation['notes'][p['url']] + '</sub>'
-            body.append('')
-        if not rows:
-            body += ['暂无。', '']
-        body += ['</details>', '']
-    body += ['<details>', f'<summary>经其他 PR 采纳的贡献与来源 · {len(adoptions)}</summary>', '',
-             '<sub>这是独立的贡献证据，不是额外的 PR 状态。只有明确收录且目标 PR 已合并才展示。</sub>', '']
+    body = ['<details>', f'<summary>查看本人已合并 PR · {len(prs)}</summary>', '',
+            '<sub>按合并时间排序。</sub>', '']
+    for p in sorted(prs, key=lambda p: (p['merged_at'], p['url']), reverse=True):
+        body += [f"- **[{p['repo']}#{p['number']}]({p['url']})**<br />{escape(p['title'])}", '']
+    body += ['</details>', '', '### 经维护者 PR / commit 采纳', '',
+             '<sub>以下原 PR 未直接合并；保留原始提交、维护者接续 PR 或合入 commit 的证据链接。</sub>', '']
     for a in adoptions:
-        source = next(p for p in prs if p['url'] == a['source'])
-        body += [f"- **[{source['repo']}#{source['number']}]({a['source']})** → [#{a['target'].rsplit('/',1)[1]}]({a['target']})：{a['description'].strip()}", '']
-    body += ['</details>', '', '<details>', '<summary>部分已合入改进说明（人工整理）</summary>', '']
-    adopted_repos = {next(p['repo'] for p in prs if p['url'] == a['source']) for a in adoptions}
+        target_label = ('#' + a['target'].rsplit('/', 1)[1] if a['target_kind'] == 'pull'
+                        else 'commit ' + a['target'].rsplit('/', 1)[1][:7])
+        body += [f"- **[{a['source_repo']}#{a['source_number']}]({a['source']})** → [{target_label}]({a['target']})：{a['description'].strip()}<br /><sub>原 PR：{a['source_state']}；采纳结果已合入上游，不计作本人 PR 直接合并。</sub>", '']
+    if not adoptions:
+        body += ['暂无已核实的接续采纳。', '']
+    body += ['<details>', '<summary>部分已合入改进说明（人工整理）</summary>', '']
     for repo, project in curation['projects'].items():
-        if any(p['state'] == 'Merged' for p in repos.get(repo, [])) or repo in adopted_repos:
+        if repo in all_repos:
             body.append(f"- [{project['name']}](https://github.com/{repo})：{project['highlights']}")
     body += ['', '</details>']
     return replace_region(text, 'PR_LIST', '\n'.join(body))
@@ -166,7 +178,7 @@ def sync(root=ROOT, get=api):
     adoptions = verified_adoptions(prs, curation, get)
     snapshot_path = root / 'data/pull-requests.json'
     old = json.loads(snapshot_path.read_text()) if snapshot_path.exists() else {}
-    data = {'pull_requests': prs, 'verified_adoptions': adoptions}
+    data = {'scope': 'merged-and-evidenced-adoptions', 'pull_requests': prs, 'verified_adoptions': adoptions}
     same = all(old.get(k) == v for k, v in data.items())
     changed_at = old['changed_at'] if same else datetime.now(timezone.utc).isoformat(timespec='seconds')
     snapshot = dict(changed_at=changed_at, **data)

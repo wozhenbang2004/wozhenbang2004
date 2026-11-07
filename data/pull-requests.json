@@ -1,15 +1,7 @@
 {
-  "changed_at": "2026-11-07T02:59:45+00:00",
+  "changed_at": "2026-11-07T03:06:49+00:00",
+  "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
-    {
-      "url": "https://github.com/AstrBotDevs/AstrBot/pull/10853",
-      "repo": "AstrBotDevs/AstrBot",
-      "number": 10853,
-      "title": "fix(provider): omit empty user messages from Anthropic requests",
-      "state": "Open",
-      "updated_at": "2026-10-29T14:17:57Z",
-      "merged_at": null
-    },
     {
       "url": "https://github.com/AstrBotDevs/AstrBot/pull/10860",
       "repo": "AstrBotDevs/AstrBot",
@@ -20,15 +12,6 @@
       "merged_at": "2026-11-05T00:34:23Z"
     },
     {
-      "url": "https://github.com/AstrBotDevs/AstrBot/pull/10863",
-      "repo": "AstrBotDevs/AstrBot",
-      "number": 10863,
-      "title": "fix: preserve dates and message times in group context",
-      "state": "Open",
-      "updated_at": "2026-10-29T17:57:04Z",
-      "merged_at": null
-    },
-    {
       "url": "https://github.com/AstrBotDevs/AstrBot/pull/10877",
       "repo": "AstrBotDevs/AstrBot",
       "number": 10877,
@@ -36,24 +19,6 @@
       "state": "Merged",
       "updated_at": "2026-11-01T05:15:36Z",
       "merged_at": "2026-11-01T05:15:35Z"
-    },
-    {
-      "url": "https://github.com/AstrBotDevs/AstrBot/pull/10938",
-      "repo": "AstrBotDevs/AstrBot",
-      "number": 10938,
-      "title": "fix(kb): honor the Markdown heading depth limit",
-      "state": "Open",
-      "updated_at": "2026-11-01T16:32:53Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/AstrBotDevs/AstrBot/pull/10942",
-      "repo": "AstrBotDevs/AstrBot",
-      "number": 10942,
-      "title": "fix(dashboard): render nested template lists in plugin configuration",
-      "state": "Open",
-      "updated_at": "2026-11-01T19:01:06Z",
-      "merged_at": null
     },
     {
       "url": "https://github.com/FasterXML/jackson-databind/pull/6368",
@@ -101,69 +66,6 @@
       "merged_at": "2026-11-03T21:41:56Z"
     },
     {
-      "url": "https://github.com/FasterXML/jackson-databind/pull/6377",
-      "repo": "FasterXML/jackson-databind",
-      "number": 6377,
-      "title": "Fix skipping structured extra values in array-shaped builders",
-      "state": "Closed",
-      "updated_at": "2026-11-03T03:31:30Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/FasterXML/jackson-databind/pull/6378",
-      "repo": "FasterXML/jackson-databind",
-      "number": 6378,
-      "title": "Wrap unknown-property handler exceptions with bean and property paths",
-      "state": "Open",
-      "updated_at": "2026-11-07T02:07:09Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/FasterXML/jackson-databind/pull/6380",
-      "repo": "FasterXML/jackson-databind",
-      "number": 6380,
-      "title": "Reuse cached serializers for dynamic converter output types",
-      "state": "Closed",
-      "updated_at": "2026-11-03T04:02:18Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/FasterXML/jackson-databind/pull/6381",
-      "repo": "FasterXML/jackson-databind",
-      "number": 6381,
-      "title": "Honor inherited type names when serializing discovered sealed subtypes",
-      "state": "Open",
-      "updated_at": "2026-11-05T04:10:00Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/FasterXML/jackson-databind/pull/6382",
-      "repo": "FasterXML/jackson-databind",
-      "number": 6382,
-      "title": "Honor keyUsing on JsonValue map accessors",
-      "state": "Open",
-      "updated_at": "2026-11-07T00:15:56Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/FasterXML/jackson-databind/pull/6389",
-      "repo": "FasterXML/jackson-databind",
-      "number": 6389,
-      "title": "Fix updates of non-public records",
-      "state": "Closed",
-      "updated_at": "2026-11-03T22:02:52Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/FasterXML/jackson-databind/pull/6390",
-      "repo": "FasterXML/jackson-databind",
-      "number": 6390,
-      "title": "Document container serializer precedence",
-      "state": "Draft",
-      "updated_at": "2026-11-03T02:11:51Z",
-      "merged_at": null
-    },
-    {
       "url": "https://github.com/FasterXML/jackson-databind/pull/6406",
       "repo": "FasterXML/jackson-databind",
       "number": 6406,
@@ -171,15 +73,6 @@
       "state": "Merged",
       "updated_at": "2026-11-07T01:45:44Z",
       "merged_at": "2026-11-07T01:45:43Z"
-    },
-    {
-      "url": "https://github.com/FasterXML/jackson-databind/pull/6407",
-      "repo": "FasterXML/jackson-databind",
-      "number": 6407,
-      "title": "Preserve buffered properties in immutable creator-based builders",
-      "state": "Open",
-      "updated_at": "2026-11-05T03:41:55Z",
-      "merged_at": null
     },
     {
       "url": "https://github.com/FasterXML/jackson-dataformats-text/pull/772",
@@ -191,148 +84,13 @@
       "merged_at": "2026-11-01T17:24:20Z"
     },
     {
-      "url": "https://github.com/JetBrains/koog/pull/2323",
-      "repo": "JetBrains/koog",
-      "number": 2323,
-      "title": "fix(prompt): preserve cached response metadata",
-      "state": "Open",
-      "updated_at": "2026-10-30T21:15:21Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/Mirascope/mirascope/pull/2951",
-      "repo": "Mirascope/mirascope",
-      "number": 2951,
-      "title": "fix(tools): preserve underscore-prefixed parameter names",
-      "state": "Open",
-      "updated_at": "2026-10-28T14:31:15Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/OpenFeign/feign/pull/3665",
-      "repo": "OpenFeign/feign",
-      "number": 3665,
-      "title": "Recognize HTTP URI schemes without regard to case",
-      "state": "Open",
-      "updated_at": "2026-11-05T11:46:47Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/PrefectHQ/fastmcp/pull/6137",
-      "repo": "PrefectHQ/fastmcp",
-      "number": 6137,
-      "title": "Fix hydration of mutually recursive schema types",
-      "state": "Open",
-      "updated_at": "2026-11-05T18:16:20Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/Wei-Shaw/sub2api/pull/8408",
-      "repo": "Wei-Shaw/sub2api",
-      "number": 8408,
-      "title": "fix(gateway): honor explicit zero Anthropic input usage",
-      "state": "Open",
-      "updated_at": "2026-11-04T14:31:16Z",
-      "merged_at": null
-    },
-    {
       "url": "https://github.com/Wei-Shaw/sub2api/pull/8420",
       "repo": "Wei-Shaw/sub2api",
       "number": 8420,
       "title": "fix(anthropic): omit beta query for Cloudflare REST messages",
-      "state": "Open",
-      "updated_at": "2026-11-04T14:31:15Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/Wei-Shaw/sub2api/pull/8422",
-      "repo": "Wei-Shaw/sub2api",
-      "number": 8422,
-      "title": "fix(channel-monitor): support Grok Responses probes",
-      "state": "Open",
-      "updated_at": "2026-11-04T14:31:15Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/ag2ai/ag2/pull/3532",
-      "repo": "ag2ai/ag2",
-      "number": 3532,
-      "title": "fix(events): restore non-init dataclass fields during deserialization",
-      "state": "Open",
-      "updated_at": "2026-10-29T15:52:30Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/alibaba/druid/pull/6744",
-      "repo": "alibaba/druid",
-      "number": 6744,
-      "title": "fix(pool): release prepared statements after reset failures",
-      "state": "Open",
-      "updated_at": "2026-11-02T07:06:55Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/alibaba/druid/pull/6746",
-      "repo": "alibaba/druid",
-      "number": 6746,
-      "title": "fix(bigquery): preserve UNNEST offset alias ownership when cloning",
-      "state": "Open",
-      "updated_at": "2026-11-05T03:59:32Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/alibaba/fastjson2/pull/7937",
-      "repo": "alibaba/fastjson2",
-      "number": 7937,
-      "title": "fix: isolate ASM class loaders for compatible SerializeConfig",
-      "state": "Open",
-      "updated_at": "2026-10-30T02:11:24Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/alibaba/fastjson2/pull/7949",
-      "repo": "alibaba/fastjson2",
-      "number": 7949,
-      "title": "fix: resolve negative indexes in JSONPath scalar extraction",
-      "state": "Open",
-      "updated_at": "2026-11-06T08:28:21Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/anomalyco/opencode/pull/60125",
-      "repo": "anomalyco/opencode",
-      "number": 60125,
-      "title": "fix(core): preserve pathless MCP OAuth resources",
-      "state": "Open",
-      "updated_at": "2026-10-31T09:04:34Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/anomalyco/opencode/pull/60314",
-      "repo": "anomalyco/opencode",
-      "number": 60314,
-      "title": "fix(acp): normalize local file resource URIs",
-      "state": "Open",
-      "updated_at": "2026-10-29T17:40:11Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/anomalyco/opencode/pull/60353",
-      "repo": "anomalyco/opencode",
-      "number": 60353,
-      "title": "fix(app): preserve MCP elicitation line breaks",
-      "state": "Open",
-      "updated_at": "2026-11-04T20:21:19Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/apache/dubbo-spi-extensions/pull/673",
-      "repo": "apache/dubbo-spi-extensions",
-      "number": 673,
-      "title": "[Dubbo-16573] Resume Consul watches after transient errors",
-      "state": "Open",
-      "updated_at": "2026-11-05T04:40:33Z",
-      "merged_at": null
+      "state": "Merged",
+      "updated_at": "2026-11-07T03:04:06Z",
+      "merged_at": "2026-11-07T03:03:43Z"
     },
     {
       "url": "https://github.com/apache/dubbo/pull/16562",
@@ -342,24 +100,6 @@
       "state": "Merged",
       "updated_at": "2026-10-30T07:17:41Z",
       "merged_at": "2026-10-30T07:17:41Z"
-    },
-    {
-      "url": "https://github.com/apache/dubbo/pull/16568",
-      "repo": "apache/dubbo",
-      "number": 16568,
-      "title": "Preserve concurrent replacements during cache expiration",
-      "state": "Open",
-      "updated_at": "2026-11-02T10:11:08Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/astaxie/TokenHub/pull/406",
-      "repo": "astaxie/TokenHub",
-      "number": 406,
-      "title": "fix(catalog): accept slug-only model discovery entries",
-      "state": "Open",
-      "updated_at": "2026-10-28T17:12:08Z",
-      "merged_at": null
     },
     {
       "url": "https://github.com/astaxie/TokenHub/pull/408",
@@ -389,33 +129,6 @@
       "merged_at": "2026-11-02T03:26:19Z"
     },
     {
-      "url": "https://github.com/brettwooldridge/HikariCP/pull/2424",
-      "repo": "brettwooldridge/HikariCP",
-      "number": 2424,
-      "title": "Allow shutdown when close starts with an interrupt",
-      "state": "Open",
-      "updated_at": "2026-10-31T09:38:41Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/charmbracelet/crush/pull/4211",
-      "repo": "charmbracelet/crush",
-      "number": 4211,
-      "title": "fix(bash): preserve workspace environment in tool execution",
-      "state": "Open",
-      "updated_at": "2026-11-02T07:41:44Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/cloudwego/eino-ext/pull/1044",
-      "repo": "cloudwego/eino-ext",
-      "number": 1044,
-      "title": "fix(wikipedia): make the search example pass go vet",
-      "state": "Open",
-      "updated_at": "2026-10-30T17:51:18Z",
-      "merged_at": null
-    },
-    {
       "url": "https://github.com/danielmiessler/Fabric/pull/2321",
       "repo": "danielmiessler/Fabric",
       "number": 2321,
@@ -432,78 +145,6 @@
       "state": "Merged",
       "updated_at": "2026-10-30T11:34:17Z",
       "merged_at": "2026-10-30T11:34:17Z"
-    },
-    {
-      "url": "https://github.com/deepset-ai/haystack/pull/13529",
-      "repo": "deepset-ai/haystack",
-      "number": 13529,
-      "title": "fix: reject positional-only tool parameters at creation",
-      "state": "Open",
-      "updated_at": "2026-11-04T12:27:01Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/google-gemini/gemini-cli/pull/30019",
-      "repo": "google-gemini/gemini-cli",
-      "number": 30019,
-      "title": "fix(core): preserve session history during tool output masking",
-      "state": "Open",
-      "updated_at": "2026-11-06T01:37:14Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/google-gemini/gemini-cli/pull/30022",
-      "repo": "google-gemini/gemini-cli",
-      "number": 30022,
-      "title": "fix(cli): run ACP tool calls through hooks",
-      "state": "Open",
-      "updated_at": "2026-11-06T01:37:08Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/google/error-prone/pull/6285",
-      "repo": "google/error-prone",
-      "number": 6285,
-      "title": "Recognize constant values in SuppressWarningsDeprecated",
-      "state": "Closed",
-      "updated_at": "2026-11-03T17:41:21Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/google/error-prone/pull/6286",
-      "repo": "google/error-prone",
-      "number": 6286,
-      "title": "Recognize compile-time TimeUnit conversion constants",
-      "state": "Open",
-      "updated_at": "2026-11-04T11:41:11Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/google/gson/pull/3157",
-      "repo": "google/gson",
-      "number": 3157,
-      "title": "Avoid quadratic clearing of JsonArray sublists",
-      "state": "Open",
-      "updated_at": "2026-10-30T11:42:15Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/google/guava/pull/8807",
-      "repo": "google/guava",
-      "number": 8807,
-      "title": "Fix primitive array rotations at Integer.MIN_VALUE",
-      "state": "Closed",
-      "updated_at": "2026-10-31T02:20:41Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/google/guava/pull/8817",
-      "repo": "google/guava",
-      "number": 8817,
-      "title": "Prevent overflow in finite quantile interpolation",
-      "state": "Open",
-      "updated_at": "2026-11-01T16:21:42Z",
-      "merged_at": null
     },
     {
       "url": "https://github.com/gptme/gptme/pull/4520",
@@ -533,123 +174,6 @@
       "merged_at": "2026-11-03T12:22:56Z"
     },
     {
-      "url": "https://github.com/immerjs/immer/pull/1354",
-      "repo": "immerjs/immer",
-      "number": 1354,
-      "title": "fix: preserve enumerable symbols when cloning patch values",
-      "state": "Open",
-      "updated_at": "2026-11-06T14:55:04Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/immutable-js/immutable-js/pull/2319",
-      "repo": "immutable-js/immutable-js",
-      "number": 2319,
-      "title": "Fix indexed skipWhile iterators",
-      "state": "Open",
-      "updated_at": "2026-11-06T21:02:51Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/inikulin/parse5/pull/1912",
-      "repo": "inikulin/parse5",
-      "number": 1912,
-      "title": "test: replace forked html5lib fixtures with the upstream corpus",
-      "state": "Open",
-      "updated_at": "2026-11-03T19:15:30Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/javaparser/javaparser/pull/5219",
-      "repo": "javaparser/javaparser",
-      "number": 5219,
-      "title": "Handle positional reachability for blocks and lambda bodies",
-      "state": "Open",
-      "updated_at": "2026-11-03T19:11:06Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/jquense/yup/pull/2362",
-      "repo": "jquense/yup",
-      "number": 2362,
-      "title": "fix: guard primitive values in object.from paths",
-      "state": "Open",
-      "updated_at": "2026-11-06T17:49:46Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/koajs/koa/pull/2040",
-      "repo": "koajs/koa",
-      "number": 2040,
-      "title": "fix: preserve a zero subdomainOffset option",
-      "state": "Open",
-      "updated_at": "2026-11-06T21:31:28Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/langchain-ai/langgraphjs/pull/3148",
-      "repo": "langchain-ai/langgraphjs",
-      "number": 3148,
-      "title": "fix(langgraph-checkpoint): handle empty MemorySaver namespaces",
-      "state": "Open",
-      "updated_at": "2026-11-05T12:15:30Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/langchain-ai/langgraphjs/pull/3171",
-      "repo": "langchain-ai/langgraphjs",
-      "number": 3171,
-      "title": "fix(langgraph-checkpoint-postgres): stabilize paginated store searches",
-      "state": "Open",
-      "updated_at": "2026-11-01T16:47:58Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/langchain4j/langchain4j/pull/6898",
-      "repo": "langchain4j/langchain4j",
-      "number": 6898,
-      "title": "fix(http-client): copy headers passed to request builder",
-      "state": "Open",
-      "updated_at": "2026-10-28T15:25:48Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/langchain4j/langchain4j/pull/6925",
-      "repo": "langchain4j/langchain4j",
-      "number": 6925,
-      "title": "Unify AI Service return type classification, including images",
-      "state": "Open",
-      "updated_at": "2026-11-04T19:31:11Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/langchain4j/langchain4j/pull/6953",
-      "repo": "langchain4j/langchain4j",
-      "number": 6953,
-      "title": "docs: correct Gemini File API upload example",
-      "state": "Open",
-      "updated_at": "2026-11-04T11:39:12Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/langchain4j/langchain4j/pull/6988",
-      "repo": "langchain4j/langchain4j",
-      "number": 6988,
-      "title": "Fix InMemoryEmbeddingStore.addAll null contents and empty batches",
-      "state": "Open",
-      "updated_at": "2026-11-05T02:26:35Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/langchain4j/langchain4j/pull/6989",
-      "repo": "langchain4j/langchain4j",
-      "number": 6989,
-      "title": "Fix preservation of additionalProperties in tool schemas",
-      "state": "Open",
-      "updated_at": "2026-11-05T06:03:44Z",
-      "merged_at": null
-    },
-    {
       "url": "https://github.com/lich0821/ccNexus/pull/157",
       "repo": "lich0821/ccNexus",
       "number": 157,
@@ -677,15 +201,6 @@
       "merged_at": "2026-11-02T07:25:35Z"
     },
     {
-      "url": "https://github.com/mark3labs/mcp-go/pull/1142",
-      "repo": "mark3labs/mcp-go",
-      "number": 1142,
-      "title": "fix(server): preserve escaped protected resource metadata paths",
-      "state": "Closed",
-      "updated_at": "2026-10-30T21:11:22Z",
-      "merged_at": null
-    },
-    {
       "url": "https://github.com/mark3labs/mcp-go/pull/1144",
       "repo": "mark3labs/mcp-go",
       "number": 1144,
@@ -695,69 +210,6 @@
       "merged_at": "2026-11-02T10:24:48Z"
     },
     {
-      "url": "https://github.com/maximhq/bifrost/pull/9259",
-      "repo": "maximhq/bifrost",
-      "number": 9259,
-      "title": "[fix]: preserve Mistral non-streaming thinking content",
-      "state": "Open",
-      "updated_at": "2026-11-04T23:58:15Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/meta/lexical/pull/9614",
-      "repo": "meta/lexical",
-      "number": 9614,
-      "title": "[lexical][lexical-y] Bug Fix: Continue notifying update listeners after failures",
-      "state": "Open",
-      "updated_at": "2026-11-05T19:39:57Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/meta/lexical/pull/9668",
-      "repo": "meta/lexical",
-      "number": 9668,
-      "title": "[lexical-selection] Bug Fix: Preserve mixed-block content when wrapping selections",
-      "state": "Open",
-      "updated_at": "2026-11-03T07:51:11Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/meta/lexical/pull/9730",
-      "repo": "meta/lexical",
-      "number": 9730,
-      "title": "[lexical-text] Bug Fix: preserve NodeState across ambiguous repeated-character insertions",
-      "state": "Open",
-      "updated_at": "2026-11-04T20:34:50Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/meta/lexical/pull/9740",
-      "repo": "meta/lexical",
-      "number": 9740,
-      "title": "[lexical-text] Bug Fix: Preserve formatting next to hashtags",
-      "state": "Open",
-      "updated_at": "2026-11-05T19:42:12Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/microsoft/vscode/pull/344888",
-      "repo": "microsoft/vscode",
-      "number": 344888,
-      "title": "agentHost: preserve selection answer kinds for freeform replies",
-      "state": "Open",
-      "updated_at": "2026-10-29T04:16:41Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/microsoft/vscode/pull/344890",
-      "repo": "microsoft/vscode",
-      "number": 344890,
-      "title": "agentHost: retry failed Mission Control session registration",
-      "state": "Open",
-      "updated_at": "2026-10-29T04:16:38Z",
-      "merged_at": null
-    },
-    {
       "url": "https://github.com/microsoft/vscode/pull/344892",
       "repo": "microsoft/vscode",
       "number": 344892,
@@ -765,42 +217,6 @@
       "state": "Merged",
       "updated_at": "2026-10-29T19:00:09Z",
       "merged_at": "2026-10-29T18:58:54Z"
-    },
-    {
-      "url": "https://github.com/microsoft/vscode/pull/345127",
-      "repo": "microsoft/vscode",
-      "number": 345127,
-      "title": "Fix authentication provider cleanup when an extension host stops",
-      "state": "Open",
-      "updated_at": "2026-11-03T17:02:22Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/mobxjs/mobx/pull/4769",
-      "repo": "mobxjs/mobx",
-      "number": 4769,
-      "title": "fix: restore dependency tracking after observer errors",
-      "state": "Open",
-      "updated_at": "2026-11-06T20:25:02Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/modelcontextprotocol/typescript-sdk/pull/3120",
-      "repo": "modelcontextprotocol/typescript-sdk",
-      "number": 3120,
-      "title": "fix: preserve schema-twin bytes during Git checkout",
-      "state": "Open",
-      "updated_at": "2026-11-01T16:52:03Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/motdotla/dotenv/pull/1081",
-      "repo": "motdotla/dotenv",
-      "number": 1081,
-      "title": "fix(cli): send debug diagnostics to stderr",
-      "state": "Open",
-      "updated_at": "2026-11-05T03:55:22Z",
-      "merged_at": null
     },
     {
       "url": "https://github.com/mybatis/mybatis-3/pull/3840",
@@ -821,24 +237,6 @@
       "merged_at": "2026-11-01T16:35:26Z"
     },
     {
-      "url": "https://github.com/mybatis/mybatis-3/pull/3883",
-      "repo": "mybatis/mybatis-3",
-      "number": 3883,
-      "title": "Resolve nested type arguments across generic inheritance",
-      "state": "Open",
-      "updated_at": "2026-11-02T08:43:31Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/mybatis/mybatis-3/pull/3896",
-      "repo": "mybatis/mybatis-3",
-      "number": 3896,
-      "title": "Honor non-positive row limits in cursors",
-      "state": "Open",
-      "updated_at": "2026-11-05T01:28:54Z",
-      "merged_at": null
-    },
-    {
       "url": "https://github.com/netty/netty/pull/18271",
       "repo": "netty/netty",
       "number": 18271,
@@ -848,96 +246,6 @@
       "merged_at": "2026-11-05T19:09:27Z"
     },
     {
-      "url": "https://github.com/netty/netty/pull/18272",
-      "repo": "netty/netty",
-      "number": 18272,
-      "title": "Handle zero-length and invalid bulk reads in ByteBufInputStream",
-      "state": "Open",
-      "updated_at": "2026-11-05T21:52:24Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/netty/netty/pull/18294",
-      "repo": "netty/netty",
-      "number": 18294,
-      "title": "Fix float matching in read-only HTTP/2 headers",
-      "state": "Open",
-      "updated_at": "2026-11-06T03:26:50Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/netty/netty/pull/18295",
-      "repo": "netty/netty",
-      "number": 18295,
-      "title": "Canonicalize NaN values written by ByteBufOutputStream",
-      "state": "Open",
-      "updated_at": "2026-11-06T03:51:22Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/nodejs/undici/pull/6164",
-      "repo": "nodejs/undici",
-      "number": 6164,
-      "title": "fix(websocket): accept null WebSocketStream option dictionaries",
-      "state": "Open",
-      "updated_at": "2026-11-05T09:36:38Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/npm/cli/pull/10229",
-      "repo": "npm/cli",
-      "number": 10229,
-      "title": "fix(pkg): handle null values in property queries",
-      "state": "Open",
-      "updated_at": "2026-11-05T03:34:31Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/ollama/ollama-js/pull/313",
-      "repo": "ollama/ollama-js",
-      "number": 313,
-      "title": "fix(types): expose cached prompt token counts",
-      "state": "Open",
-      "updated_at": "2026-10-28T15:14:43Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/ollama/ollama/pull/19536",
-      "repo": "ollama/ollama",
-      "number": 19536,
-      "title": "api: return an error for missing scalar parameter values",
-      "state": "Open",
-      "updated_at": "2026-11-05T03:52:56Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/pmd/pmd/pull/7283",
-      "repo": "pmd/pmd",
-      "number": 7283,
-      "title": "[java] Handle bare blocks in AvoidBranchingStatementAsLastInLoop",
-      "state": "Open",
-      "updated_at": "2026-11-03T17:59:09Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/pmd/pmd/pull/7284",
-      "repo": "pmd/pmd",
-      "number": 7284,
-      "title": "[java] Fix UseArraysAsList through bare blocks",
-      "state": "Open",
-      "updated_at": "2026-11-03T19:10:27Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/pmd/pmd/pull/7285",
-      "repo": "pmd/pmd",
-      "number": 7285,
-      "title": "[java] Handle bare blocks in finalizer rules",
-      "state": "Open",
-      "updated_at": "2026-11-03T19:14:39Z",
-      "merged_at": null
-    },
-    {
       "url": "https://github.com/postcss/autoprefixer/pull/1563",
       "repo": "postcss/autoprefixer",
       "number": 1563,
@@ -945,60 +253,6 @@
       "state": "Merged",
       "updated_at": "2026-11-06T21:23:12Z",
       "merged_at": "2026-11-06T21:23:11Z"
-    },
-    {
-      "url": "https://github.com/postcss/postcss-nested/pull/181",
-      "repo": "postcss/postcss-nested",
-      "number": 181,
-      "title": "Fix declaration order after @at-root",
-      "state": "Open",
-      "updated_at": "2026-11-05T23:29:04Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/postcss/postcss-selector-parser/pull/354",
-      "repo": "postcss/postcss-selector-parser",
-      "number": 354,
-      "title": "fix: preserve selector delimiters after escaped backslashes",
-      "state": "Open",
-      "updated_at": "2026-11-05T03:02:36Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/postcss/postcss/pull/2187",
-      "repo": "postcss/postcss",
-      "number": 2187,
-      "title": "Fix CRLF line break cleanup before source map annotations",
-      "state": "Open",
-      "updated_at": "2026-11-07T00:43:51Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/preactjs/preact/pull/5352",
-      "repo": "preactjs/preact",
-      "number": 5352,
-      "title": "Normalize Document containers before invoking root hooks",
-      "state": "Closed",
-      "updated_at": "2026-11-06T15:19:18Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/prestodb/presto/pull/28748",
-      "repo": "prestodb/presto",
-      "number": 28748,
-      "title": "fix(plugin-jdbc): Package geometry runtime dependencies",
-      "state": "Open",
-      "updated_at": "2026-10-30T19:18:59Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/projectlombok/lombok/pull/4102",
-      "repo": "projectlombok/lombok",
-      "number": 4102,
-      "title": "Clarify field selection for AllArgsConstructor",
-      "state": "Open",
-      "updated_at": "2026-11-03T01:52:57Z",
-      "merged_at": null
     },
     {
       "url": "https://github.com/react-hook-form/react-hook-form/pull/13987",
@@ -1019,105 +273,6 @@
       "merged_at": "2026-11-06T22:18:17Z"
     },
     {
-      "url": "https://github.com/react-hook-form/react-hook-form/pull/13996",
-      "repo": "react-hook-form/react-hook-form",
-      "number": 13996,
-      "title": "fix(useController): preserve values when shouldUnregister changes",
-      "state": "Open",
-      "updated_at": "2026-11-06T04:01:04Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/react-hook-form/react-hook-form/pull/13997",
-      "repo": "react-hook-form/react-hook-form",
-      "number": 13997,
-      "title": "fix(form): honor encType when selecting request body",
-      "state": "Open",
-      "updated_at": "2026-11-06T22:19:28Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/react-hook-form/react-hook-form/pull/13998",
-      "repo": "react-hook-form/react-hook-form",
-      "number": 13998,
-      "title": "fix(form): handle nullish resolver outputs",
-      "state": "Closed",
-      "updated_at": "2026-11-06T22:16:00Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/react-hook-form/react-hook-form/pull/13999",
-      "repo": "react-hook-form/react-hook-form",
-      "number": 13999,
-      "title": "fix(handleSubmit): accept nullish outputs with disabled fields",
-      "state": "Open",
-      "updated_at": "2026-11-06T11:09:07Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/react-hook-form/react-hook-form/pull/14000",
-      "repo": "react-hook-form/react-hook-form",
-      "number": 14000,
-      "title": "fix(setValue): touch registered field array items",
-      "state": "Closed",
-      "updated_at": "2026-11-06T22:20:35Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/react-hook-form/react-hook-form/pull/14002",
-      "repo": "react-hook-form/react-hook-form",
-      "number": 14002,
-      "title": "fix: omit disabled options from multi-select changes",
-      "state": "Open",
-      "updated_at": "2026-11-06T22:23:19Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/react/react/pull/38113",
-      "repo": "react/react",
-      "number": 38113,
-      "title": "[DOM] Avoid spurious change replay for duplicate select values",
-      "state": "Open",
-      "updated_at": "2026-11-05T11:10:13Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/redisson/redisson/pull/7411",
-      "repo": "redisson/redisson",
-      "number": 7411,
-      "title": "fix: clear READONLY errors between batch retry attempts",
-      "state": "Open",
-      "updated_at": "2026-10-30T08:21:02Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/reduxjs/redux-toolkit/pull/5595",
-      "repo": "reduxjs/redux-toolkit",
-      "number": 5595,
-      "title": "Fix fetchBaseQuery timeouts when a request provides a signal",
-      "state": "Open",
-      "updated_at": "2026-11-06T18:47:29Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/resilience4j/resilience4j/pull/2579",
-      "repo": "resilience4j/resilience4j",
-      "number": 2579,
-      "title": "Fix null termination in ConcurrentEvictingQueue.toArray",
-      "state": "Open",
-      "updated_at": "2026-11-05T05:39:29Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/router-for-me/CLIProxyAPI/pull/3003",
-      "repo": "router-for-me/CLIProxyAPI",
-      "number": 3003,
-      "title": "fix(codex): stabilize OpenCode prompt caching",
-      "state": "Closed",
-      "updated_at": "2026-11-01T04:05:09Z",
-      "merged_at": null
-    },
-    {
       "url": "https://github.com/router-for-me/CLIProxyAPI/pull/7095",
       "repo": "router-for-me/CLIProxyAPI",
       "number": 7095,
@@ -1125,15 +280,6 @@
       "state": "Merged",
       "updated_at": "2026-10-29T11:29:41Z",
       "merged_at": "2026-10-29T11:29:41Z"
-    },
-    {
-      "url": "https://github.com/run-llama/llama_index/pull/23769",
-      "repo": "run-llama/llama_index",
-      "number": 23769,
-      "title": "fix(lmstudio): send inference parameters in OpenAI payload",
-      "state": "Open",
-      "updated_at": "2026-10-28T15:16:13Z",
-      "merged_at": null
     },
     {
       "url": "https://github.com/sirmalloc/ccstatusline/pull/757",
@@ -1154,78 +300,6 @@
       "merged_at": "2026-11-05T16:09:42Z"
     },
     {
-      "url": "https://github.com/solidjs/solid/pull/4539",
-      "repo": "solidjs/solid",
-      "number": 4539,
-      "title": "fix(signals): retain query observation during optimistic rerenders",
-      "state": "Closed",
-      "updated_at": "2026-11-01T03:59:42Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/solidjs/solid/pull/4703",
-      "repo": "solidjs/solid",
-      "number": 4703,
-      "title": "fix(store): preserve class accessor precedence in createMutable",
-      "state": "Open",
-      "updated_at": "2026-11-06T21:08:31Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/spotbugs/spotbugs/pull/4446",
-      "repo": "spotbugs/spotbugs",
-      "number": 4446,
-      "title": "Avoid constructor throw warnings for requireNonNull(this)",
-      "state": "Open",
-      "updated_at": "2026-11-04T17:47:33Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/spring-cloud/spring-cloud-gateway/pull/4351",
-      "repo": "spring-cloud/spring-cloud-gateway",
-      "number": 4351,
-      "title": "Retain form values that also appear in query parameters",
-      "state": "Open",
-      "updated_at": "2026-10-30T22:08:48Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/spring-projects/spring-ai/pull/7267",
-      "repo": "spring-projects/spring-ai",
-      "number": 7267,
-      "title": "Fix optional auto-configuration metadata introspection",
-      "state": "Open",
-      "updated_at": "2026-10-29T20:40:17Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/spring-projects/spring-ai/pull/7304",
-      "repo": "spring-projects/spring-ai",
-      "number": 7304,
-      "title": "Support Mistral OCR document annotations",
-      "state": "Open",
-      "updated_at": "2026-11-03T01:35:12Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/sveltejs/svelte/pull/19195",
-      "repo": "sveltejs/svelte",
-      "number": 19195,
-      "title": "fix: parse case-insensitive CSS url functions",
-      "state": "Open",
-      "updated_at": "2026-11-06T16:39:21Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/testcontainers/testcontainers-java/pull/12155",
-      "repo": "testcontainers/testcontainers-java",
-      "number": 12155,
-      "title": "Reject repeated SHA-256 digests in DockerImageName",
-      "state": "Open",
-      "updated_at": "2026-11-05T03:14:42Z",
-      "merged_at": null
-    },
-    {
       "url": "https://github.com/tlaplus/tlaplus/pull/1507",
       "repo": "tlaplus/tlaplus",
       "number": 1507,
@@ -1233,82 +307,44 @@
       "state": "Merged",
       "updated_at": "2026-11-03T17:53:32Z",
       "merged_at": "2026-11-03T17:53:20Z"
-    },
-    {
-      "url": "https://github.com/unclecode/crawl4ai/pull/2458",
-      "repo": "unclecode/crawl4ai",
-      "number": 2458,
-      "title": "fix: match complex content-type scoring patterns as regex",
-      "state": "Open",
-      "updated_at": "2026-10-28T14:15:45Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/urfave/cli/pull/2527",
-      "repo": "urfave/cli",
-      "number": 2527,
-      "title": "fix: allow inverse bool flag access before parsing",
-      "state": "Open",
-      "updated_at": "2026-11-05T10:43:03Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/vercel/swr/pull/4383",
-      "repo": "vercel/swr",
-      "number": 4383,
-      "title": "fix: discard errors from superseded revalidations",
-      "state": "Open",
-      "updated_at": "2026-11-06T18:15:15Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/vuejs/core/pull/16141",
-      "repo": "vuejs/core",
-      "number": 16141,
-      "title": "fix(runtime-core): preserve falsy slot outlet keys",
-      "state": "Open",
-      "updated_at": "2026-11-05T10:40:59Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/vuejs/core/pull/16162",
-      "repo": "vuejs/core",
-      "number": 16162,
-      "title": "fix(compiler-sfc): avoid hangs when rewriting default export specifiers",
-      "state": "Open",
-      "updated_at": "2026-11-06T14:46:49Z",
-      "merged_at": null
-    },
-    {
-      "url": "https://github.com/wagoodman/dive/pull/734",
-      "repo": "wagoodman/dive",
-      "number": 734,
-      "title": "Reject NaN percentage thresholds in CI rules",
-      "state": "Open",
-      "updated_at": "2026-11-05T05:30:46Z",
-      "merged_at": null
     }
   ],
   "verified_adoptions": [
     {
       "source": "https://github.com/FasterXML/jackson-databind/pull/6389",
       "target": "https://github.com/FasterXML/jackson-databind/pull/6403",
-      "description": "修复非公开 Record 的部分更新。维护者保留原作者提交，补充访问器缓存及发布说明，已合入 `3.x`。"
+      "description": "修复非公开 Record 的部分更新。维护者保留原作者提交，补充访问器缓存及发布说明，已合入 `3.x`。",
+      "source_repo": "FasterXML/jackson-databind",
+      "source_number": 6389,
+      "source_state": "Closed",
+      "target_kind": "pull"
     },
     {
       "source": "https://github.com/FasterXML/jackson-databind/pull/6377",
       "target": "https://github.com/FasterXML/jackson-databind/pull/6391",
-      "description": "修复数组形态 Builder 对额外结构化值的跳过。维护者保留修复、测试与作者提交，补充发布说明，已合入 `3.x`。"
+      "description": "修复数组形态 Builder 对额外结构化值的跳过。维护者保留修复、测试与作者提交，补充发布说明，已合入 `3.x`。",
+      "source_repo": "FasterXML/jackson-databind",
+      "source_number": 6377,
+      "source_state": "Closed",
+      "target_kind": "pull"
     },
     {
       "source": "https://github.com/solidjs/solid/pull/4539",
       "target": "https://github.com/solidjs/solid/pull/4558",
-      "description": "Ryan 接续并完善原修复，保留[作者 commit 22cc9e4](https://github.com/solidjs/solid/commit/22cc9e4c6b097a0b6d7d149013f52f7568fab88d)，已通过 [commit 718ec9c](https://github.com/solidjs/solid/commit/718ec9c218643dfe9943f05d33ccb66db53621c6) 合入 `next`。"
+      "description": "Ryan 接续并完善原修复，保留[作者 commit 22cc9e4](https://github.com/solidjs/solid/commit/22cc9e4c6b097a0b6d7d149013f52f7568fab88d)，已通过 [commit 718ec9c](https://github.com/solidjs/solid/commit/718ec9c218643dfe9943f05d33ccb66db53621c6) 合入 `next`。",
+      "source_repo": "solidjs/solid",
+      "source_number": 4539,
+      "source_state": "Closed",
+      "target_kind": "pull"
     },
     {
       "source": "https://github.com/google/guava/pull/8807",
       "target": "https://github.com/google/guava/pull/8811",
-      "description": "经 Copybara 导入 `master`，[commit c0a8a1e](https://github.com/google/guava/commit/c0a8a1edc69393e8141424037571d9825f5fc0f4) 的 author 关联本账号。"
+      "description": "经 Copybara 导入 `master`，[commit c0a8a1e](https://github.com/google/guava/commit/c0a8a1edc69393e8141424037571d9825f5fc0f4) 的 author 关联本账号。",
+      "source_repo": "google/guava",
+      "source_number": 8807,
+      "source_state": "Closed",
+      "target_kind": "pull"
     }
   ]
 }

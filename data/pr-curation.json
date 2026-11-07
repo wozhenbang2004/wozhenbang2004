@@ -102,12 +102,5 @@
       "target": "https://github.com/google/guava/pull/8811",
       "description": "经 Copybara 导入 `master`，[commit c0a8a1e](https://github.com/google/guava/commit/c0a8a1edc69393e8141424037571d9825f5fc0f4) 的 author 关联本账号。"
     }
-  ],
-  "notes": {
-    "https://github.com/FasterXML/jackson-databind/pull/6380": "维护者接续 PR #6393 也已关闭，问题转至 [issue #6395](https://github.com/FasterXML/jackson-databind/issues/6395) 继续讨论缓存与上下文隔离；未计为已采纳。",
-    "https://github.com/router-for-me/CLIProxyAPI/pull/3003": "已撤回旧混合 PR，保留[关闭说明](https://github.com/router-for-me/CLIProxyAPI/pull/3003#issuecomment-6553195159)；未计为已采纳。",
-    "https://github.com/mark3labs/mcp-go/pull/1142": "由 [#1144](https://github.com/mark3labs/mcp-go/pull/1144) 接续，后者已合并；同一修复只计一次。",
-    "https://github.com/Wei-Shaw/sub2api/pull/8408": "另被第三方 fork [youxuanxue/sub2api#2989](https://github.com/youxuanxue/sub2api/pull/2989) 引用并重新实现，[已合入 main](https://github.com/youxuanxue/sub2api/commit/c108c772b192992c70e77291e06a1c3b949d09fc)。未保留本人 commit，不计入目标上游采纳。",
-    "https://github.com/google/error-prone/pull/6285": "历史关闭记录未有明确采纳证据，不额外计为已采纳。"
-  }
+  ]
 }
