@@ -9,7 +9,7 @@ import sys
 import urllib.parse
 import urllib.request
 from collections import Counter, defaultdict
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timezone
 
 OWNER = 'wozhenbang2004'
 REPO = f'{OWNER}/{OWNER}'
@@ -142,10 +142,8 @@ def render(text, prs, adoptions, curation, changed_at):
         repos[p['repo']].append(p)
     adopted_repos = Counter(a['source_repo'] for a in adoptions)
     all_repos = set(repos) | set(adopted_repos)
-    timestamp = datetime.fromisoformat(changed_at).astimezone(timezone(timedelta(hours=8))).strftime('%Y-%m-%d %H:%M')
     summary = (f"**{len(prs) + len(adoptions)} 项贡献已被上游合入** · **{len(prs)} 条本人 PR 直接合并** · **{len(adoptions)} 项经维护者 PR / commit 采纳**  \n"
                f"**覆盖 {len(all_repos)} 个公开上游仓库**\n\n"
-               f"<sub>每小时自动检查；数据变更于 {timestamp}（北京时间，UTC+8）。仅展示本人向公开外部上游提交且已合并的 PR，以及有明确来源与合入证据的接续采纳。接续采纳保留原 PR 的真实状态，不计作本人 PR 直接合并，同一贡献不重复计数。采纳关系由人工维护证据、自动核对合入状态；已合入开发分支不等于已经发布。GitHub 定时任务可能延迟。</sub>\n\n"
                f"[本人 PR 直接合并记录]({search_link()}) · [同步记录](https://github.com/{REPO}/actions/workflows/sync-pr-status.yml)")
     text = replace_region(text, 'PR_SUMMARY', summary)
     table = ['| 项目 | 本人 PR 直接合并 | 经维护者 PR / commit 采纳 |', '| :--- | ---: | ---: |']

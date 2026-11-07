@@ -146,6 +146,19 @@ class SyncTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 m.render(text, [m.normalize(item())], [], CURATION, DATE)
 
+    def test_removed_summary_explanation_stays_absent_on_regeneration(self):
+        old_note = '<sub>每小时自动检查；数据变更于 2026-11-07 11:06（北京时间，UTC+8）。仅展示本人向公开外部上游提交且已合并的 PR，以及有明确来源与合入证据的接续采纳。接续采纳保留原 PR 的真实状态，不计作本人 PR 直接合并，同一贡献不重复计数。采纳关系由人工维护证据、自动核对合入状态；已合入开发分支不等于已经发布。GitHub 定时任务可能延迟。</sub>'
+        text = TEMPLATE.replace('<!-- PR_SUMMARY_START -->\nold', '<!-- PR_SUMMARY_START -->\n' + old_note)
+        prs = [m.normalize(item())]
+        for changed_at in (DATE, '2026-11-08T00:00:00Z'):
+            text = m.render(text, prs, [], CURATION, changed_at)
+            summary = text.split('<!-- PR_SUMMARY_START -->')[1].split('<!-- PR_SUMMARY_END -->')[0]
+            self.assertNotIn('<sub>', summary)
+            self.assertNotIn('每小时自动检查', text)
+            self.assertNotIn('数据变更于', text)
+            self.assertIn('1 条本人 PR 直接合并', summary)
+            self.assertIn('[同步记录]', summary)
+
     def test_sync_idempotent_and_failure_preserves_files(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
