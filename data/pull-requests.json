@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-07T03:35:53+00:00",
+  "changed_at": "2026-11-07T10:07:38+00:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -273,6 +273,42 @@
       "merged_at": "2026-11-06T22:18:17Z"
     },
     {
+      "url": "https://github.com/react-hook-form/react-hook-form/pull/13996",
+      "repo": "react-hook-form/react-hook-form",
+      "number": 13996,
+      "title": "fix(useController): preserve values when shouldUnregister changes",
+      "state": "Merged",
+      "updated_at": "2026-11-07T06:53:28Z",
+      "merged_at": "2026-11-07T06:53:28Z"
+    },
+    {
+      "url": "https://github.com/react-hook-form/react-hook-form/pull/13997",
+      "repo": "react-hook-form/react-hook-form",
+      "number": 13997,
+      "title": "fix(form): honor encType when selecting request body",
+      "state": "Merged",
+      "updated_at": "2026-11-07T06:47:50Z",
+      "merged_at": "2026-11-07T06:47:50Z"
+    },
+    {
+      "url": "https://github.com/react-hook-form/react-hook-form/pull/13999",
+      "repo": "react-hook-form/react-hook-form",
+      "number": 13999,
+      "title": "fix(handleSubmit): accept nullish outputs with disabled fields",
+      "state": "Merged",
+      "updated_at": "2026-11-07T06:45:05Z",
+      "merged_at": "2026-11-07T06:45:05Z"
+    },
+    {
+      "url": "https://github.com/react-hook-form/react-hook-form/pull/14002",
+      "repo": "react-hook-form/react-hook-form",
+      "number": 14002,
+      "title": "fix: omit disabled options from multi-select changes",
+      "state": "Merged",
+      "updated_at": "2026-11-07T06:34:40Z",
+      "merged_at": "2026-11-07T06:34:40Z"
+    },
+    {
       "url": "https://github.com/router-for-me/CLIProxyAPI/pull/7095",
       "repo": "router-for-me/CLIProxyAPI",
       "number": 7095,
@@ -348,29 +384,29 @@
     }
   ],
   "repo_stars": {
-    "apache/dubbo": 41571,
-    "astaxie/TokenHub": 1424,
-    "AstrBotDevs/AstrBot": 46276,
+    "apache/dubbo": 41572,
+    "astaxie/TokenHub": 1426,
+    "AstrBotDevs/AstrBot": 46321,
     "baomidou/mybatis-plus": 17486,
-    "danielmiessler/Fabric": 44564,
-    "deepset-ai/haystack": 26939,
+    "danielmiessler/Fabric": 44566,
+    "deepset-ai/haystack": 26941,
     "FasterXML/jackson-databind": 3757,
     "FasterXML/jackson-dataformats-text": 454,
     "google/guava": 51921,
-    "gptme/gptme": 4468,
+    "gptme/gptme": 4467,
     "h2database/h2database": 4644,
     "lich0821/ccNexus": 973,
-    "looplj/axonhub": 5435,
+    "looplj/axonhub": 5437,
     "mark3labs/mcp-go": 9224,
-    "microsoft/vscode": 195051,
+    "microsoft/vscode": 195116,
     "mybatis/mybatis-3": 20436,
-    "netty/netty": 35069,
+    "netty/netty": 35070,
     "postcss/autoprefixer": 22197,
-    "react-hook-form/react-hook-form": 44908,
-    "router-for-me/CLIProxyAPI": 57817,
-    "sirmalloc/ccstatusline": 13541,
-    "solidjs/solid": 36335,
+    "react-hook-form/react-hook-form": 44907,
+    "router-for-me/CLIProxyAPI": 57844,
+    "sirmalloc/ccstatusline": 13543,
+    "solidjs/solid": 36336,
     "tlaplus/tlaplus": 3200,
-    "Wei-Shaw/sub2api": 45590
+    "Wei-Shaw/sub2api": 45606
   }
 }
