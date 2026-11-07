@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-07T10:07:38+00:00",
+  "changed_at": "2026-11-07T16:26:34+00:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -384,29 +384,29 @@
     }
   ],
   "repo_stars": {
-    "apache/dubbo": 41572,
-    "astaxie/TokenHub": 1426,
-    "AstrBotDevs/AstrBot": 46321,
+    "apache/dubbo": 41573,
+    "astaxie/TokenHub": 1427,
+    "AstrBotDevs/AstrBot": 46354,
     "baomidou/mybatis-plus": 17486,
-    "danielmiessler/Fabric": 44566,
-    "deepset-ai/haystack": 26941,
-    "FasterXML/jackson-databind": 3757,
+    "danielmiessler/Fabric": 44569,
+    "deepset-ai/haystack": 26940,
+    "FasterXML/jackson-databind": 3758,
     "FasterXML/jackson-dataformats-text": 454,
-    "google/guava": 51921,
-    "gptme/gptme": 4467,
+    "google/guava": 51920,
+    "gptme/gptme": 4468,
     "h2database/h2database": 4644,
     "lich0821/ccNexus": 973,
     "looplj/axonhub": 5437,
-    "mark3labs/mcp-go": 9224,
-    "microsoft/vscode": 195116,
+    "mark3labs/mcp-go": 9225,
+    "microsoft/vscode": 195129,
     "mybatis/mybatis-3": 20436,
     "netty/netty": 35070,
     "postcss/autoprefixer": 22197,
     "react-hook-form/react-hook-form": 44907,
-    "router-for-me/CLIProxyAPI": 57844,
-    "sirmalloc/ccstatusline": 13543,
-    "solidjs/solid": 36336,
+    "router-for-me/CLIProxyAPI": 57870,
+    "sirmalloc/ccstatusline": 13545,
+    "solidjs/solid": 36342,
     "tlaplus/tlaplus": 3200,
-    "Wei-Shaw/sub2api": 45606
+    "Wei-Shaw/sub2api": 45624
   }
 }
