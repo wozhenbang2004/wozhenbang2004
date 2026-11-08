@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-08T00:35:34+00:00",
+  "changed_at": "2026-11-08T07:19:48+00:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -91,6 +91,15 @@
       "state": "Merged",
       "updated_at": "2026-11-07T03:04:06Z",
       "merged_at": "2026-11-07T03:03:43Z"
+    },
+    {
+      "url": "https://github.com/ant-design/ant-design/pull/59814",
+      "repo": "ant-design/ant-design",
+      "number": 59814,
+      "title": "docs: clarify Listy classNames and styles callback support",
+      "state": "Merged",
+      "updated_at": "2026-11-08T03:30:59Z",
+      "merged_at": "2026-11-08T03:30:50Z"
     },
     {
       "url": "https://github.com/apache/dubbo/pull/16562",
@@ -402,31 +411,32 @@
     }
   ],
   "repo_stars": {
+    "ant-design/ant-design": 100106,
     "apache/dubbo": 41574,
     "astaxie/TokenHub": 1427,
-    "AstrBotDevs/AstrBot": 46372,
+    "AstrBotDevs/AstrBot": 46399,
     "baomidou/mybatis-plus": 17486,
-    "danielmiessler/Fabric": 44572,
-    "deepset-ai/haystack": 26942,
+    "danielmiessler/Fabric": 44575,
+    "deepset-ai/haystack": 26943,
     "FasterXML/jackson-databind": 3758,
     "FasterXML/jackson-dataformats-text": 454,
     "google/guava": 51921,
-    "gptme/gptme": 4469,
+    "gptme/gptme": 4470,
     "h2database/h2database": 4644,
     "lich0821/ccNexus": 973,
     "looplj/axonhub": 5437,
-    "mark3labs/mcp-go": 9228,
-    "microsoft/vscode": 195141,
+    "mark3labs/mcp-go": 9229,
+    "microsoft/vscode": 195161,
     "mybatis/mybatis-3": 20437,
     "netty/netty": 35071,
     "postcss/autoprefixer": 22197,
     "postcss/postcss": 28964,
     "postcss/postcss-nested": 1199,
-    "react-hook-form/react-hook-form": 44907,
-    "router-for-me/CLIProxyAPI": 57898,
-    "sirmalloc/ccstatusline": 13549,
-    "solidjs/solid": 36343,
-    "tlaplus/tlaplus": 3201,
-    "Wei-Shaw/sub2api": 45636
+    "react-hook-form/react-hook-form": 44908,
+    "router-for-me/CLIProxyAPI": 57920,
+    "sirmalloc/ccstatusline": 13550,
+    "solidjs/solid": 36344,
+    "tlaplus/tlaplus": 3202,
+    "Wei-Shaw/sub2api": 45652
   }
 }
