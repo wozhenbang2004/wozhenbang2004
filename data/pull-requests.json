@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-08T15:11:56+00:00",
+  "changed_at": "2026-11-08T19:41:14+00:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -273,6 +273,15 @@
       "merged_at": "2026-11-07T22:49:33Z"
     },
     {
+      "url": "https://github.com/postcss/postcss-selector-parser/pull/354",
+      "repo": "postcss/postcss-selector-parser",
+      "number": 354,
+      "title": "fix: preserve selector delimiters after escaped backslashes",
+      "state": "Merged",
+      "updated_at": "2026-11-08T17:54:14Z",
+      "merged_at": "2026-11-08T17:54:14Z"
+    },
+    {
       "url": "https://github.com/postcss/postcss/pull/2187",
       "repo": "postcss/postcss",
       "number": 2187,
@@ -411,32 +420,33 @@
     }
   ],
   "repo_stars": {
-    "ant-design/ant-design": 100109,
-    "apache/dubbo": 41574,
+    "ant-design/ant-design": 100112,
+    "apache/dubbo": 41575,
     "astaxie/TokenHub": 1428,
-    "AstrBotDevs/AstrBot": 46433,
-    "baomidou/mybatis-plus": 17486,
-    "danielmiessler/Fabric": 44584,
+    "AstrBotDevs/AstrBot": 46441,
+    "baomidou/mybatis-plus": 17487,
+    "danielmiessler/Fabric": 44585,
     "deepset-ai/haystack": 26943,
-    "FasterXML/jackson-databind": 3758,
+    "FasterXML/jackson-databind": 3759,
     "FasterXML/jackson-dataformats-text": 454,
-    "google/guava": 51920,
+    "google/guava": 51921,
     "gptme/gptme": 4470,
     "h2database/h2database": 4644,
     "lich0821/ccNexus": 973,
     "looplj/axonhub": 5441,
     "mark3labs/mcp-go": 9230,
-    "microsoft/vscode": 195184,
+    "microsoft/vscode": 195193,
     "mybatis/mybatis-3": 20437,
-    "netty/netty": 35071,
+    "netty/netty": 35072,
     "postcss/autoprefixer": 22196,
     "postcss/postcss": 28965,
     "postcss/postcss-nested": 1199,
+    "postcss/postcss-selector-parser": 217,
     "react-hook-form/react-hook-form": 44908,
-    "router-for-me/CLIProxyAPI": 57955,
+    "router-for-me/CLIProxyAPI": 57971,
     "sirmalloc/ccstatusline": 13550,
-    "solidjs/solid": 36346,
-    "tlaplus/tlaplus": 3205,
-    "Wei-Shaw/sub2api": 45663
+    "solidjs/solid": 36347,
+    "tlaplus/tlaplus": 3207,
+    "Wei-Shaw/sub2api": 45664
   }
 }
