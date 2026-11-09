@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-08T23:42:45+00:00",
+  "changed_at": "2026-11-09T06:26:41+00:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -228,6 +228,15 @@
       "merged_at": "2026-10-29T18:58:54Z"
     },
     {
+      "url": "https://github.com/motdotla/dotenv/pull/1081",
+      "repo": "motdotla/dotenv",
+      "number": 1081,
+      "title": "fix(cli): send debug diagnostics to stderr",
+      "state": "Merged",
+      "updated_at": "2026-11-09T01:00:00Z",
+      "merged_at": "2026-11-09T00:57:43Z"
+    },
+    {
       "url": "https://github.com/mybatis/mybatis-3/pull/3840",
       "repo": "mybatis/mybatis-3",
       "number": 3840,
@@ -420,22 +429,23 @@
     }
   ],
   "repo_stars": {
-    "ant-design/ant-design": 100114,
+    "ant-design/ant-design": 100118,
     "apache/dubbo": 41575,
     "astaxie/TokenHub": 1428,
-    "AstrBotDevs/AstrBot": 46446,
+    "AstrBotDevs/AstrBot": 46473,
     "baomidou/mybatis-plus": 17487,
-    "danielmiessler/Fabric": 44587,
+    "danielmiessler/Fabric": 44589,
     "deepset-ai/haystack": 26944,
     "FasterXML/jackson-databind": 3759,
     "FasterXML/jackson-dataformats-text": 454,
-    "google/guava": 51921,
+    "google/guava": 51920,
     "gptme/gptme": 4470,
     "h2database/h2database": 4644,
     "lich0821/ccNexus": 973,
     "looplj/axonhub": 5441,
     "mark3labs/mcp-go": 9230,
-    "microsoft/vscode": 195201,
+    "microsoft/vscode": 195211,
+    "motdotla/dotenv": 20562,
     "mybatis/mybatis-3": 20437,
     "netty/netty": 35072,
     "postcss/autoprefixer": 22196,
@@ -443,10 +453,10 @@
     "postcss/postcss-nested": 1199,
     "postcss/postcss-selector-parser": 217,
     "react-hook-form/react-hook-form": 44910,
-    "router-for-me/CLIProxyAPI": 57984,
-    "sirmalloc/ccstatusline": 13551,
-    "solidjs/solid": 36348,
-    "tlaplus/tlaplus": 3207,
-    "Wei-Shaw/sub2api": 45665
+    "router-for-me/CLIProxyAPI": 58006,
+    "sirmalloc/ccstatusline": 13552,
+    "solidjs/solid": 36352,
+    "tlaplus/tlaplus": 3208,
+    "Wei-Shaw/sub2api": 45686
   }
 }
