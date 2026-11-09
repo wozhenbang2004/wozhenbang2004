@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-09T06:26:41+00:00",
+  "changed_at": "2026-11-09T17:29:11+00:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -183,6 +183,15 @@
       "merged_at": "2026-11-03T12:22:56Z"
     },
     {
+      "url": "https://github.com/immutable-js/immutable-js/pull/2319",
+      "repo": "immutable-js/immutable-js",
+      "number": 2319,
+      "title": "Fix indexed skipWhile iterators",
+      "state": "Merged",
+      "updated_at": "2026-11-09T09:40:20Z",
+      "merged_at": "2026-11-09T09:40:12Z"
+    },
+    {
       "url": "https://github.com/lich0821/ccNexus/pull/157",
       "repo": "lich0821/ccNexus",
       "number": 157,
@@ -226,6 +235,15 @@
       "state": "Merged",
       "updated_at": "2026-10-29T19:00:09Z",
       "merged_at": "2026-10-29T18:58:54Z"
+    },
+    {
+      "url": "https://github.com/microsoft/vscode/pull/345127",
+      "repo": "microsoft/vscode",
+      "number": 345127,
+      "title": "Fix authentication provider cleanup when an extension host stops",
+      "state": "Merged",
+      "updated_at": "2026-11-09T16:34:07Z",
+      "merged_at": "2026-11-09T16:32:31Z"
     },
     {
       "url": "https://github.com/motdotla/dotenv/pull/1081",
@@ -429,34 +447,35 @@
     }
   ],
   "repo_stars": {
-    "ant-design/ant-design": 100118,
-    "apache/dubbo": 41575,
-    "astaxie/TokenHub": 1428,
-    "AstrBotDevs/AstrBot": 46473,
+    "ant-design/ant-design": 100126,
+    "apache/dubbo": 41576,
+    "astaxie/TokenHub": 1429,
+    "AstrBotDevs/AstrBot": 46533,
     "baomidou/mybatis-plus": 17487,
     "danielmiessler/Fabric": 44589,
-    "deepset-ai/haystack": 26944,
-    "FasterXML/jackson-databind": 3759,
+    "deepset-ai/haystack": 26959,
+    "FasterXML/jackson-databind": 3758,
     "FasterXML/jackson-dataformats-text": 454,
     "google/guava": 51920,
-    "gptme/gptme": 4470,
+    "gptme/gptme": 4469,
     "h2database/h2database": 4644,
-    "lich0821/ccNexus": 973,
-    "looplj/axonhub": 5441,
+    "immutable-js/immutable-js": 33019,
+    "lich0821/ccNexus": 972,
+    "looplj/axonhub": 5443,
     "mark3labs/mcp-go": 9230,
-    "microsoft/vscode": 195211,
-    "motdotla/dotenv": 20562,
+    "microsoft/vscode": 195226,
+    "motdotla/dotenv": 20563,
     "mybatis/mybatis-3": 20437,
-    "netty/netty": 35072,
+    "netty/netty": 35071,
     "postcss/autoprefixer": 22196,
-    "postcss/postcss": 28965,
+    "postcss/postcss": 28969,
     "postcss/postcss-nested": 1199,
     "postcss/postcss-selector-parser": 217,
-    "react-hook-form/react-hook-form": 44910,
-    "router-for-me/CLIProxyAPI": 58006,
-    "sirmalloc/ccstatusline": 13552,
-    "solidjs/solid": 36352,
-    "tlaplus/tlaplus": 3208,
-    "Wei-Shaw/sub2api": 45686
+    "react-hook-form/react-hook-form": 44912,
+    "router-for-me/CLIProxyAPI": 58058,
+    "sirmalloc/ccstatusline": 13558,
+    "solidjs/solid": 36355,
+    "tlaplus/tlaplus": 3211,
+    "Wei-Shaw/sub2api": 45728
   }
 }
