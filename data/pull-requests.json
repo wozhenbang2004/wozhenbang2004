@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-09T17:29:11+00:00",
+  "changed_at": "2026-11-10T01:30:38+00:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -84,6 +84,15 @@
       "merged_at": "2026-11-01T17:24:20Z"
     },
     {
+      "url": "https://github.com/OpenFeign/feign/pull/3665",
+      "repo": "OpenFeign/feign",
+      "number": 3665,
+      "title": "Recognize HTTP URI schemes without regard to case",
+      "state": "Merged",
+      "updated_at": "2026-11-09T21:15:17Z",
+      "merged_at": "2026-11-09T21:15:17Z"
+    },
+    {
       "url": "https://github.com/Wei-Shaw/sub2api/pull/8420",
       "repo": "Wei-Shaw/sub2api",
       "number": 8420,
@@ -154,6 +163,15 @@
       "state": "Merged",
       "updated_at": "2026-10-30T11:34:17Z",
       "merged_at": "2026-10-30T11:34:17Z"
+    },
+    {
+      "url": "https://github.com/google/gson/pull/3157",
+      "repo": "google/gson",
+      "number": 3157,
+      "title": "Avoid quadratic clearing of JsonArray sublists",
+      "state": "Merged",
+      "updated_at": "2026-11-10T00:38:45Z",
+      "merged_at": "2026-11-10T00:38:45Z"
     },
     {
       "url": "https://github.com/gptme/gptme/pull/4520",
@@ -447,35 +465,37 @@
     }
   ],
   "repo_stars": {
-    "ant-design/ant-design": 100126,
+    "ant-design/ant-design": 100127,
     "apache/dubbo": 41576,
-    "astaxie/TokenHub": 1429,
-    "AstrBotDevs/AstrBot": 46533,
+    "astaxie/TokenHub": 1428,
+    "AstrBotDevs/AstrBot": 46540,
     "baomidou/mybatis-plus": 17487,
-    "danielmiessler/Fabric": 44589,
-    "deepset-ai/haystack": 26959,
+    "danielmiessler/Fabric": 44590,
+    "deepset-ai/haystack": 26968,
     "FasterXML/jackson-databind": 3758,
     "FasterXML/jackson-dataformats-text": 454,
+    "google/gson": 24231,
     "google/guava": 51920,
     "gptme/gptme": 4469,
     "h2database/h2database": 4644,
     "immutable-js/immutable-js": 33019,
     "lich0821/ccNexus": 972,
-    "looplj/axonhub": 5443,
+    "looplj/axonhub": 5445,
     "mark3labs/mcp-go": 9230,
-    "microsoft/vscode": 195226,
+    "microsoft/vscode": 195247,
     "motdotla/dotenv": 20563,
     "mybatis/mybatis-3": 20437,
     "netty/netty": 35071,
+    "OpenFeign/feign": 9798,
     "postcss/autoprefixer": 22196,
-    "postcss/postcss": 28969,
+    "postcss/postcss": 28967,
     "postcss/postcss-nested": 1199,
     "postcss/postcss-selector-parser": 217,
     "react-hook-form/react-hook-form": 44912,
-    "router-for-me/CLIProxyAPI": 58058,
-    "sirmalloc/ccstatusline": 13558,
+    "router-for-me/CLIProxyAPI": 58088,
+    "sirmalloc/ccstatusline": 13560,
     "solidjs/solid": 36355,
-    "tlaplus/tlaplus": 3211,
-    "Wei-Shaw/sub2api": 45728
+    "tlaplus/tlaplus": 3212,
+    "Wei-Shaw/sub2api": 45734
   }
 }
