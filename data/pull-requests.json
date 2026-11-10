@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-10T17:50:12+00:00",
+  "changed_at": "2026-11-10T23:21:29+00:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -435,6 +435,15 @@
       "merged_at": "2026-11-05T16:09:42Z"
     },
     {
+      "url": "https://github.com/solidjs/solid/pull/4703",
+      "repo": "solidjs/solid",
+      "number": 4703,
+      "title": "fix(store): preserve class accessor precedence in createMutable",
+      "state": "Merged",
+      "updated_at": "2026-11-10T23:13:14Z",
+      "merged_at": "2026-11-10T23:13:14Z"
+    },
+    {
       "url": "https://github.com/tlaplus/tlaplus/pull/1507",
       "repo": "tlaplus/tlaplus",
       "number": 1507,
@@ -484,37 +493,37 @@
   ],
   "repo_stars": {
     "ant-design/ant-design": 100145,
-    "apache/dubbo": 41578,
+    "apache/dubbo": 41579,
     "astaxie/TokenHub": 1431,
-    "AstrBotDevs/AstrBot": 46616,
+    "AstrBotDevs/AstrBot": 46622,
     "baomidou/mybatis-plus": 17488,
-    "danielmiessler/Fabric": 44593,
-    "deepset-ai/haystack": 26984,
+    "danielmiessler/Fabric": 44598,
+    "deepset-ai/haystack": 26985,
     "FasterXML/jackson-databind": 3758,
     "FasterXML/jackson-dataformats-text": 454,
-    "google/gson": 24232,
-    "google/guava": 51922,
+    "google/gson": 24231,
+    "google/guava": 51923,
     "gptme/gptme": 4470,
     "h2database/h2database": 4644,
     "immutable-js/immutable-js": 33019,
     "lich0821/ccNexus": 972,
     "looplj/axonhub": 5449,
-    "mark3labs/mcp-go": 9232,
-    "microsoft/vscode": 195263,
-    "motdotla/dotenv": 20564,
+    "mark3labs/mcp-go": 9233,
+    "microsoft/vscode": 195271,
+    "motdotla/dotenv": 20563,
     "mybatis/mybatis-3": 20439,
     "netty/netty": 35070,
-    "OpenFeign/feign": 9798,
+    "OpenFeign/feign": 9799,
     "pmd/pmd": 5527,
-    "postcss/autoprefixer": 22197,
-    "postcss/postcss": 28968,
+    "postcss/autoprefixer": 22196,
+    "postcss/postcss": 28969,
     "postcss/postcss-nested": 1199,
     "postcss/postcss-selector-parser": 217,
-    "react-hook-form/react-hook-form": 44917,
-    "router-for-me/CLIProxyAPI": 58172,
-    "sirmalloc/ccstatusline": 13574,
-    "solidjs/solid": 36361,
+    "react-hook-form/react-hook-form": 44919,
+    "router-for-me/CLIProxyAPI": 58190,
+    "sirmalloc/ccstatusline": 13577,
+    "solidjs/solid": 36362,
     "tlaplus/tlaplus": 3215,
-    "Wei-Shaw/sub2api": 45796
+    "Wei-Shaw/sub2api": 45801
   }
 }
