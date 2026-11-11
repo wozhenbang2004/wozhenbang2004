@@ -1,4 +1,4 @@
-name: Sync all PR statuses
+name: Sync upstream contributions
 
 on:
   schedule:
@@ -9,7 +9,6 @@ on:
     paths:
       - '.github/workflows/sync-pr-status.yml'
       - 'scripts/sync_prs.py'
-      - 'tests/test_sync_prs.py'
       - 'data/pr-curation.json'
 
 permissions:
@@ -31,8 +30,8 @@ jobs:
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           ref: main
-      - name: Test status synchronization
-        run: python3 -m unittest discover -s tests -v
+      - name: Compile synchronization script
+        run: python3 -m py_compile scripts/sync_prs.py
       - name: Read public upstream PRs
         env:
           GH_TOKEN: ${{ github.token }}

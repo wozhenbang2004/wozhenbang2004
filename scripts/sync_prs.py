@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Synchronize merged upstream PRs and explicitly evidenced maintainer adoptions."""
+"""Synchronize merged PRs, retained-commit adoptions, and curated adoptions."""
 import html
 import json
 import os
@@ -8,13 +8,14 @@ import re
 import sys
 import urllib.parse
 import urllib.request
-from collections import Counter
+from urllib.error import HTTPError
 from datetime import datetime, timezone
 
 OWNER = 'wozhenbang2004'
 REPO = f'{OWNER}/{OWNER}'
 ROOT = Path(__file__).resolve().parents[1]
 QUERY = f'is:pr is:merged author:{OWNER} is:public -user:{OWNER}'
+CLOSED_QUERY = f'is:pr is:closed is:unmerged author:{OWNER} is:public -user:{OWNER}'
 
 
 def api(path):
@@ -46,11 +47,11 @@ def normalize(item):
             'state': state, 'updated_at': item['updated_at'], 'merged_at': pr['merged_at']}
 
 
-def fetch_prs(get=api):
+def search_prs(query, get=api):
     items, total = [], None
     for page in range(1, 11):
         # Creation order avoids comment activity moving entries between pages.
-        params = urllib.parse.urlencode({'q': QUERY, 'sort': 'created', 'order': 'asc',
+        params = urllib.parse.urlencode({'q': query, 'sort': 'created', 'order': 'asc',
                                          'per_page': 100, 'page': page})
         payload = get('/search/issues?' + params)
         if payload.get('incomplete_results') is not False:
@@ -66,12 +67,99 @@ def fetch_prs(get=api):
             break
         if not payload['items']:
             raise ValueError('Missing search page')
-    if not total or len(items) != total or len({p['id'] for p in items}) != total:
+    if total is None or len(items) != total or len({p['id'] for p in items}) != total:
         raise ValueError('Empty, duplicated, or truncated PR results; keeping previous data')
-    rows = [normalize(p) for p in items]
-    if any(p['state'] != 'Merged' for p in rows):
+    return sorted([normalize(p) for p in items], key=lambda p: p['url'])
+
+
+def fetch_prs(get=api):
+    rows = search_prs(QUERY, get)
+    if not rows or any(p['state'] != 'Merged' for p in rows):
         raise ValueError('Merged search returned an unmerged PR; refusing to publish it')
-    return sorted(rows, key=lambda p: p['url'])
+    return rows
+
+
+def api_list(path, get):
+    rows = []
+    for page in range(1, 11):
+        batch = get(f'{path}?per_page=100&page={page}')
+        if not isinstance(batch, list):
+            raise ValueError('Expected a complete GitHub list')
+        rows.extend(batch)
+        if len(batch) < 100:
+            return rows
+    raise ValueError('GitHub list exceeds pagination limit; keeping previous data')
+
+
+def discovered_adoptions(prs, curated, get=api):
+    """Count exact retained commits, never similarity or a closed PR alone.
+
+    Rewritten/cherry-picked commits still need explicit evidence in curation.
+    A merged successor can squash its history, so inspect its PR commit list
+    before falling back to ancestry on the original upstream target branch.
+    """
+    counted_targets = {p['url'] for p in prs} | {a['target'] for a in curated}
+    counted_sources = {a['source'] for a in curated}
+    found = []
+    for source in search_prs(CLOSED_QUERY, get):
+        if source['url'] in counted_sources:
+            continue
+        repo = source['repo']
+        raw = get(f'/repos/{repo}/pulls/{source["number"]}')
+        if (raw['base']['repo']['private'] is not False
+                or raw['html_url'] != source['url']):
+            raise ValueError('Unexpected adoption source repository')
+        current = normalize(dict(raw, pull_request={'merged_at': raw['merged_at']}))
+        if current['state'] != 'Closed':
+            raise ValueError('Closed PR changed during discovery; retry later')
+        sha, branch = raw['head']['sha'], raw['base']['ref']
+        if not re.fullmatch(r'[0-9a-f]{40}', sha) or not branch:
+            raise ValueError('Missing source commit or upstream branch')
+        associated = api_list(f'/repos/{repo}/commits/{sha}/pulls', get)
+        targets = [p for p in associated
+                   if p.get('merged_at') and p['base']['repo']['private'] is False
+                   and p['base']['repo']['full_name'].lower() == repo.lower()]
+        # A replacement authored by this account is already in the direct list.
+        if any(p['html_url'] in counted_targets for p in targets):
+            continue
+        entry = None
+        for target in sorted(targets, key=lambda p: (p['merged_at'], p['number'])):
+            if target['user']['login'].lower() == OWNER.lower():
+                continue
+            details = get(f'/repos/{repo}/pulls/{target["number"]}')
+            commits = api_list(f'/repos/{repo}/pulls/{target["number"]}/commits', get)
+            # GitHub caps this endpoint at 250 commits even with pagination.
+            if len(commits) != details['commits']:
+                raise ValueError(f'Truncated commit list for {target["html_url"]}; curate this adoption explicitly')
+            if not details.get('merged_at') or details['html_url'] != target['html_url']:
+                raise ValueError('Successor PR changed during discovery; retry later')
+            if any(c['sha'] == sha for c in commits):
+                # render() owns table-pipe escaping for every description.
+                title = escape(source['title']).replace(r'\|', '|')
+                entry = {'source': source['url'], 'target': target['html_url'],
+                         'target_kind': 'pull', 'evidence_commit': sha,
+                         'description': f'{title}。接续 PR 收录原 head commit [{sha[:7]}](https://github.com/{repo}/commit/{sha})，并已合并。'}
+                break
+        if entry is None:
+            try:
+                comparison = get(f'/repos/{repo}/compare/{sha}...{urllib.parse.quote(branch, safe="")}')
+            except HTTPError as exc:
+                if exc.code != 404:
+                    raise
+                continue  # A removed branch/commit is not evidence of adoption.
+            if (comparison.get('status') not in ('ahead', 'identical')
+                    or comparison.get('merge_base_commit', {}).get('sha') != sha):
+                continue
+            entry = {'source': source['url'], 'target': f'https://github.com/{repo}/commit/{sha}',
+                     'target_kind': 'commit', 'target_branch': branch, 'evidence_commit': sha,
+                     'description': f'原 PR 的 head commit 已进入上游 `{escape(branch)}` 分支；按采纳贡献单列，不计入本人已合并 PR。'}
+        if entry['target'] in counted_targets:
+            continue
+        found.append(dict(entry, source_repo=repo, source_number=source['number'],
+                          source_state='Closed', discovery='retained-commit'))
+        counted_sources.add(source['url'])
+        counted_targets.add(entry['target'])
+    return found
 
 
 def verified_adoptions(prs, curation, get=api):
@@ -172,6 +260,7 @@ def render(text, prs, adoptions, repo_stars):
     for p in sorted(prs, key=lambda p: (p['merged_at'], p['url']), reverse=True):
         body.append(f"| {project_cell(p['repo'], repo_stars[p['repo']])} | **[#{p['number']}]({p['url']})**<br />{escape(p['title'])} |")
     body += ['', '### 经维护者 PR / commit 采纳', '',
+             '<sub>原 PR 未直接合并，但有上游采纳证据。自动核对保留原 commit 的接续 PR / 分支；重写或 cherry-pick 的记录另行举证，且不重复计入本人已合并 PR。</sub>', '',
              '| 项目 / Stars | 原 PR → 采纳记录 |', '| :--- | :--- |']
     for a in adoptions:
         target_label = ('PR #' + a['target'].rsplit('/', 1)[1] if a['target_kind'] == 'pull'
@@ -187,6 +276,7 @@ def sync(root=ROOT, get=api):
     curation = json.loads((root / 'data/pr-curation.json').read_text())
     prs = fetch_prs(get)
     adoptions = verified_adoptions(prs, curation, get)
+    adoptions += discovered_adoptions(prs, adoptions, get)
     repo_stars = fetch_repo_stars(prs, adoptions, get)
     snapshot_path = root / 'data/pull-requests.json'
     old = json.loads(snapshot_path.read_text()) if snapshot_path.exists() else {}
@@ -201,7 +291,7 @@ def sync(root=ROOT, get=api):
     # All API responses and marker validation have completed before any write.
     snapshot_path.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2) + '\n')
     readme_path.write_text(new_text)
-    print(f'Synchronized {len(prs)} PRs: {dict(Counter(p["state"] for p in prs))}')
+    print(f'Synchronized {len(prs)} merged PRs and {len(adoptions)} verified adoptions')
 
 
 if __name__ == '__main__':

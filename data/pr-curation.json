@@ -1,6 +1,12 @@
 {
   "adoptions": [
     {
+      "source": "https://github.com/PrefectHQ/fastmcp/pull/6137",
+      "target": "https://github.com/PrefectHQ/fastmcp/pull/6394",
+      "description": "修复互相递归 schema 的类型还原。维护者沿用修复与测试、去除无关 workflow 提交，保留 co-author，已合入 `main`。",
+      "evidence": "https://github.com/PrefectHQ/fastmcp/pull/6137#issuecomment-6761385319"
+    },
+    {
       "source": "https://github.com/FasterXML/jackson-databind/pull/6389",
       "target": "https://github.com/FasterXML/jackson-databind/pull/6403",
       "description": "修复非公开 Record 的部分更新。维护者保留原作者提交，补充访问器缓存及发布说明，已合入 `3.x`。"
