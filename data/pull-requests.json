@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-11T06:18:46+00:00",
+  "changed_at": "2026-11-11T07:25:40+00:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -455,6 +455,16 @@
   ],
   "verified_adoptions": [
     {
+      "source": "https://github.com/PrefectHQ/fastmcp/pull/6137",
+      "target": "https://github.com/PrefectHQ/fastmcp/pull/6394",
+      "description": "修复互相递归 schema 的类型还原。维护者沿用修复与测试、去除无关 workflow 提交，保留 co-author，已合入 `main`。",
+      "evidence": "https://github.com/PrefectHQ/fastmcp/pull/6137#issuecomment-6761385319",
+      "source_repo": "PrefectHQ/fastmcp",
+      "source_number": 6137,
+      "source_state": "Closed",
+      "target_kind": "pull"
+    },
+    {
       "source": "https://github.com/FasterXML/jackson-databind/pull/6389",
       "target": "https://github.com/FasterXML/jackson-databind/pull/6403",
       "description": "修复非公开 Record 的部分更新。维护者保留原作者提交，补充访问器缓存及发布说明，已合入 `3.x`。",
@@ -489,16 +499,38 @@
       "source_number": 8807,
       "source_state": "Closed",
       "target_kind": "pull"
+    },
+    {
+      "source": "https://github.com/FasterXML/jackson-databind/pull/6378",
+      "target": "https://github.com/FasterXML/jackson-databind/pull/6411",
+      "target_kind": "pull",
+      "evidence_commit": "cec6f231df2c849c6e8dd1c887a539b599a3e4c1",
+      "description": "Wrap unknown-property handler exceptions with bean and property paths。接续 PR 收录原 head commit [cec6f23](https://github.com/FasterXML/jackson-databind/commit/cec6f231df2c849c6e8dd1c887a539b599a3e4c1)，并已合并。",
+      "source_repo": "FasterXML/jackson-databind",
+      "source_number": 6378,
+      "source_state": "Closed",
+      "discovery": "retained-commit"
+    },
+    {
+      "source": "https://github.com/FasterXML/jackson-databind/pull/6415",
+      "target": "https://github.com/FasterXML/jackson-databind/pull/6420",
+      "target_kind": "pull",
+      "evidence_commit": "a36b7be7b24b42a506f0ce2862cc4f80887d4394",
+      "description": "Consolidate unwrapped input-name collection on SettableBeanProperty。接续 PR 收录原 head commit [a36b7be](https://github.com/FasterXML/jackson-databind/commit/a36b7be7b24b42a506f0ce2862cc4f80887d4394)，并已合并。",
+      "source_repo": "FasterXML/jackson-databind",
+      "source_number": 6415,
+      "source_state": "Closed",
+      "discovery": "retained-commit"
     }
   ],
   "repo_stars": {
     "ant-design/ant-design": 100150,
     "apache/dubbo": 41579,
     "astaxie/TokenHub": 1431,
-    "AstrBotDevs/AstrBot": 46653,
+    "AstrBotDevs/AstrBot": 46659,
     "baomidou/mybatis-plus": 17487,
     "danielmiessler/Fabric": 44599,
-    "deepset-ai/haystack": 26986,
+    "deepset-ai/haystack": 26987,
     "FasterXML/jackson-databind": 3758,
     "FasterXML/jackson-dataformats-text": 454,
     "google/gson": 24231,
@@ -507,23 +539,24 @@
     "h2database/h2database": 4644,
     "immutable-js/immutable-js": 33019,
     "lich0821/ccNexus": 972,
-    "looplj/axonhub": 5450,
+    "looplj/axonhub": 5451,
     "mark3labs/mcp-go": 9233,
-    "microsoft/vscode": 195293,
+    "microsoft/vscode": 195301,
     "motdotla/dotenv": 20562,
     "mybatis/mybatis-3": 20439,
-    "netty/netty": 35070,
+    "netty/netty": 35071,
     "OpenFeign/feign": 9798,
     "pmd/pmd": 5528,
     "postcss/autoprefixer": 22196,
     "postcss/postcss": 28969,
     "postcss/postcss-nested": 1199,
     "postcss/postcss-selector-parser": 217,
-    "react-hook-form/react-hook-form": 44919,
-    "router-for-me/CLIProxyAPI": 58223,
-    "sirmalloc/ccstatusline": 13579,
+    "PrefectHQ/fastmcp": 28379,
+    "react-hook-form/react-hook-form": 44920,
+    "router-for-me/CLIProxyAPI": 58230,
+    "sirmalloc/ccstatusline": 13578,
     "solidjs/solid": 36363,
     "tlaplus/tlaplus": 3215,
-    "Wei-Shaw/sub2api": 45812
+    "Wei-Shaw/sub2api": 45817
   }
 }
