@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-12T11:08:41+00:00",
+  "changed_at": "2026-11-12T18:56:28+00:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -318,6 +318,15 @@
       "merged_at": "2026-11-12T08:36:35Z"
     },
     {
+      "url": "https://github.com/netty/netty/pull/18294",
+      "repo": "netty/netty",
+      "number": 18294,
+      "title": "Fix float matching in read-only HTTP/2 headers",
+      "state": "Merged",
+      "updated_at": "2026-11-12T15:24:43Z",
+      "merged_at": "2026-11-12T15:23:07Z"
+    },
+    {
       "url": "https://github.com/pmd/pmd/pull/7283",
       "repo": "pmd/pmd",
       "number": 7283,
@@ -542,26 +551,26 @@
     }
   ],
   "repo_stars": {
-    "ant-design/ant-design": 100171,
-    "apache/dubbo": 41575,
-    "astaxie/TokenHub": 1436,
-    "AstrBotDevs/AstrBot": 46743,
+    "ant-design/ant-design": 100176,
+    "apache/dubbo": 41574,
+    "astaxie/TokenHub": 1439,
+    "AstrBotDevs/AstrBot": 46779,
     "baomidou/mybatis-plus": 17485,
-    "danielmiessler/Fabric": 44605,
+    "danielmiessler/Fabric": 44610,
     "deepset-ai/haystack": 26998,
     "FasterXML/jackson-databind": 3757,
     "FasterXML/jackson-dataformats-text": 454,
     "google/gson": 24231,
     "google/guava": 51923,
-    "gptme/gptme": 4470,
+    "gptme/gptme": 4471,
     "h2database/h2database": 4644,
-    "immutable-js/immutable-js": 33018,
+    "immutable-js/immutable-js": 33019,
     "lich0821/ccNexus": 971,
     "looplj/axonhub": 5452,
     "mark3labs/mcp-go": 9233,
-    "microsoft/vscode": 195318,
+    "microsoft/vscode": 195330,
     "motdotla/dotenv": 20563,
-    "mybatis/mybatis-3": 20436,
+    "mybatis/mybatis-3": 20435,
     "netty/netty": 35067,
     "OpenFeign/feign": 9798,
     "pmd/pmd": 5529,
@@ -569,13 +578,13 @@
     "postcss/postcss": 28966,
     "postcss/postcss-nested": 1199,
     "postcss/postcss-selector-parser": 217,
-    "PrefectHQ/fastmcp": 28400,
+    "PrefectHQ/fastmcp": 28402,
     "prestodb/presto": 16773,
     "react-hook-form/react-hook-form": 44917,
-    "router-for-me/CLIProxyAPI": 58363,
-    "sirmalloc/ccstatusline": 13584,
-    "solidjs/solid": 36259,
+    "router-for-me/CLIProxyAPI": 58397,
+    "sirmalloc/ccstatusline": 13589,
+    "solidjs/solid": 36263,
     "tlaplus/tlaplus": 3220,
-    "Wei-Shaw/sub2api": 45913
+    "Wei-Shaw/sub2api": 45930
   }
 }
