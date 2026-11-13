@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-13T07:57:42+00:00",
+  "changed_at": "2026-11-13T16:23:40+00:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -341,7 +341,7 @@
       "number": 18295,
       "title": "Canonicalize NaN values written by ByteBufOutputStream",
       "state": "Merged",
-      "updated_at": "2026-11-13T07:49:55Z",
+      "updated_at": "2026-11-13T09:22:15Z",
       "merged_at": "2026-11-13T07:49:45Z"
     },
     {
@@ -569,41 +569,41 @@
     }
   ],
   "repo_stars": {
-    "ant-design/ant-design": 100185,
-    "apache/dubbo": 41574,
+    "ant-design/ant-design": 100189,
+    "apache/dubbo": 41573,
     "astaxie/TokenHub": 1441,
-    "AstrBotDevs/AstrBot": 46819,
+    "AstrBotDevs/AstrBot": 46846,
     "baomidou/mybatis-plus": 17485,
-    "danielmiessler/Fabric": 44614,
+    "danielmiessler/Fabric": 44625,
     "deepset-ai/haystack": 27001,
     "FasterXML/jackson-databind": 3757,
     "FasterXML/jackson-dataformats-text": 454,
     "google/gson": 24230,
     "google/guava": 51923,
-    "gptme/gptme": 4472,
+    "gptme/gptme": 4473,
     "h2database/h2database": 4645,
     "immutable-js/immutable-js": 33018,
     "kayak/pypika": 2924,
     "lich0821/ccNexus": 971,
-    "looplj/axonhub": 5452,
-    "mark3labs/mcp-go": 9234,
-    "microsoft/vscode": 195355,
+    "looplj/axonhub": 5455,
+    "mark3labs/mcp-go": 9235,
+    "microsoft/vscode": 195364,
     "motdotla/dotenv": 20563,
     "mybatis/mybatis-3": 20435,
-    "netty/netty": 35066,
+    "netty/netty": 35067,
     "OpenFeign/feign": 9798,
     "pmd/pmd": 5530,
     "postcss/autoprefixer": 22196,
     "postcss/postcss": 28966,
     "postcss/postcss-nested": 1199,
     "postcss/postcss-selector-parser": 217,
-    "PrefectHQ/fastmcp": 28407,
+    "PrefectHQ/fastmcp": 28411,
     "prestodb/presto": 16774,
-    "react-hook-form/react-hook-form": 44921,
-    "router-for-me/CLIProxyAPI": 58447,
-    "sirmalloc/ccstatusline": 13590,
-    "solidjs/solid": 36265,
-    "tlaplus/tlaplus": 3221,
-    "Wei-Shaw/sub2api": 45958
+    "react-hook-form/react-hook-form": 44920,
+    "router-for-me/CLIProxyAPI": 58481,
+    "sirmalloc/ccstatusline": 13592,
+    "solidjs/solid": 36266,
+    "tlaplus/tlaplus": 3222,
+    "Wei-Shaw/sub2api": 45988
   }
 }
