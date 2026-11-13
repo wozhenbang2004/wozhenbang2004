@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-12T18:56:28+00:00",
+  "changed_at": "2026-11-13T00:23:56+00:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -217,6 +217,15 @@
       "state": "Merged",
       "updated_at": "2026-11-09T09:40:20Z",
       "merged_at": "2026-11-09T09:40:12Z"
+    },
+    {
+      "url": "https://github.com/kayak/pypika/pull/3557",
+      "repo": "kayak/pypika",
+      "number": 3557,
+      "title": "Fix chained JSON operations",
+      "state": "Merged",
+      "updated_at": "2026-11-12T19:31:39Z",
+      "merged_at": "2026-11-12T19:31:39Z"
     },
     {
       "url": "https://github.com/lich0821/ccNexus/pull/157",
@@ -551,40 +560,41 @@
     }
   ],
   "repo_stars": {
-    "ant-design/ant-design": 100176,
+    "ant-design/ant-design": 100182,
     "apache/dubbo": 41574,
     "astaxie/TokenHub": 1439,
-    "AstrBotDevs/AstrBot": 46779,
+    "AstrBotDevs/AstrBot": 46783,
     "baomidou/mybatis-plus": 17485,
-    "danielmiessler/Fabric": 44610,
-    "deepset-ai/haystack": 26998,
+    "danielmiessler/Fabric": 44615,
+    "deepset-ai/haystack": 26997,
     "FasterXML/jackson-databind": 3757,
     "FasterXML/jackson-dataformats-text": 454,
     "google/gson": 24231,
     "google/guava": 51923,
     "gptme/gptme": 4471,
-    "h2database/h2database": 4644,
-    "immutable-js/immutable-js": 33019,
+    "h2database/h2database": 4645,
+    "immutable-js/immutable-js": 33018,
+    "kayak/pypika": 2924,
     "lich0821/ccNexus": 971,
     "looplj/axonhub": 5452,
     "mark3labs/mcp-go": 9233,
-    "microsoft/vscode": 195330,
+    "microsoft/vscode": 195337,
     "motdotla/dotenv": 20563,
     "mybatis/mybatis-3": 20435,
-    "netty/netty": 35067,
+    "netty/netty": 35066,
     "OpenFeign/feign": 9798,
-    "pmd/pmd": 5529,
+    "pmd/pmd": 5530,
     "postcss/autoprefixer": 22196,
     "postcss/postcss": 28966,
     "postcss/postcss-nested": 1199,
     "postcss/postcss-selector-parser": 217,
-    "PrefectHQ/fastmcp": 28402,
+    "PrefectHQ/fastmcp": 28405,
     "prestodb/presto": 16773,
-    "react-hook-form/react-hook-form": 44917,
-    "router-for-me/CLIProxyAPI": 58397,
-    "sirmalloc/ccstatusline": 13589,
-    "solidjs/solid": 36263,
+    "react-hook-form/react-hook-form": 44919,
+    "router-for-me/CLIProxyAPI": 58410,
+    "sirmalloc/ccstatusline": 13590,
+    "solidjs/solid": 36264,
     "tlaplus/tlaplus": 3220,
-    "Wei-Shaw/sub2api": 45930
+    "Wei-Shaw/sub2api": 45936
   }
 }
