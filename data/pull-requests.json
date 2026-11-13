@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-13T00:23:56+00:00",
+  "changed_at": "2026-11-13T07:57:42+00:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -336,6 +336,15 @@
       "merged_at": "2026-11-12T15:23:07Z"
     },
     {
+      "url": "https://github.com/netty/netty/pull/18295",
+      "repo": "netty/netty",
+      "number": 18295,
+      "title": "Canonicalize NaN values written by ByteBufOutputStream",
+      "state": "Merged",
+      "updated_at": "2026-11-13T07:49:55Z",
+      "merged_at": "2026-11-13T07:49:45Z"
+    },
+    {
       "url": "https://github.com/pmd/pmd/pull/7283",
       "repo": "pmd/pmd",
       "number": 7283,
@@ -560,25 +569,25 @@
     }
   ],
   "repo_stars": {
-    "ant-design/ant-design": 100182,
+    "ant-design/ant-design": 100185,
     "apache/dubbo": 41574,
-    "astaxie/TokenHub": 1439,
-    "AstrBotDevs/AstrBot": 46783,
+    "astaxie/TokenHub": 1441,
+    "AstrBotDevs/AstrBot": 46819,
     "baomidou/mybatis-plus": 17485,
-    "danielmiessler/Fabric": 44615,
-    "deepset-ai/haystack": 26997,
+    "danielmiessler/Fabric": 44614,
+    "deepset-ai/haystack": 27001,
     "FasterXML/jackson-databind": 3757,
     "FasterXML/jackson-dataformats-text": 454,
-    "google/gson": 24231,
+    "google/gson": 24230,
     "google/guava": 51923,
-    "gptme/gptme": 4471,
+    "gptme/gptme": 4472,
     "h2database/h2database": 4645,
     "immutable-js/immutable-js": 33018,
     "kayak/pypika": 2924,
     "lich0821/ccNexus": 971,
     "looplj/axonhub": 5452,
-    "mark3labs/mcp-go": 9233,
-    "microsoft/vscode": 195337,
+    "mark3labs/mcp-go": 9234,
+    "microsoft/vscode": 195355,
     "motdotla/dotenv": 20563,
     "mybatis/mybatis-3": 20435,
     "netty/netty": 35066,
@@ -588,13 +597,13 @@
     "postcss/postcss": 28966,
     "postcss/postcss-nested": 1199,
     "postcss/postcss-selector-parser": 217,
-    "PrefectHQ/fastmcp": 28405,
-    "prestodb/presto": 16773,
-    "react-hook-form/react-hook-form": 44919,
-    "router-for-me/CLIProxyAPI": 58410,
+    "PrefectHQ/fastmcp": 28407,
+    "prestodb/presto": 16774,
+    "react-hook-form/react-hook-form": 44921,
+    "router-for-me/CLIProxyAPI": 58447,
     "sirmalloc/ccstatusline": 13590,
-    "solidjs/solid": 36264,
-    "tlaplus/tlaplus": 3220,
-    "Wei-Shaw/sub2api": 45936
+    "solidjs/solid": 36265,
+    "tlaplus/tlaplus": 3221,
+    "Wei-Shaw/sub2api": 45958
   }
 }
