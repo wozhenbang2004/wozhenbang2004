@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-13T22:37:55+00:00",
+  "changed_at": "2026-11-14T03:16:11+00:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -569,25 +569,25 @@
     }
   ],
   "repo_stars": {
-    "ant-design/ant-design": 100193,
+    "ant-design/ant-design": 100197,
     "apache/dubbo": 41573,
     "astaxie/TokenHub": 1441,
-    "AstrBotDevs/AstrBot": 46856,
+    "AstrBotDevs/AstrBot": 46863,
     "baomidou/mybatis-plus": 17485,
-    "danielmiessler/Fabric": 44628,
-    "deepset-ai/haystack": 27003,
+    "danielmiessler/Fabric": 44632,
+    "deepset-ai/haystack": 27004,
     "FasterXML/jackson-databind": 3757,
     "FasterXML/jackson-dataformats-text": 454,
     "google/gson": 24230,
-    "google/guava": 51923,
-    "gptme/gptme": 4476,
-    "h2database/h2database": 4645,
-    "immutable-js/immutable-js": 33018,
+    "google/guava": 51922,
+    "gptme/gptme": 4477,
+    "h2database/h2database": 4646,
+    "immutable-js/immutable-js": 33017,
     "kayak/pypika": 2924,
     "lich0821/ccNexus": 971,
     "looplj/axonhub": 5455,
     "mark3labs/mcp-go": 9236,
-    "microsoft/vscode": 195351,
+    "microsoft/vscode": 195353,
     "motdotla/dotenv": 20564,
     "mybatis/mybatis-3": 20435,
     "netty/netty": 35067,
@@ -597,13 +597,13 @@
     "postcss/postcss": 28967,
     "postcss/postcss-nested": 1199,
     "postcss/postcss-selector-parser": 217,
-    "PrefectHQ/fastmcp": 28411,
+    "PrefectHQ/fastmcp": 28415,
     "prestodb/presto": 16774,
     "react-hook-form/react-hook-form": 44920,
-    "router-for-me/CLIProxyAPI": 58499,
-    "sirmalloc/ccstatusline": 13596,
+    "router-for-me/CLIProxyAPI": 58506,
+    "sirmalloc/ccstatusline": 13595,
     "solidjs/solid": 36267,
     "tlaplus/tlaplus": 3223,
-    "Wei-Shaw/sub2api": 45994
+    "Wei-Shaw/sub2api": 45995
   }
 }
