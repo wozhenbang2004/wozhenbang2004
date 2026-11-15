@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-15T17:10:57+00:00",
+  "changed_at": "2026-11-15T21:49:33+00:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -590,10 +590,10 @@
     "ant-design/ant-design": 100220,
     "apache/dubbo": 41573,
     "astaxie/TokenHub": 1444,
-    "AstrBotDevs/AstrBot": 46979,
+    "AstrBotDevs/AstrBot": 46991,
     "baomidou/mybatis-plus": 17484,
-    "danielmiessler/Fabric": 44643,
-    "deepset-ai/haystack": 27010,
+    "danielmiessler/Fabric": 44644,
+    "deepset-ai/haystack": 27011,
     "FasterXML/jackson-databind": 3756,
     "FasterXML/jackson-dataformats-text": 454,
     "google/gson": 24233,
@@ -607,23 +607,23 @@
     "lich0821/ccNexus": 971,
     "looplj/axonhub": 5459,
     "mark3labs/mcp-go": 9239,
-    "microsoft/vscode": 195393,
+    "microsoft/vscode": 195430,
     "motdotla/dotenv": 20567,
     "mybatis/mybatis-3": 20433,
-    "netty/netty": 35068,
+    "netty/netty": 35066,
     "OpenFeign/feign": 9799,
     "pmd/pmd": 5532,
     "postcss/autoprefixer": 22197,
     "postcss/postcss": 28968,
     "postcss/postcss-nested": 1199,
     "postcss/postcss-selector-parser": 217,
-    "PrefectHQ/fastmcp": 28506,
+    "PrefectHQ/fastmcp": 28524,
     "prestodb/presto": 16774,
-    "react-hook-form/react-hook-form": 44918,
-    "router-for-me/CLIProxyAPI": 58628,
-    "sirmalloc/ccstatusline": 13601,
-    "solidjs/solid": 36269,
-    "tlaplus/tlaplus": 3232,
-    "Wei-Shaw/sub2api": 46058
+    "react-hook-form/react-hook-form": 44920,
+    "router-for-me/CLIProxyAPI": 58640,
+    "sirmalloc/ccstatusline": 13602,
+    "solidjs/solid": 36272,
+    "tlaplus/tlaplus": 3234,
+    "Wei-Shaw/sub2api": 46060
   }
 }
