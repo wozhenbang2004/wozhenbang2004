@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-16T09:43:13+00:00",
+  "changed_at": "2026-11-16T20:29:27+00:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -489,6 +489,15 @@
       "merged_at": "2026-11-07T06:34:40Z"
     },
     {
+      "url": "https://github.com/reduxjs/redux-toolkit/pull/5595",
+      "repo": "reduxjs/redux-toolkit",
+      "number": 5595,
+      "title": "fix(toolkit): `fetchBaseQuery` timeouts when a request provides a signal",
+      "state": "Merged",
+      "updated_at": "2026-11-16T19:33:46Z",
+      "merged_at": "2026-11-16T19:33:46Z"
+    },
+    {
       "url": "https://github.com/router-for-me/CLIProxyAPI/pull/7095",
       "repo": "router-for-me/CLIProxyAPI",
       "number": 7095,
@@ -523,6 +532,15 @@
       "state": "Merged",
       "updated_at": "2026-11-10T23:13:14Z",
       "merged_at": "2026-11-10T23:13:14Z"
+    },
+    {
+      "url": "https://github.com/tabulator-tables/tabulator/pull/5010",
+      "repo": "tabulator-tables/tabulator",
+      "number": 5010,
+      "title": "Fix deleting frozen rows after regrouping",
+      "state": "Merged",
+      "updated_at": "2026-11-16T14:37:30Z",
+      "merged_at": "2026-11-16T14:37:30Z"
     },
     {
       "url": "https://github.com/tlaplus/tlaplus/pull/1507",
@@ -605,43 +623,45 @@
     }
   ],
   "repo_stars": {
-    "ant-design/ant-design": 100227,
-    "apache/dubbo": 41571,
-    "astaxie/TokenHub": 1446,
-    "AstrBotDevs/AstrBot": 47018,
+    "ant-design/ant-design": 100236,
+    "apache/dubbo": 41569,
+    "astaxie/TokenHub": 1447,
+    "AstrBotDevs/AstrBot": 47053,
     "baomidou/mybatis-plus": 17484,
     "danielmiessler/Fabric": 44647,
-    "deepset-ai/haystack": 27015,
+    "deepset-ai/haystack": 27020,
     "FasterXML/jackson-databind": 3756,
-    "FasterXML/jackson-dataformats-text": 454,
-    "google/gson": 24231,
+    "FasterXML/jackson-dataformats-text": 455,
+    "google/gson": 24232,
     "google/guava": 51926,
-    "gptme/gptme": 4482,
+    "gptme/gptme": 4486,
     "greenmail-mail-test/greenmail": 754,
     "h2database/h2database": 4644,
     "immutable-js/immutable-js": 33015,
     "kayak/pypika": 2925,
     "koajs/koa": 35682,
     "lich0821/ccNexus": 971,
-    "looplj/axonhub": 5463,
+    "looplj/axonhub": 5464,
     "mark3labs/mcp-go": 9241,
-    "microsoft/vscode": 195451,
+    "microsoft/vscode": 195466,
     "motdotla/dotenv": 20567,
     "mybatis/mybatis-3": 20431,
-    "netty/netty": 35065,
+    "netty/netty": 35064,
     "OpenFeign/feign": 9798,
     "pmd/pmd": 5531,
     "postcss/autoprefixer": 22196,
-    "postcss/postcss": 28967,
+    "postcss/postcss": 28968,
     "postcss/postcss-nested": 1199,
     "postcss/postcss-selector-parser": 217,
-    "PrefectHQ/fastmcp": 28568,
+    "PrefectHQ/fastmcp": 28583,
     "prestodb/presto": 16773,
     "react-hook-form/react-hook-form": 44919,
-    "router-for-me/CLIProxyAPI": 58690,
-    "sirmalloc/ccstatusline": 13607,
+    "reduxjs/redux-toolkit": 11248,
+    "router-for-me/CLIProxyAPI": 58735,
+    "sirmalloc/ccstatusline": 13609,
     "solidjs/solid": 36273,
-    "tlaplus/tlaplus": 3239,
-    "Wei-Shaw/sub2api": 46093
+    "tabulator-tables/tabulator": 7815,
+    "tlaplus/tlaplus": 3241,
+    "Wei-Shaw/sub2api": 46114
   }
 }
