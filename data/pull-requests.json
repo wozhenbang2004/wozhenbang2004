@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-18T13:58:52+00:00",
+  "changed_at": "2026-11-18T21:57:29+00:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -91,6 +91,15 @@
       "state": "Merged",
       "updated_at": "2026-11-01T17:24:28Z",
       "merged_at": "2026-11-01T17:24:20Z"
+    },
+    {
+      "url": "https://github.com/OWASP/www-community/pull/1373",
+      "repo": "OWASP/www-community",
+      "number": 1373,
+      "title": "Update the MS00-078 reference in Unicode Encoding",
+      "state": "Merged",
+      "updated_at": "2026-11-18T16:55:34Z",
+      "merged_at": "2026-11-18T16:54:50Z"
     },
     {
       "url": "https://github.com/OpenFeign/feign/pull/3665",
@@ -262,6 +271,15 @@
       "state": "Merged",
       "updated_at": "2026-11-12T19:31:39Z",
       "merged_at": "2026-11-12T19:31:39Z"
+    },
+    {
+      "url": "https://github.com/kayak/pypika/pull/3558",
+      "repo": "kayak/pypika",
+      "number": 3558,
+      "title": "Parenthesize subqueries in IN and NOT IN criteria",
+      "state": "Merged",
+      "updated_at": "2026-11-18T21:03:28Z",
+      "merged_at": "2026-11-18T21:03:28Z"
     },
     {
       "url": "https://github.com/koajs/koa/pull/2040",
@@ -525,6 +543,15 @@
       "merged_at": "2026-10-29T11:29:41Z"
     },
     {
+      "url": "https://github.com/rspamd/rspamd/pull/6390",
+      "repo": "rspamd/rspamd",
+      "number": 6390,
+      "title": "[Fix] Ignore HELO literals when extracting Received addresses",
+      "state": "Merged",
+      "updated_at": "2026-11-18T16:59:44Z",
+      "merged_at": "2026-11-18T16:59:44Z"
+    },
+    {
       "url": "https://github.com/sirmalloc/ccstatusline/pull/757",
       "repo": "sirmalloc/ccstatusline",
       "number": 757,
@@ -641,47 +668,49 @@
     }
   ],
   "repo_stars": {
-    "ant-design/ant-design": 100265,
-    "apache/dubbo": 41567,
+    "ant-design/ant-design": 100264,
+    "apache/dubbo": 41566,
     "astaxie/TokenHub": 1450,
-    "AstrBotDevs/AstrBot": 47152,
+    "AstrBotDevs/AstrBot": 47160,
     "baomidou/mybatis-plus": 17485,
     "celery/kombu": 3157,
-    "danielmiessler/Fabric": 44661,
-    "deepset-ai/haystack": 27043,
+    "danielmiessler/Fabric": 44660,
+    "deepset-ai/haystack": 27044,
     "FasterXML/jackson-databind": 3756,
     "FasterXML/jackson-dataformats-text": 455,
-    "google/gson": 24236,
-    "google/guava": 51925,
-    "gptme/gptme": 4487,
+    "google/gson": 24235,
+    "google/guava": 51926,
+    "gptme/gptme": 4488,
     "greenmail-mail-test/greenmail": 754,
-    "h2database/h2database": 4644,
+    "h2database/h2database": 4645,
     "immutable-js/immutable-js": 33016,
     "kayak/pypika": 2925,
     "koajs/koa": 35682,
     "lich0821/ccNexus": 971,
-    "looplj/axonhub": 5476,
+    "looplj/axonhub": 5477,
     "mark3labs/mcp-go": 9244,
-    "microsoft/vscode": 195619,
-    "motdotla/dotenv": 20569,
-    "mybatis/mybatis-3": 20433,
+    "microsoft/vscode": 195591,
+    "motdotla/dotenv": 20571,
+    "mybatis/mybatis-3": 20432,
     "neovim/nvim-lspconfig": 14017,
     "netty/netty": 35068,
     "OpenFeign/feign": 9797,
-    "pmd/pmd": 5534,
+    "OWASP/www-community": 1426,
+    "pmd/pmd": 5533,
     "postcss/autoprefixer": 22197,
     "postcss/postcss": 28967,
     "postcss/postcss-nested": 1199,
     "postcss/postcss-selector-parser": 217,
-    "PrefectHQ/fastmcp": 28648,
-    "prestodb/presto": 16776,
+    "PrefectHQ/fastmcp": 28654,
+    "prestodb/presto": 16778,
     "react-hook-form/react-hook-form": 44923,
     "reduxjs/redux-toolkit": 11249,
-    "router-for-me/CLIProxyAPI": 58926,
-    "sirmalloc/ccstatusline": 13634,
-    "solidjs/solid": 36372,
+    "router-for-me/CLIProxyAPI": 58948,
+    "rspamd/rspamd": 2575,
+    "sirmalloc/ccstatusline": 13637,
+    "solidjs/solid": 36539,
     "tabulator-tables/tabulator": 7820,
-    "tlaplus/tlaplus": 3256,
-    "Wei-Shaw/sub2api": 46253
+    "tlaplus/tlaplus": 3258,
+    "Wei-Shaw/sub2api": 46265
   }
 }
