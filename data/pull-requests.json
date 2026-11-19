@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-19T03:28:03+00:00",
+  "changed_at": "2026-11-19T13:06:42+00:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -417,6 +417,15 @@
       "merged_at": "2026-11-13T07:49:45Z"
     },
     {
+      "url": "https://github.com/netty/netty/pull/18452",
+      "repo": "netty/netty",
+      "number": 18452,
+      "title": "Decompress domain names in DNS SOA records",
+      "state": "Merged",
+      "updated_at": "2026-11-19T09:51:23Z",
+      "merged_at": "2026-11-19T09:50:16Z"
+    },
+    {
       "url": "https://github.com/pmd/pmd/pull/7283",
       "repo": "pmd/pmd",
       "number": 7283,
@@ -595,6 +604,15 @@
       "state": "Merged",
       "updated_at": "2026-11-03T17:53:32Z",
       "merged_at": "2026-11-03T17:53:20Z"
+    },
+    {
+      "url": "https://github.com/unicode-org/icu4x/pull/8733",
+      "repo": "unicode-org/icu4x",
+      "number": 8733,
+      "title": "Filter low-frequency suffixes from dense ZeroTrie",
+      "state": "Merged",
+      "updated_at": "2026-11-19T09:49:41Z",
+      "merged_at": "2026-11-19T09:49:40Z"
     }
   ],
   "verified_adoptions": [
@@ -668,49 +686,50 @@
     }
   ],
   "repo_stars": {
-    "ant-design/ant-design": 100266,
-    "apache/dubbo": 41567,
+    "ant-design/ant-design": 100282,
+    "apache/dubbo": 41568,
     "astaxie/TokenHub": 1450,
-    "AstrBotDevs/AstrBot": 47168,
-    "baomidou/mybatis-plus": 17485,
+    "AstrBotDevs/AstrBot": 47196,
+    "baomidou/mybatis-plus": 17484,
     "celery/kombu": 3157,
-    "danielmiessler/Fabric": 44662,
-    "deepset-ai/haystack": 27046,
+    "danielmiessler/Fabric": 44667,
+    "deepset-ai/haystack": 27050,
     "FasterXML/jackson-databind": 3756,
     "FasterXML/jackson-dataformats-text": 455,
-    "google/gson": 24235,
-    "google/guava": 51926,
+    "google/gson": 24236,
+    "google/guava": 51928,
     "gptme/gptme": 4488,
     "greenmail-mail-test/greenmail": 754,
     "h2database/h2database": 4645,
     "immutable-js/immutable-js": 33016,
     "kayak/pypika": 2925,
     "koajs/koa": 35681,
-    "lich0821/ccNexus": 971,
+    "lich0821/ccNexus": 970,
     "looplj/axonhub": 5479,
     "mark3labs/mcp-go": 9244,
-    "microsoft/vscode": 195551,
+    "microsoft/vscode": 195610,
     "motdotla/dotenv": 20571,
-    "mybatis/mybatis-3": 20432,
+    "mybatis/mybatis-3": 20431,
     "neovim/nvim-lspconfig": 14017,
-    "netty/netty": 35069,
+    "netty/netty": 35068,
     "OpenFeign/feign": 9797,
     "OWASP/www-community": 1427,
     "pmd/pmd": 5533,
     "postcss/autoprefixer": 22197,
-    "postcss/postcss": 28967,
+    "postcss/postcss": 28968,
     "postcss/postcss-nested": 1199,
     "postcss/postcss-selector-parser": 217,
-    "PrefectHQ/fastmcp": 28660,
+    "PrefectHQ/fastmcp": 28667,
     "prestodb/presto": 16779,
-    "react-hook-form/react-hook-form": 44923,
-    "reduxjs/redux-toolkit": 11249,
-    "router-for-me/CLIProxyAPI": 58963,
+    "react-hook-form/react-hook-form": 44925,
+    "reduxjs/redux-toolkit": 11248,
+    "router-for-me/CLIProxyAPI": 59000,
     "rspamd/rspamd": 2575,
-    "sirmalloc/ccstatusline": 13643,
-    "solidjs/solid": 36625,
-    "tabulator-tables/tabulator": 7821,
-    "tlaplus/tlaplus": 3258,
-    "Wei-Shaw/sub2api": 46274
+    "sirmalloc/ccstatusline": 13644,
+    "solidjs/solid": 36752,
+    "tabulator-tables/tabulator": 7823,
+    "tlaplus/tlaplus": 3259,
+    "unicode-org/icu4x": 1878,
+    "Wei-Shaw/sub2api": 46308
   }
 }
