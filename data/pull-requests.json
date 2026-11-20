@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-20T19:04:49+00:00",
+  "changed_at": "2026-11-20T20:19:04+00:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -91,6 +91,15 @@
       "state": "Merged",
       "updated_at": "2026-11-01T17:24:28Z",
       "merged_at": "2026-11-01T17:24:20Z"
+    },
+    {
+      "url": "https://github.com/Mirascope/mirascope/pull/2951",
+      "repo": "Mirascope/mirascope",
+      "number": 2951,
+      "title": "fix(tools): preserve underscore-prefixed parameter names",
+      "state": "Merged",
+      "updated_at": "2026-11-20T20:02:45Z",
+      "merged_at": "2026-11-20T20:02:45Z"
     },
     {
       "url": "https://github.com/OWASP/www-community/pull/1373",
@@ -758,14 +767,14 @@
     }
   ],
   "repo_stars": {
-    "ant-design/ant-design": 100317,
+    "ant-design/ant-design": 100318,
     "apache/dubbo": 41567,
     "astaxie/TokenHub": 1449,
-    "AstrBotDevs/AstrBot": 47268,
+    "AstrBotDevs/AstrBot": 47269,
     "baomidou/mybatis-plus": 17484,
     "celery/kombu": 3156,
-    "danielmiessler/Fabric": 44682,
-    "deepset-ai/haystack": 27062,
+    "danielmiessler/Fabric": 44683,
+    "deepset-ai/haystack": 27063,
     "FasterXML/jackson-databind": 3755,
     "FasterXML/jackson-dataformats-text": 454,
     "google/gson": 24236,
@@ -780,14 +789,15 @@
     "lich0821/ccNexus": 969,
     "looplj/axonhub": 5481,
     "mark3labs/mcp-go": 9245,
-    "microsoft/vscode": 195702,
+    "microsoft/vscode": 195703,
+    "Mirascope/mirascope": 1534,
     "motdotla/dotenv": 20570,
-    "mybatis/mybatis-3": 20431,
+    "mybatis/mybatis-3": 20432,
     "neovim/nvim-lspconfig": 14017,
     "netty/netty": 35066,
     "OpenFeign/feign": 9796,
     "OWASP/www-community": 1426,
-    "PebbleTemplates/pebble": 1198,
+    "PebbleTemplates/pebble": 1199,
     "pmd/pmd": 5538,
     "postcss/autoprefixer": 22197,
     "postcss/postcss": 28975,
@@ -798,14 +808,14 @@
     "react-hook-form/react-hook-form": 44925,
     "reduxjs/redux-toolkit": 11247,
     "robolectric/robolectric": 6088,
-    "router-for-me/CLIProxyAPI": 59095,
+    "router-for-me/CLIProxyAPI": 59099,
     "rspamd/rspamd": 2576,
-    "sirmalloc/ccstatusline": 13650,
-    "solidjs/solid": 36874,
+    "sirmalloc/ccstatusline": 13652,
+    "solidjs/solid": 36876,
     "tabulator-tables/tabulator": 7824,
     "tlaplus/tlaplus": 3266,
     "unicode-org/icu": 3648,
     "unicode-org/icu4x": 1878,
-    "Wei-Shaw/sub2api": 46361
+    "Wei-Shaw/sub2api": 46362
   }
 }
