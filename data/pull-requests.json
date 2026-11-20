@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-20T11:45:33+00:00",
+  "changed_at": "2026-11-20T19:04:49+00:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -273,6 +273,15 @@
       "merged_at": "2026-11-03T12:22:56Z"
     },
     {
+      "url": "https://github.com/harttle/liquidjs/pull/1005",
+      "repo": "harttle/liquidjs",
+      "number": 1005,
+      "title": "fix: share named cycle counters across argument lists",
+      "state": "Merged",
+      "updated_at": "2026-11-20T15:38:22Z",
+      "merged_at": "2026-11-20T15:37:58Z"
+    },
+    {
       "url": "https://github.com/immutable-js/immutable-js/pull/2319",
       "repo": "immutable-js/immutable-js",
       "number": 2319,
@@ -444,6 +453,15 @@
       "merged_at": "2026-11-19T09:50:16Z"
     },
     {
+      "url": "https://github.com/netty/netty/pull/18491",
+      "repo": "netty/netty",
+      "number": 18491,
+      "title": "Propagate channelInactive during proxy negotiation",
+      "state": "Merged",
+      "updated_at": "2026-11-20T15:38:57Z",
+      "merged_at": "2026-11-20T15:34:45Z"
+    },
+    {
       "url": "https://github.com/pmd/pmd/pull/7283",
       "repo": "pmd/pmd",
       "number": 7283,
@@ -561,6 +579,24 @@
       "merged_at": "2026-11-16T19:33:46Z"
     },
     {
+      "url": "https://github.com/robolectric/robolectric/pull/11819",
+      "repo": "robolectric/robolectric",
+      "number": 11819,
+      "title": "Update enabled state of pinned shortcuts",
+      "state": "Merged",
+      "updated_at": "2026-11-20T17:40:01Z",
+      "merged_at": "2026-11-20T17:40:00Z"
+    },
+    {
+      "url": "https://github.com/robolectric/robolectric/pull/11820",
+      "repo": "robolectric/robolectric",
+      "number": 11820,
+      "title": "Replace extras when updating a PendingIntent",
+      "state": "Merged",
+      "updated_at": "2026-11-20T17:44:03Z",
+      "merged_at": "2026-11-20T17:44:03Z"
+    },
+    {
       "url": "https://github.com/router-for-me/CLIProxyAPI/pull/7095",
       "repo": "router-for-me/CLIProxyAPI",
       "number": 7095,
@@ -622,6 +658,15 @@
       "state": "Merged",
       "updated_at": "2026-11-03T17:53:32Z",
       "merged_at": "2026-11-03T17:53:20Z"
+    },
+    {
+      "url": "https://github.com/unicode-org/icu/pull/4382",
+      "repo": "unicode-org/icu",
+      "number": 4382,
+      "title": "ICU-23596 Apply parse adjustments to the working calendar",
+      "state": "Merged",
+      "updated_at": "2026-11-20T16:32:46Z",
+      "merged_at": "2026-11-20T16:32:46Z"
     },
     {
       "url": "https://github.com/unicode-org/icu4x/pull/8732",
@@ -713,28 +758,29 @@
     }
   ],
   "repo_stars": {
-    "ant-design/ant-design": 100312,
+    "ant-design/ant-design": 100317,
     "apache/dubbo": 41567,
     "astaxie/TokenHub": 1449,
-    "AstrBotDevs/AstrBot": 47250,
+    "AstrBotDevs/AstrBot": 47268,
     "baomidou/mybatis-plus": 17484,
     "celery/kombu": 3156,
-    "danielmiessler/Fabric": 44679,
-    "deepset-ai/haystack": 27060,
+    "danielmiessler/Fabric": 44682,
+    "deepset-ai/haystack": 27062,
     "FasterXML/jackson-databind": 3755,
     "FasterXML/jackson-dataformats-text": 454,
     "google/gson": 24236,
-    "google/guava": 51927,
+    "google/guava": 51925,
     "gptme/gptme": 4489,
     "greenmail-mail-test/greenmail": 756,
     "h2database/h2database": 4643,
+    "harttle/liquidjs": 1889,
     "immutable-js/immutable-js": 33016,
     "kayak/pypika": 2924,
-    "koajs/koa": 35682,
-    "lich0821/ccNexus": 970,
+    "koajs/koa": 35681,
+    "lich0821/ccNexus": 969,
     "looplj/axonhub": 5481,
     "mark3labs/mcp-go": 9245,
-    "microsoft/vscode": 195694,
+    "microsoft/vscode": 195702,
     "motdotla/dotenv": 20570,
     "mybatis/mybatis-3": 20431,
     "neovim/nvim-lspconfig": 14017,
@@ -742,22 +788,24 @@
     "OpenFeign/feign": 9796,
     "OWASP/www-community": 1426,
     "PebbleTemplates/pebble": 1198,
-    "pmd/pmd": 5537,
+    "pmd/pmd": 5538,
     "postcss/autoprefixer": 22197,
-    "postcss/postcss": 28976,
+    "postcss/postcss": 28975,
     "postcss/postcss-nested": 1199,
     "postcss/postcss-selector-parser": 217,
-    "PrefectHQ/fastmcp": 28686,
+    "PrefectHQ/fastmcp": 28694,
     "prestodb/presto": 16778,
     "react-hook-form/react-hook-form": 44925,
     "reduxjs/redux-toolkit": 11247,
-    "router-for-me/CLIProxyAPI": 59066,
+    "robolectric/robolectric": 6088,
+    "router-for-me/CLIProxyAPI": 59095,
     "rspamd/rspamd": 2576,
-    "sirmalloc/ccstatusline": 13649,
-    "solidjs/solid": 36852,
-    "tabulator-tables/tabulator": 7825,
-    "tlaplus/tlaplus": 3265,
-    "unicode-org/icu4x": 1877,
-    "Wei-Shaw/sub2api": 46346
+    "sirmalloc/ccstatusline": 13650,
+    "solidjs/solid": 36874,
+    "tabulator-tables/tabulator": 7824,
+    "tlaplus/tlaplus": 3266,
+    "unicode-org/icu": 3648,
+    "unicode-org/icu4x": 1878,
+    "Wei-Shaw/sub2api": 46361
   }
 }
