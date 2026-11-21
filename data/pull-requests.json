@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-20T20:19:04+00:00",
+  "changed_at": "2026-11-21T02:14:46+00:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -219,6 +219,15 @@
       "merged_at": "2026-11-17T06:40:22Z"
     },
     {
+      "url": "https://github.com/cvxpy/cvxpy/pull/3636",
+      "repo": "cvxpy/cvxpy",
+      "number": 3636,
+      "title": "Expose CVXOPT iteration counts and native solver statistics",
+      "state": "Merged",
+      "updated_at": "2026-11-20T21:21:02Z",
+      "merged_at": "2026-11-20T21:21:01Z"
+    },
+    {
       "url": "https://github.com/danielmiessler/Fabric/pull/2321",
       "repo": "danielmiessler/Fabric",
       "number": 2321,
@@ -235,6 +244,15 @@
       "state": "Merged",
       "updated_at": "2026-10-30T11:34:17Z",
       "merged_at": "2026-10-30T11:34:17Z"
+    },
+    {
+      "url": "https://github.com/dotnet/BenchmarkDotNet/pull/3346",
+      "repo": "dotnet/BenchmarkDotNet",
+      "number": 3346,
+      "title": "docs: Clarify when ArgumentsSource is read",
+      "state": "Merged",
+      "updated_at": "2026-11-21T01:18:37Z",
+      "merged_at": "2026-11-21T01:18:34Z"
     },
     {
       "url": "https://github.com/google/gson/pull/3157",
@@ -469,6 +487,24 @@
       "state": "Merged",
       "updated_at": "2026-11-20T15:38:57Z",
       "merged_at": "2026-11-20T15:34:45Z"
+    },
+    {
+      "url": "https://github.com/oapi-codegen/oapi-codegen/pull/2678",
+      "repo": "oapi-codegen/oapi-codegen",
+      "number": 2678,
+      "title": "Preserve enum values with colliding Go names",
+      "state": "Merged",
+      "updated_at": "2026-11-21T01:41:17Z",
+      "merged_at": "2026-11-21T01:41:17Z"
+    },
+    {
+      "url": "https://github.com/oapi-codegen/oapi-codegen/pull/2679",
+      "repo": "oapi-codegen/oapi-codegen",
+      "number": 2679,
+      "title": "Make codegen utility tests independent",
+      "state": "Merged",
+      "updated_at": "2026-11-21T01:33:29Z",
+      "merged_at": "2026-11-21T01:33:29Z"
     },
     {
       "url": "https://github.com/pmd/pmd/pull/7283",
@@ -767,14 +803,16 @@
     }
   ],
   "repo_stars": {
-    "ant-design/ant-design": 100318,
+    "ant-design/ant-design": 100320,
     "apache/dubbo": 41567,
     "astaxie/TokenHub": 1449,
     "AstrBotDevs/AstrBot": 47269,
-    "baomidou/mybatis-plus": 17484,
+    "baomidou/mybatis-plus": 17483,
     "celery/kombu": 3156,
+    "cvxpy/cvxpy": 6399,
     "danielmiessler/Fabric": 44683,
-    "deepset-ai/haystack": 27063,
+    "deepset-ai/haystack": 27065,
+    "dotnet/BenchmarkDotNet": 11531,
     "FasterXML/jackson-databind": 3755,
     "FasterXML/jackson-dataformats-text": 454,
     "google/gson": 24236,
@@ -787,14 +825,15 @@
     "kayak/pypika": 2924,
     "koajs/koa": 35681,
     "lich0821/ccNexus": 969,
-    "looplj/axonhub": 5481,
-    "mark3labs/mcp-go": 9245,
-    "microsoft/vscode": 195703,
+    "looplj/axonhub": 5482,
+    "mark3labs/mcp-go": 9246,
+    "microsoft/vscode": 195691,
     "Mirascope/mirascope": 1534,
-    "motdotla/dotenv": 20570,
+    "motdotla/dotenv": 20571,
     "mybatis/mybatis-3": 20432,
-    "neovim/nvim-lspconfig": 14017,
+    "neovim/nvim-lspconfig": 14016,
     "netty/netty": 35066,
+    "oapi-codegen/oapi-codegen": 8668,
     "OpenFeign/feign": 9796,
     "OWASP/www-community": 1426,
     "PebbleTemplates/pebble": 1199,
@@ -803,19 +842,19 @@
     "postcss/postcss": 28975,
     "postcss/postcss-nested": 1199,
     "postcss/postcss-selector-parser": 217,
-    "PrefectHQ/fastmcp": 28694,
-    "prestodb/presto": 16778,
-    "react-hook-form/react-hook-form": 44925,
+    "PrefectHQ/fastmcp": 28695,
+    "prestodb/presto": 16777,
+    "react-hook-form/react-hook-form": 44924,
     "reduxjs/redux-toolkit": 11247,
     "robolectric/robolectric": 6088,
-    "router-for-me/CLIProxyAPI": 59099,
+    "router-for-me/CLIProxyAPI": 59111,
     "rspamd/rspamd": 2576,
     "sirmalloc/ccstatusline": 13652,
-    "solidjs/solid": 36876,
+    "solidjs/solid": 36883,
     "tabulator-tables/tabulator": 7824,
-    "tlaplus/tlaplus": 3266,
+    "tlaplus/tlaplus": 3267,
     "unicode-org/icu": 3648,
     "unicode-org/icu4x": 1878,
-    "Wei-Shaw/sub2api": 46362
+    "Wei-Shaw/sub2api": 46367
   }
 }
