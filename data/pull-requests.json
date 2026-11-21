@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-21T17:33:52+00:00",
+  "changed_at": "2026-11-21T23:16:13+00:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -525,6 +525,15 @@
       "merged_at": "2026-11-10T07:59:03Z"
     },
     {
+      "url": "https://github.com/pmd/pmd/pull/7375",
+      "repo": "pmd/pmd",
+      "number": 7375,
+      "title": "[java] Fix #2786: Exempt ConcurrentMap implementations from UseConcurrentHashMap",
+      "state": "Merged",
+      "updated_at": "2026-11-21T18:19:24Z",
+      "merged_at": "2026-11-21T18:19:24Z"
+    },
+    {
       "url": "https://github.com/postcss/autoprefixer/pull/1563",
       "repo": "postcss/autoprefixer",
       "number": 1563,
@@ -633,6 +642,15 @@
       "merged_at": "2026-11-21T10:01:25Z"
     },
     {
+      "url": "https://github.com/recharts/recharts/pull/8270",
+      "repo": "recharts/recharts",
+      "number": 8270,
+      "title": "docs: explain how to layer bar groups",
+      "state": "Merged",
+      "updated_at": "2026-11-21T18:42:03Z",
+      "merged_at": "2026-11-21T18:42:03Z"
+    },
+    {
       "url": "https://github.com/recharts/recharts/pull/8271",
       "repo": "recharts/recharts",
       "number": 8271,
@@ -649,6 +667,24 @@
       "state": "Merged",
       "updated_at": "2026-11-16T19:33:46Z",
       "merged_at": "2026-11-16T19:33:46Z"
+    },
+    {
+      "url": "https://github.com/reduxjs/redux-toolkit/pull/5630",
+      "repo": "reduxjs/redux-toolkit",
+      "number": 5630,
+      "title": "feat(toolkit): add checkCurrent to listener take and condition",
+      "state": "Merged",
+      "updated_at": "2026-11-21T21:07:18Z",
+      "merged_at": "2026-11-21T21:07:18Z"
+    },
+    {
+      "url": "https://github.com/reduxjs/redux-toolkit/pull/5631",
+      "repo": "reduxjs/redux-toolkit",
+      "number": 5631,
+      "title": "fix(toolkit): report errors from autoJoined listener tasks",
+      "state": "Merged",
+      "updated_at": "2026-11-21T21:08:34Z",
+      "merged_at": "2026-11-21T21:08:34Z"
     },
     {
       "url": "https://github.com/robolectric/robolectric/pull/11819",
@@ -839,20 +875,20 @@
     }
   ],
   "repo_stars": {
-    "ant-design/ant-design": 100326,
-    "apache/dubbo": 41567,
+    "ant-design/ant-design": 100327,
+    "apache/dubbo": 41568,
     "astaxie/TokenHub": 1450,
-    "AstrBotDevs/AstrBot": 47307,
+    "AstrBotDevs/AstrBot": 47313,
     "baomidou/mybatis-plus": 17484,
     "celery/kombu": 3156,
-    "cvxpy/cvxpy": 6399,
-    "danielmiessler/Fabric": 44687,
+    "cvxpy/cvxpy": 6400,
+    "danielmiessler/Fabric": 44689,
     "deepset-ai/haystack": 27072,
     "dotnet/BenchmarkDotNet": 11531,
     "FasterXML/jackson-databind": 3755,
     "FasterXML/jackson-dataformats-text": 454,
-    "google/gson": 24236,
-    "google/guava": 51924,
+    "google/gson": 24235,
+    "google/guava": 51923,
     "gptme/gptme": 4490,
     "greenmail-mail-test/greenmail": 756,
     "h2database/h2database": 4643,
@@ -863,36 +899,36 @@
     "lich0821/ccNexus": 969,
     "looplj/axonhub": 5482,
     "mark3labs/mcp-go": 9247,
-    "microsoft/vscode": 195703,
+    "microsoft/vscode": 195719,
     "Mirascope/mirascope": 1534,
-    "motdotla/dotenv": 20571,
+    "motdotla/dotenv": 20572,
     "mybatis/mybatis-3": 20431,
     "neovim/nvim-lspconfig": 14018,
-    "netty/netty": 35066,
-    "oapi-codegen/oapi-codegen": 8669,
+    "netty/netty": 35067,
+    "oapi-codegen/oapi-codegen": 8670,
     "OpenFeign/feign": 9796,
     "OWASP/www-community": 1426,
     "PebbleTemplates/pebble": 1199,
     "pmd/pmd": 5538,
-    "postcss/autoprefixer": 22198,
-    "postcss/postcss": 28977,
+    "postcss/autoprefixer": 22197,
+    "postcss/postcss": 28976,
     "postcss/postcss-nested": 1199,
     "postcss/postcss-selector-parser": 217,
-    "PrefectHQ/fastmcp": 28702,
+    "PrefectHQ/fastmcp": 28705,
     "prestodb/presto": 16777,
-    "react-hook-form/react-hook-form": 44924,
-    "recharts/recharts": 27730,
+    "react-hook-form/react-hook-form": 44925,
+    "recharts/recharts": 27729,
     "reduxjs/redux-toolkit": 11247,
-    "robolectric/robolectric": 6093,
-    "router-for-me/CLIProxyAPI": 59170,
+    "robolectric/robolectric": 6094,
+    "router-for-me/CLIProxyAPI": 59180,
     "rspamd/rspamd": 2576,
     "sirmalloc/ccstatusline": 13654,
-    "solidjs/solid": 36897,
+    "solidjs/solid": 36900,
     "tabulator-tables/tabulator": 7825,
-    "The-OpenROAD-Project/OpenROAD": 3304,
+    "The-OpenROAD-Project/OpenROAD": 3306,
     "tlaplus/tlaplus": 3267,
     "unicode-org/icu": 3648,
     "unicode-org/icu4x": 1878,
-    "Wei-Shaw/sub2api": 46405
+    "Wei-Shaw/sub2api": 46408
   }
 }
