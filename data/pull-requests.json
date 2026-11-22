@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-22T03:15:16+00:00",
+  "changed_at": "2026-11-22T11:30:25+00:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -93,6 +93,15 @@
       "merged_at": "2026-11-01T17:24:20Z"
     },
     {
+      "url": "https://github.com/Leaflet/Leaflet/pull/10619",
+      "repo": "Leaflet/Leaflet",
+      "number": 10619,
+      "title": "Clarify that popup width options measure content",
+      "state": "Merged",
+      "updated_at": "2026-11-22T11:18:20Z",
+      "merged_at": "2026-11-22T11:18:19Z"
+    },
+    {
       "url": "https://github.com/Mirascope/mirascope/pull/2951",
       "repo": "Mirascope/mirascope",
       "number": 2951,
@@ -118,6 +127,24 @@
       "state": "Merged",
       "updated_at": "2026-11-09T21:15:17Z",
       "merged_at": "2026-11-09T21:15:17Z"
+    },
+    {
+      "url": "https://github.com/OpenFeign/feign/pull/3704",
+      "repo": "OpenFeign/feign",
+      "number": 3704,
+      "title": "Document when EncodeException can have a null message",
+      "state": "Merged",
+      "updated_at": "2026-11-22T09:52:43Z",
+      "merged_at": "2026-11-22T09:52:42Z"
+    },
+    {
+      "url": "https://github.com/OpenFeign/feign/pull/3705",
+      "repo": "OpenFeign/feign",
+      "number": 3705,
+      "title": "Document how to add Feign response headers",
+      "state": "Merged",
+      "updated_at": "2026-11-22T09:52:38Z",
+      "merged_at": "2026-11-22T09:52:38Z"
     },
     {
       "url": "https://github.com/PebbleTemplates/pebble/pull/864",
@@ -768,6 +795,15 @@
       "merged_at": "2026-11-16T14:37:30Z"
     },
     {
+      "url": "https://github.com/testng-team/testng/pull/3618",
+      "repo": "testng-team/testng",
+      "number": 3618,
+      "title": "fix: restore compatibility with the 7.12.0 API",
+      "state": "Merged",
+      "updated_at": "2026-11-22T06:39:04Z",
+      "merged_at": "2026-11-22T06:38:27Z"
+    },
+    {
       "url": "https://github.com/tlaplus/tlaplus/pull/1507",
       "repo": "tlaplus/tlaplus",
       "number": 1507,
@@ -802,6 +838,24 @@
       "state": "Merged",
       "updated_at": "2026-11-19T09:49:41Z",
       "merged_at": "2026-11-19T09:49:40Z"
+    },
+    {
+      "url": "https://github.com/valyala/fasthttp/pull/2604",
+      "repo": "valyala/fasthttp",
+      "number": 2604,
+      "title": "docs: clarify retry callback eligibility",
+      "state": "Merged",
+      "updated_at": "2026-11-22T04:03:56Z",
+      "merged_at": "2026-11-22T04:03:52Z"
+    },
+    {
+      "url": "https://github.com/valyala/fasthttp/pull/2605",
+      "repo": "valyala/fasthttp",
+      "number": 2605,
+      "title": "docs: explain fragmented input to Request.Read",
+      "state": "Merged",
+      "updated_at": "2026-11-22T04:04:07Z",
+      "merged_at": "2026-11-22T04:04:04Z"
     }
   ],
   "verified_adoptions": [
@@ -875,34 +929,35 @@
     }
   ],
   "repo_stars": {
-    "ant-design/ant-design": 100333,
-    "apache/dubbo": 41568,
-    "astaxie/TokenHub": 1450,
-    "AstrBotDevs/AstrBot": 47317,
+    "ant-design/ant-design": 100341,
+    "apache/dubbo": 41569,
+    "astaxie/TokenHub": 1449,
+    "AstrBotDevs/AstrBot": 47331,
     "baomidou/mybatis-plus": 17484,
     "celery/kombu": 3156,
     "cvxpy/cvxpy": 6400,
-    "danielmiessler/Fabric": 44690,
+    "danielmiessler/Fabric": 44723,
     "deepset-ai/haystack": 27072,
     "dotnet/BenchmarkDotNet": 11531,
     "FasterXML/jackson-databind": 3755,
     "FasterXML/jackson-dataformats-text": 454,
     "google/gson": 24236,
-    "google/guava": 51923,
-    "gptme/gptme": 4491,
+    "google/guava": 51924,
+    "gptme/gptme": 4492,
     "greenmail-mail-test/greenmail": 756,
     "h2database/h2database": 4643,
     "harttle/liquidjs": 1890,
     "immutable-js/immutable-js": 33016,
     "kayak/pypika": 2924,
     "koajs/koa": 35682,
+    "Leaflet/Leaflet": 45967,
     "lich0821/ccNexus": 969,
     "looplj/axonhub": 5482,
     "mark3labs/mcp-go": 9246,
-    "microsoft/vscode": 195673,
+    "microsoft/vscode": 195735,
     "Mirascope/mirascope": 1534,
     "motdotla/dotenv": 20572,
-    "mybatis/mybatis-3": 20431,
+    "mybatis/mybatis-3": 20432,
     "neovim/nvim-lspconfig": 14018,
     "netty/netty": 35067,
     "oapi-codegen/oapi-codegen": 8669,
@@ -914,21 +969,23 @@
     "postcss/postcss": 28977,
     "postcss/postcss-nested": 1199,
     "postcss/postcss-selector-parser": 217,
-    "PrefectHQ/fastmcp": 28706,
+    "PrefectHQ/fastmcp": 28711,
     "prestodb/presto": 16777,
     "react-hook-form/react-hook-form": 44926,
-    "recharts/recharts": 27728,
+    "recharts/recharts": 27727,
     "reduxjs/redux-toolkit": 11247,
-    "robolectric/robolectric": 6096,
-    "router-for-me/CLIProxyAPI": 59188,
+    "robolectric/robolectric": 6098,
+    "router-for-me/CLIProxyAPI": 59209,
     "rspamd/rspamd": 2576,
-    "sirmalloc/ccstatusline": 13655,
-    "solidjs/solid": 36904,
+    "sirmalloc/ccstatusline": 13658,
+    "solidjs/solid": 36910,
     "tabulator-tables/tabulator": 7825,
-    "The-OpenROAD-Project/OpenROAD": 3306,
-    "tlaplus/tlaplus": 3268,
+    "testng-team/testng": 2058,
+    "The-OpenROAD-Project/OpenROAD": 3307,
+    "tlaplus/tlaplus": 3270,
     "unicode-org/icu": 3649,
-    "unicode-org/icu4x": 1878,
-    "Wei-Shaw/sub2api": 46409
+    "unicode-org/icu4x": 1879,
+    "valyala/fasthttp": 23524,
+    "Wei-Shaw/sub2api": 46430
   }
 }
