@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-23T01:03:27+00:00",
+  "changed_at": "2026-11-22T18:01:12-08:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -172,6 +172,15 @@
       "state": "Merged",
       "updated_at": "2026-11-22T21:21:22Z",
       "merged_at": "2026-11-22T21:21:22Z"
+    },
+    {
+      "url": "https://github.com/RoaringBitmap/RoaringBitmap/pull/911",
+      "repo": "RoaringBitmap/RoaringBitmap",
+      "number": 911,
+      "title": "Skip redundant slices in RangeBitmap range queries",
+      "state": "Merged",
+      "updated_at": "2026-11-23T01:19:37Z",
+      "merged_at": "2026-11-23T01:19:37Z"
     },
     {
       "url": "https://github.com/The-OpenROAD-Project/OpenROAD/pull/12356",
@@ -831,6 +840,15 @@
       "merged_at": "2026-11-21T07:52:08Z"
     },
     {
+      "url": "https://github.com/ruby/rbs/pull/3337",
+      "repo": "ruby/rbs",
+      "number": 3337,
+      "title": "Allow descriptions around OptionParser argument types",
+      "state": "Merged",
+      "updated_at": "2026-11-23T01:55:19Z",
+      "merged_at": "2026-11-23T01:55:19Z"
+    },
+    {
       "url": "https://github.com/sirmalloc/ccstatusline/pull/757",
       "repo": "sirmalloc/ccstatusline",
       "number": 757,
@@ -934,7 +952,7 @@
     {
       "source": "https://github.com/PrefectHQ/fastmcp/pull/6137",
       "target": "https://github.com/PrefectHQ/fastmcp/pull/6394",
-      "description": "修复互相递归 schema 的类型还原。维护者沿用修复与测试、去除无关 workflow 提交，保留 co-author，已合入 `main`。",
+      "description": "Fixed type reconstruction for mutually recursive schemas. The maintainer retained the fix and tests, removed unrelated workflow commits, preserved co-author attribution, and merged the change into `main`.",
       "evidence": "https://github.com/PrefectHQ/fastmcp/pull/6137#issuecomment-6761385319",
       "source_repo": "PrefectHQ/fastmcp",
       "source_number": 6137,
@@ -944,7 +962,7 @@
     {
       "source": "https://github.com/FasterXML/jackson-databind/pull/6389",
       "target": "https://github.com/FasterXML/jackson-databind/pull/6403",
-      "description": "修复非公开 Record 的部分更新。维护者保留原作者提交，补充访问器缓存及发布说明，已合入 `3.x`。",
+      "description": "Fixed partial updates of non-public Record types. The maintainer retained the original author's commit, added accessor caching and release notes, and merged the change into `3.x`.",
       "source_repo": "FasterXML/jackson-databind",
       "source_number": 6389,
       "source_state": "Closed",
@@ -953,7 +971,7 @@
     {
       "source": "https://github.com/FasterXML/jackson-databind/pull/6377",
       "target": "https://github.com/FasterXML/jackson-databind/pull/6391",
-      "description": "修复数组形态 Builder 对额外结构化值的跳过。维护者保留修复、测试与作者提交，补充发布说明，已合入 `3.x`。",
+      "description": "Fixed skipping of extra structured values for array-shaped builders. The maintainer retained the fix, tests and original author's commit, added release notes, and merged the change into `3.x`.",
       "source_repo": "FasterXML/jackson-databind",
       "source_number": 6377,
       "source_state": "Closed",
@@ -962,7 +980,7 @@
     {
       "source": "https://github.com/solidjs/solid/pull/4539",
       "target": "https://github.com/solidjs/solid/pull/4558",
-      "description": "Ryan 接续并完善原修复，保留[作者 commit 22cc9e4](https://github.com/solidjs/solid/commit/22cc9e4c6b097a0b6d7d149013f52f7568fab88d)，已通过 [commit 718ec9c](https://github.com/solidjs/solid/commit/718ec9c218643dfe9943f05d33ccb66db53621c6) 合入 `next`。",
+      "description": "Ryan continued and refined the original fix, retained [author commit 22cc9e4](https://github.com/solidjs/solid/commit/22cc9e4c6b097a0b6d7d149013f52f7568fab88d), and merged it into `next` via [commit 718ec9c](https://github.com/solidjs/solid/commit/718ec9c218643dfe9943f05d33ccb66db53621c6).",
       "source_repo": "solidjs/solid",
       "source_number": 4539,
       "source_state": "Closed",
@@ -971,7 +989,7 @@
     {
       "source": "https://github.com/google/guava/pull/8807",
       "target": "https://github.com/google/guava/pull/8811",
-      "description": "经 Copybara 导入 `master`，[commit c0a8a1e](https://github.com/google/guava/commit/c0a8a1edc69393e8141424037571d9825f5fc0f4) 的 author 关联本账号。",
+      "description": "Imported into `master` through Copybara; the author of [commit c0a8a1e](https://github.com/google/guava/commit/c0a8a1edc69393e8141424037571d9825f5fc0f4) is linked to this account.",
       "source_repo": "google/guava",
       "source_number": 8807,
       "source_state": "Closed",
@@ -982,7 +1000,7 @@
       "target": "https://github.com/FasterXML/jackson-databind/pull/6411",
       "target_kind": "pull",
       "evidence_commit": "cec6f231df2c849c6e8dd1c887a539b599a3e4c1",
-      "description": "Wrap unknown-property handler exceptions with bean and property paths。接续 PR 收录原 head commit [cec6f23](https://github.com/FasterXML/jackson-databind/commit/cec6f231df2c849c6e8dd1c887a539b599a3e4c1)，并已合并。",
+      "description": "Wrap unknown-property handler exceptions with bean and property paths. The successor PR includes the original head commit [cec6f23](https://github.com/FasterXML/jackson-databind/commit/cec6f231df2c849c6e8dd1c887a539b599a3e4c1) and has been merged.",
       "source_repo": "FasterXML/jackson-databind",
       "source_number": 6378,
       "source_state": "Closed",
@@ -993,7 +1011,7 @@
       "target": "https://github.com/FasterXML/jackson-databind/pull/6420",
       "target_kind": "pull",
       "evidence_commit": "a36b7be7b24b42a506f0ce2862cc4f80887d4394",
-      "description": "Consolidate unwrapped input-name collection on SettableBeanProperty。接续 PR 收录原 head commit [a36b7be](https://github.com/FasterXML/jackson-databind/commit/a36b7be7b24b42a506f0ce2862cc4f80887d4394)，并已合并。",
+      "description": "Consolidate unwrapped input-name collection on SettableBeanProperty. The successor PR includes the original head commit [a36b7be](https://github.com/FasterXML/jackson-databind/commit/a36b7be7b24b42a506f0ce2862cc4f80887d4394) and has been merged.",
       "source_repo": "FasterXML/jackson-databind",
       "source_number": 6415,
       "source_state": "Closed",
@@ -1001,15 +1019,15 @@
     }
   ],
   "repo_stars": {
-    "ant-design/ant-design": 100345,
+    "ant-design/ant-design": 100346,
     "apache/dubbo": 41568,
     "astaxie/TokenHub": 1449,
-    "AstrBotDevs/AstrBot": 47352,
+    "AstrBotDevs/AstrBot": 47355,
     "baomidou/mybatis-plus": 17484,
     "celery/kombu": 3156,
     "chartjs/Chart.js": 67819,
     "cvxpy/cvxpy": 6400,
-    "danielmiessler/Fabric": 44741,
+    "danielmiessler/Fabric": 44744,
     "deepset-ai/haystack": 27077,
     "dotnet/BenchmarkDotNet": 11534,
     "FasterXML/jackson-databind": 3755,
@@ -1029,7 +1047,7 @@
     "luben/zstd-jni": 1078,
     "madyankin/postcss-modules": 1623,
     "mark3labs/mcp-go": 9247,
-    "microsoft/vscode": 195794,
+    "microsoft/vscode": 195798,
     "Mirascope/mirascope": 1535,
     "motdotla/dotenv": 20572,
     "mybatis/mybatis-3": 20431,
@@ -1049,13 +1067,15 @@
     "prestodb/presto": 16777,
     "PyCQA/flake8-bugbear": 1126,
     "react-hook-form/react-hook-form": 44925,
-    "recharts/recharts": 27733,
-    "reduxjs/redux-toolkit": 11246,
+    "recharts/recharts": 27734,
+    "reduxjs/redux-toolkit": 11247,
+    "RoaringBitmap/RoaringBitmap": 3958,
     "robolectric/robolectric": 6100,
-    "router-for-me/CLIProxyAPI": 59250,
+    "router-for-me/CLIProxyAPI": 59255,
     "rspamd/rspamd": 2576,
+    "ruby/rbs": 2186,
     "sirmalloc/ccstatusline": 13664,
-    "solidjs/solid": 36921,
+    "solidjs/solid": 36923,
     "tabulator-tables/tabulator": 7825,
     "testng-team/testng": 2058,
     "The-OpenROAD-Project/OpenROAD": 3310,
@@ -1063,6 +1083,6 @@
     "unicode-org/icu": 3649,
     "unicode-org/icu4x": 1881,
     "valyala/fasthttp": 23525,
-    "Wei-Shaw/sub2api": 46453
+    "Wei-Shaw/sub2api": 46457
   }
 }

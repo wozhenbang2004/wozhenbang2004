@@ -24,7 +24,7 @@
 ## 🌍 Open Source Contributor
 
 <!-- PR_SUMMARY_START -->
-**Contributor to 63 upstream projects**
+**Contributor to 65 upstream projects**
 <!-- PR_SUMMARY_END -->
 
 <!-- PR_LIST_START -->
@@ -52,10 +52,11 @@
 | **[tabulator](https://github.com/tabulator-tables/tabulator)** | **[cvxpy](https://github.com/cvxpy/cvxpy)** |
 | **[robolectric](https://github.com/robolectric/robolectric)** | **[pmd](https://github.com/pmd/pmd)** |
 | **[axonhub](https://github.com/looplj/axonhub)** | **[h2database](https://github.com/h2database/h2database)** |
-| **[gptme](https://github.com/gptme/gptme)** | **[jackson-databind](https://github.com/FasterXML/jackson-databind)** |
-| **[icu](https://github.com/unicode-org/icu)** | **[OpenROAD](https://github.com/The-OpenROAD-Project/OpenROAD)** |
-| **[tlaplus](https://github.com/tlaplus/tlaplus)** | **[kombu](https://github.com/celery/kombu)** |
-| **[pypika](https://github.com/kayak/pypika)** | **[rspamd](https://github.com/rspamd/rspamd)** |
+| **[gptme](https://github.com/gptme/gptme)** | **[RoaringBitmap](https://github.com/RoaringBitmap/RoaringBitmap)** |
+| **[jackson-databind](https://github.com/FasterXML/jackson-databind)** | **[icu](https://github.com/unicode-org/icu)** |
+| **[OpenROAD](https://github.com/The-OpenROAD-Project/OpenROAD)** | **[tlaplus](https://github.com/tlaplus/tlaplus)** |
+| **[kombu](https://github.com/celery/kombu)** | **[pypika](https://github.com/kayak/pypika)** |
+| **[rspamd](https://github.com/rspamd/rspamd)** | **[rbs](https://github.com/ruby/rbs)** |
 | **[testng](https://github.com/testng-team/testng)** | **[liquidjs](https://github.com/harttle/liquidjs)** |
 | **[icu4x](https://github.com/unicode-org/icu4x)** | **[postcss-modules](https://github.com/madyankin/postcss-modules)** |
 | **[mirascope](https://github.com/Mirascope/mirascope)** | **[TokenHub](https://github.com/astaxie/TokenHub)** |
