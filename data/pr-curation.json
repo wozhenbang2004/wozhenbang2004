@@ -3,28 +3,28 @@
     {
       "source": "https://github.com/PrefectHQ/fastmcp/pull/6137",
       "target": "https://github.com/PrefectHQ/fastmcp/pull/6394",
-      "description": "修复互相递归 schema 的类型还原。维护者沿用修复与测试、去除无关 workflow 提交，保留 co-author，已合入 `main`。",
+      "description": "Fixed type reconstruction for mutually recursive schemas. The maintainer retained the fix and tests, removed unrelated workflow commits, preserved co-author attribution, and merged the change into `main`.",
       "evidence": "https://github.com/PrefectHQ/fastmcp/pull/6137#issuecomment-6761385319"
     },
     {
       "source": "https://github.com/FasterXML/jackson-databind/pull/6389",
       "target": "https://github.com/FasterXML/jackson-databind/pull/6403",
-      "description": "修复非公开 Record 的部分更新。维护者保留原作者提交，补充访问器缓存及发布说明，已合入 `3.x`。"
+      "description": "Fixed partial updates of non-public Record types. The maintainer retained the original author's commit, added accessor caching and release notes, and merged the change into `3.x`."
     },
     {
       "source": "https://github.com/FasterXML/jackson-databind/pull/6377",
       "target": "https://github.com/FasterXML/jackson-databind/pull/6391",
-      "description": "修复数组形态 Builder 对额外结构化值的跳过。维护者保留修复、测试与作者提交，补充发布说明，已合入 `3.x`。"
+      "description": "Fixed skipping of extra structured values for array-shaped builders. The maintainer retained the fix, tests and original author's commit, added release notes, and merged the change into `3.x`."
     },
     {
       "source": "https://github.com/solidjs/solid/pull/4539",
       "target": "https://github.com/solidjs/solid/pull/4558",
-      "description": "Ryan 接续并完善原修复，保留[作者 commit 22cc9e4](https://github.com/solidjs/solid/commit/22cc9e4c6b097a0b6d7d149013f52f7568fab88d)，已通过 [commit 718ec9c](https://github.com/solidjs/solid/commit/718ec9c218643dfe9943f05d33ccb66db53621c6) 合入 `next`。"
+      "description": "Ryan continued and refined the original fix, retained [author commit 22cc9e4](https://github.com/solidjs/solid/commit/22cc9e4c6b097a0b6d7d149013f52f7568fab88d), and merged it into `next` via [commit 718ec9c](https://github.com/solidjs/solid/commit/718ec9c218643dfe9943f05d33ccb66db53621c6)."
     },
     {
       "source": "https://github.com/google/guava/pull/8807",
       "target": "https://github.com/google/guava/pull/8811",
-      "description": "经 Copybara 导入 `master`，[commit c0a8a1e](https://github.com/google/guava/commit/c0a8a1edc69393e8141424037571d9825f5fc0f4) 的 author 关联本账号。"
+      "description": "Imported into `master` through Copybara; the author of [commit c0a8a1e](https://github.com/google/guava/commit/c0a8a1edc69393e8141424037571d9825f5fc0f4) is linked to this account."
     }
   ]
 }
