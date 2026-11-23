@@ -1,15 +1,13 @@
-<h1 align="center">你好呀，我是 Kayokoi 👋</h1>
+<h1 align="center">Hi, I'm Kayokoi 👋</h1>
 
 <p align="center">
   <picture>
     <source media="(prefers-reduced-motion: reduce)" srcset="./assets/gallery-still.jpg" />
-    <img src="./assets/gallery.gif" width="520" alt="二次元图集" />
+    <img src="./assets/gallery.gif" width="520" alt="Anime gallery" />
   </picture>
 </p>
 
-## 🌸 关于我
-
-全栈开发 · AI 应用 · 开源贡献
+## 🌸 Tech Stack
 
 <p>
   <img src="./assets/tiles/java-original.svg" width="48" height="52" alt="Java" />
@@ -68,20 +66,20 @@
 | **[postcss-selector-parser](https://github.com/postcss/postcss-selector-parser)** |  |
 <!-- PR_LIST_END -->
 
-## 🌱 GitHub 日常
+## 🌱 GitHub Activity
 
 <p align="center">
-  <img src="./metrics.plugin.isocalendar.svg" alt="近一年 GitHub 贡献日历" width="520" />
+  <img src="./metrics.plugin.isocalendar.svg" alt="GitHub contributions over the past year" width="520" />
 </p>
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/github-contribution-grid-snake-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="./assets/github-contribution-grid-snake.svg" />
-    <img alt="贡献记录动画" src="./assets/github-contribution-grid-snake.svg" width="100%" />
+    <img alt="GitHub contribution snake animation" src="./assets/github-contribution-grid-snake.svg" width="100%" />
   </picture>
 </p>
 
-## 📬 来找我
+## 📬 Contact
 
-[GitHub](https://github.com/wozhenbang2004) · [个人小站](https://kayokoi.online)
+[GitHub](https://github.com/wozhenbang2004) · [Personal Website](https://kayokoi.online)
