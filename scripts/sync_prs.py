@@ -9,7 +9,8 @@ import sys
 import urllib.parse
 import urllib.request
 from urllib.error import HTTPError
-from datetime import datetime, timezone
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 OWNER = 'wozhenbang2004'
 REPO = f'{OWNER}/{OWNER}'
@@ -138,7 +139,7 @@ def discovered_adoptions(prs, curated, get=api):
                 title = escape(source['title']).replace(r'\|', '|')
                 entry = {'source': source['url'], 'target': target['html_url'],
                          'target_kind': 'pull', 'evidence_commit': sha,
-                         'description': f'{title}。接续 PR 收录原 head commit [{sha[:7]}](https://github.com/{repo}/commit/{sha})，并已合并。'}
+                         'description': f'{title}. The successor PR includes the original head commit [{sha[:7]}](https://github.com/{repo}/commit/{sha}) and has been merged.'}
                 break
         if entry is None:
             try:
@@ -152,7 +153,7 @@ def discovered_adoptions(prs, curated, get=api):
                 continue
             entry = {'source': source['url'], 'target': f'https://github.com/{repo}/commit/{sha}',
                      'target_kind': 'commit', 'target_branch': branch, 'evidence_commit': sha,
-                     'description': f'原 PR 的 head commit 已进入上游 `{escape(branch)}` 分支；按采纳贡献单列，不计入本人已合并 PR。'}
+                     'description': f"The original PR's head commit is now on the upstream `{escape(branch)}` branch; recorded separately as an adopted contribution, not counted as a directly merged PR by this account."}
         if entry['target'] in counted_targets:
             continue
         found.append(dict(entry, source_repo=repo, source_number=source['number'],
@@ -268,7 +269,10 @@ def sync(root=ROOT, get=api):
     data = {'scope': 'merged-and-evidenced-adoptions', 'pull_requests': prs,
             'verified_adoptions': adoptions, 'repo_stars': repo_stars}
     same = all(old.get(k) == v for k, v in data.items())
-    changed_at = old['changed_at'] if same else datetime.now(timezone.utc).isoformat(timespec='seconds')
+    changed_at = (
+        datetime.fromisoformat(old['changed_at']).astimezone(ZoneInfo('America/Los_Angeles'))
+        if same else datetime.now(ZoneInfo('America/Los_Angeles'))
+    ).isoformat(timespec='seconds')
     snapshot = dict(changed_at=changed_at, **data)
     readme_path = root / 'README.md'
     old_text = readme_path.read_text()
