@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-23T00:54:00+00:00",
+  "changed_at": "2026-11-23T01:03:27+00:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -1004,7 +1004,7 @@
     "ant-design/ant-design": 100345,
     "apache/dubbo": 41568,
     "astaxie/TokenHub": 1449,
-    "AstrBotDevs/AstrBot": 47351,
+    "AstrBotDevs/AstrBot": 47352,
     "baomidou/mybatis-plus": 17484,
     "celery/kombu": 3156,
     "chartjs/Chart.js": 67819,
@@ -1045,7 +1045,7 @@
     "postcss/postcss": 28979,
     "postcss/postcss-nested": 1199,
     "postcss/postcss-selector-parser": 217,
-    "PrefectHQ/fastmcp": 28714,
+    "PrefectHQ/fastmcp": 28715,
     "prestodb/presto": 16777,
     "PyCQA/flake8-bugbear": 1126,
     "react-hook-form/react-hook-form": 44925,
