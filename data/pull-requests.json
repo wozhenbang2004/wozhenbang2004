@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-22T19:39:41+00:00",
+  "changed_at": "2026-11-23T00:45:36+00:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -156,6 +156,24 @@
       "merged_at": "2026-11-20T11:19:15Z"
     },
     {
+      "url": "https://github.com/PyCQA/flake8-bugbear/pull/650",
+      "repo": "PyCQA/flake8-bugbear",
+      "number": 650,
+      "title": "B909: check unpacked subscript assignments and deletions",
+      "state": "Merged",
+      "updated_at": "2026-11-22T21:25:30Z",
+      "merged_at": "2026-11-22T21:25:30Z"
+    },
+    {
+      "url": "https://github.com/PyCQA/flake8-bugbear/pull/651",
+      "repo": "PyCQA/flake8-bugbear",
+      "number": 651,
+      "title": "B033: detect duplicate signed numeric literals in sets",
+      "state": "Merged",
+      "updated_at": "2026-11-22T21:21:22Z",
+      "merged_at": "2026-11-22T21:21:22Z"
+    },
+    {
       "url": "https://github.com/The-OpenROAD-Project/OpenROAD/pull/12356",
       "repo": "The-OpenROAD-Project/OpenROAD",
       "number": 12356,
@@ -262,6 +280,15 @@
       "state": "Merged",
       "updated_at": "2026-11-17T06:41:13Z",
       "merged_at": "2026-11-17T06:40:22Z"
+    },
+    {
+      "url": "https://github.com/chartjs/Chart.js/pull/12415",
+      "repo": "chartjs/Chart.js",
+      "number": 12415,
+      "title": "fix: exclude explicit scale bounds from grace",
+      "state": "Merged",
+      "updated_at": "2026-11-22T21:26:22Z",
+      "merged_at": "2026-11-22T21:26:22Z"
     },
     {
       "url": "https://github.com/cvxpy/cvxpy/pull/3636",
@@ -570,6 +597,15 @@
       "merged_at": "2026-11-21T01:33:29Z"
     },
     {
+      "url": "https://github.com/plantuml/plantuml/pull/3029",
+      "repo": "plantuml/plantuml",
+      "number": 3029,
+      "title": "Connect both ends of grouped self associations",
+      "state": "Merged",
+      "updated_at": "2026-11-22T21:28:42Z",
+      "merged_at": "2026-11-22T19:42:07Z"
+    },
+    {
       "url": "https://github.com/pmd/pmd/pull/7283",
       "repo": "pmd/pmd",
       "number": 7283,
@@ -595,6 +631,15 @@
       "state": "Merged",
       "updated_at": "2026-11-06T21:23:12Z",
       "merged_at": "2026-11-06T21:23:11Z"
+    },
+    {
+      "url": "https://github.com/postcss/autoprefixer/pull/1572",
+      "repo": "postcss/autoprefixer",
+      "number": 1572,
+      "title": "Skip grid end prefixes when the start is missing",
+      "state": "Merged",
+      "updated_at": "2026-11-22T22:20:54Z",
+      "merged_at": "2026-11-22T22:20:54Z"
     },
     {
       "url": "https://github.com/postcss/postcss-nested/pull/181",
@@ -956,20 +1001,21 @@
     }
   ],
   "repo_stars": {
-    "ant-design/ant-design": 100340,
+    "ant-design/ant-design": 100345,
     "apache/dubbo": 41568,
     "astaxie/TokenHub": 1449,
-    "AstrBotDevs/AstrBot": 47347,
+    "AstrBotDevs/AstrBot": 47351,
     "baomidou/mybatis-plus": 17484,
     "celery/kombu": 3156,
+    "chartjs/Chart.js": 67819,
     "cvxpy/cvxpy": 6400,
-    "danielmiessler/Fabric": 44739,
-    "deepset-ai/haystack": 27076,
-    "dotnet/BenchmarkDotNet": 11533,
+    "danielmiessler/Fabric": 44741,
+    "deepset-ai/haystack": 27077,
+    "dotnet/BenchmarkDotNet": 11534,
     "FasterXML/jackson-databind": 3755,
     "FasterXML/jackson-dataformats-text": 454,
     "google/gson": 24236,
-    "google/guava": 51923,
+    "google/guava": 51924,
     "gptme/gptme": 4492,
     "greenmail-mail-test/greenmail": 756,
     "h2database/h2database": 4643,
@@ -977,44 +1023,46 @@
     "immutable-js/immutable-js": 33016,
     "kayak/pypika": 2924,
     "koajs/koa": 35683,
-    "Leaflet/Leaflet": 45968,
+    "Leaflet/Leaflet": 45969,
     "lich0821/ccNexus": 969,
     "looplj/axonhub": 5484,
     "luben/zstd-jni": 1078,
     "madyankin/postcss-modules": 1623,
-    "mark3labs/mcp-go": 9246,
-    "microsoft/vscode": 195784,
-    "Mirascope/mirascope": 1534,
+    "mark3labs/mcp-go": 9247,
+    "microsoft/vscode": 195794,
+    "Mirascope/mirascope": 1535,
     "motdotla/dotenv": 20572,
     "mybatis/mybatis-3": 20431,
     "neovim/nvim-lspconfig": 14018,
-    "netty/netty": 35069,
+    "netty/netty": 35068,
     "oapi-codegen/oapi-codegen": 8669,
-    "OpenFeign/feign": 9796,
+    "OpenFeign/feign": 9795,
     "OWASP/www-community": 1426,
     "PebbleTemplates/pebble": 1199,
+    "plantuml/plantuml": 13433,
     "pmd/pmd": 5538,
     "postcss/autoprefixer": 22198,
     "postcss/postcss": 28979,
     "postcss/postcss-nested": 1199,
     "postcss/postcss-selector-parser": 217,
-    "PrefectHQ/fastmcp": 28712,
+    "PrefectHQ/fastmcp": 28714,
     "prestodb/presto": 16777,
-    "react-hook-form/react-hook-form": 44924,
-    "recharts/recharts": 27729,
+    "PyCQA/flake8-bugbear": 1126,
+    "react-hook-form/react-hook-form": 44925,
+    "recharts/recharts": 27733,
     "reduxjs/redux-toolkit": 11246,
     "robolectric/robolectric": 6100,
-    "router-for-me/CLIProxyAPI": 59234,
+    "router-for-me/CLIProxyAPI": 59249,
     "rspamd/rspamd": 2576,
-    "sirmalloc/ccstatusline": 13660,
-    "solidjs/solid": 36918,
+    "sirmalloc/ccstatusline": 13664,
+    "solidjs/solid": 36921,
     "tabulator-tables/tabulator": 7825,
     "testng-team/testng": 2058,
-    "The-OpenROAD-Project/OpenROAD": 3307,
-    "tlaplus/tlaplus": 3270,
+    "The-OpenROAD-Project/OpenROAD": 3310,
+    "tlaplus/tlaplus": 3271,
     "unicode-org/icu": 3649,
     "unicode-org/icu4x": 1881,
-    "valyala/fasthttp": 23524,
-    "Wei-Shaw/sub2api": 46447
+    "valyala/fasthttp": 23525,
+    "Wei-Shaw/sub2api": 46453
   }
 }
