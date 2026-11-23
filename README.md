@@ -80,6 +80,3 @@
   </picture>
 </p>
 
-## 📬 Contact
-
-[GitHub](https://github.com/wozhenbang2004) · [Personal Website](https://kayokoi.online)
