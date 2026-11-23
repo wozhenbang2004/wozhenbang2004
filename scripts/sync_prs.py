@@ -226,22 +226,8 @@ def fetch_repo_stars(prs, adoptions, get=api):
     return stars
 
 
-def project_cell(repo, direct, adopted):
-    name = repo.split('/')[1]
-    refs = [
-        f'<a href="{p["url"]}">#{p["number"]}</a>'
-        for p in sorted(direct, key=lambda p: (p['merged_at'], p['number']), reverse=True)
-    ]
-    refs += [
-        f'<a href="{a["source"]}" title="Adopted by maintainer">#{a["source_number"]}†</a>'
-        for a in sorted(adopted, key=lambda a: a['source_number'], reverse=True)
-    ]
-    return f'**[{escape(name)}](https://github.com/{repo})** <sub>{" · ".join(refs)}</sub>'
-
-
-def search_link(extra=''):
-    return 'https://github.com/pulls?q=' + urllib.parse.quote(QUERY + (' ' + extra if extra else ''))
-
+def project_cell(repo):
+    return f'**[{escape(repo.split("/")[1])}](https://github.com/{repo})**'
 
 def replace_region(text, name, body):
     start, end = f'<!-- {name}_START -->', f'<!-- {name}_END -->'
@@ -254,46 +240,22 @@ def replace_region(text, name, body):
 
 def render(text, prs, adoptions, repo_stars):
     if any(p['state'] != 'Merged' for p in prs):
-        raise ValueError('Only merged PRs belong in the published contribution list')
+        raise ValueError('Only merged PRs belong in the published contributor list')
     all_repos = {p['repo'] for p in prs} | {a['source_repo'] for a in adoptions}
     if (set(repo_stars) != all_repos
             or any(type(value) is not int or value < 0 for value in repo_stars.values())):
         raise ValueError('Every displayed repository needs verified stars')
-    summary = (
-        f"**Contributor to {len(all_repos)} upstream projects** · "
-        f"**{len(prs)} merged PRs** · **{len(adoptions)} maintainer-adopted changes**\n\n"
-        f'<sub><a href="{search_link()}">Merged PRs</a> · '
-        f'<a href="https://github.com/{REPO}/actions/workflows/sync-pr-status.yml">Sync history</a></sub>'
+    text = replace_region(
+        text, 'PR_SUMMARY', f'**Contributor to {len(all_repos)} upstream projects**'
     )
-    text = replace_region(text, 'PR_SUMMARY', summary)
-    direct_by_repo = {repo: [] for repo in all_repos}
-    adopted_by_repo = {repo: [] for repo in all_repos}
-    for p in prs:
-        direct_by_repo[p['repo']].append(p)
-    for a in adoptions:
-        adopted_by_repo[a['source_repo']].append(a)
     projects = sorted(all_repos, key=lambda repo: (-repo_stars[repo], repo.lower()))
-    body = ['### Contributed projects', '',
-            '<sub>Small links are PR references. † = adopted by maintainers rather than directly merged.</sub>',
-            '', '| Project | Project |', '| :--- | :--- |']
+    body = ['### Contributed projects', '', '| Project | Project |', '| :--- | :--- |']
     for i in range(0, len(projects), 2):
-        cells = [project_cell(repo, direct_by_repo[repo], adopted_by_repo[repo])
-                 for repo in projects[i:i + 2]]
+        cells = [project_cell(repo) for repo in projects[i:i + 2]]
         if len(cells) == 1:
             cells.append('')
         body.append('| ' + ' | '.join(cells) + ' |')
-    if adoptions:
-        body += ['', '<details>', f'<summary>Maintainer-adopted changes ({len(adoptions)})</summary>', '',
-                 'The original PRs were not directly merged; these changes were accepted via an upstream PR or commit.', '',
-                 '| Project | Original PR | Adopted via |', '| :--- | :--- | :--- |']
-        for a in sorted(adoptions, key=lambda a: (a['source_repo'].lower(), a['source_number'])):
-            target_label = ('PR #' + a['target'].rsplit('/', 1)[1] if a['target_kind'] == 'pull'
-                            else 'commit ' + a['target'].rsplit('/', 1)[1][:7])
-            body.append(f'| [{escape(a["source_repo"].split("/")[1])}](https://github.com/{a["source_repo"]}) '
-                        f'| [#{a["source_number"]}]({a["source"]}) | [{target_label}]({a["target"]}) |')
-        body += ['', '</details>']
     return replace_region(text, 'PR_LIST', '\n'.join(body))
-
 
 def sync(root=ROOT, get=api):
     curation = json.loads((root / 'data/pr-curation.json').read_text())
