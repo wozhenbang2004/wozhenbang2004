@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-23T01:05:05-08:00",
+  "changed_at": "2026-11-23T13:25:21-08:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -152,7 +152,7 @@
       "number": 3705,
       "title": "Document how to add Feign response headers",
       "state": "Merged",
-      "updated_at": "2026-11-22T09:52:38Z",
+      "updated_at": "2026-11-23T12:26:31Z",
       "merged_at": "2026-11-22T09:52:38Z"
     },
     {
@@ -192,6 +192,15 @@
       "merged_at": "2026-11-23T01:19:37Z"
     },
     {
+      "url": "https://github.com/RoaringBitmap/RoaringBitmap/pull/912",
+      "repo": "RoaringBitmap/RoaringBitmap",
+      "number": 912,
+      "title": "Add findIndex for heap bitmaps",
+      "state": "Merged",
+      "updated_at": "2026-11-23T15:49:11Z",
+      "merged_at": "2026-11-23T15:49:11Z"
+    },
+    {
       "url": "https://github.com/The-OpenROAD-Project/OpenROAD/pull/12356",
       "repo": "The-OpenROAD-Project/OpenROAD",
       "number": 12356,
@@ -226,6 +235,15 @@
       "state": "Merged",
       "updated_at": "2026-11-16T08:40:33Z",
       "merged_at": "2026-11-16T08:32:19Z"
+    },
+    {
+      "url": "https://github.com/alecthomas/chroma/pull/1533",
+      "repo": "alecthomas/chroma",
+      "number": 1533,
+      "title": "fix(lexers): avoid numeric prefixes in YAML plain scalars",
+      "state": "Merged",
+      "updated_at": "2026-11-23T11:03:42Z",
+      "merged_at": "2026-11-23T11:03:42Z"
     },
     {
       "url": "https://github.com/ant-design/ant-design/pull/59814",
@@ -300,6 +318,15 @@
       "merged_at": "2026-11-17T06:40:22Z"
     },
     {
+      "url": "https://github.com/chartjs/Chart.js/pull/12414",
+      "repo": "chartjs/Chart.js",
+      "number": 12414,
+      "title": "fix: apply category bounds after inferring labels",
+      "state": "Merged",
+      "updated_at": "2026-11-23T12:09:55Z",
+      "merged_at": "2026-11-23T12:09:55Z"
+    },
+    {
       "url": "https://github.com/chartjs/Chart.js/pull/12415",
       "repo": "chartjs/Chart.js",
       "number": 12415,
@@ -343,6 +370,15 @@
       "state": "Merged",
       "updated_at": "2026-11-21T01:18:37Z",
       "merged_at": "2026-11-21T01:18:34Z"
+    },
+    {
+      "url": "https://github.com/dotnet/runtime/pull/138060",
+      "repo": "dotnet/runtime",
+      "number": 138060,
+      "title": "Add System.IO.Packaging package README",
+      "state": "Merged",
+      "updated_at": "2026-11-23T14:15:56Z",
+      "merged_at": "2026-11-23T14:15:56Z"
     },
     {
       "url": "https://github.com/google/gson/pull/3157",
@@ -406,6 +442,15 @@
       "state": "Merged",
       "updated_at": "2026-11-09T09:40:20Z",
       "merged_at": "2026-11-09T09:40:12Z"
+    },
+    {
+      "url": "https://github.com/jknack/handlebars.java/pull/1215",
+      "repo": "jknack/handlebars.java",
+      "number": 1215,
+      "title": "Allow join to append to an empty string",
+      "state": "Merged",
+      "updated_at": "2026-11-23T15:21:11Z",
+      "merged_at": "2026-11-23T15:21:11Z"
     },
     {
       "url": "https://github.com/kayak/pypika/pull/3557",
@@ -620,7 +665,7 @@
       "number": 3029,
       "title": "Connect both ends of grouped self associations",
       "state": "Merged",
-      "updated_at": "2026-11-22T21:28:42Z",
+      "updated_at": "2026-11-23T11:09:25Z",
       "merged_at": "2026-11-22T19:42:07Z"
     },
     {
@@ -775,6 +820,24 @@
       "state": "Merged",
       "updated_at": "2026-11-21T16:56:38Z",
       "merged_at": "2026-11-21T16:56:37Z"
+    },
+    {
+      "url": "https://github.com/redis/go-redis/pull/4398",
+      "repo": "redis/go-redis",
+      "number": 4398,
+      "title": "docs(pool): clarify connection retry timing",
+      "state": "Merged",
+      "updated_at": "2026-11-23T12:29:41Z",
+      "merged_at": "2026-11-23T12:29:41Z"
+    },
+    {
+      "url": "https://github.com/redis/ioredis/pull/2299",
+      "repo": "redis/ioredis",
+      "number": 2299,
+      "title": "docs: clarify explicit batches with autopipelining",
+      "state": "Merged",
+      "updated_at": "2026-11-23T09:53:21Z",
+      "merged_at": "2026-11-23T09:53:21Z"
     },
     {
       "url": "https://github.com/reduxjs/redux-toolkit/pull/5595",
@@ -1037,71 +1100,76 @@
     }
   ],
   "repo_stars": {
-    "ant-design/ant-design": 100351,
-    "apache/dubbo": 41569,
-    "astaxie/TokenHub": 1450,
-    "AstrBotDevs/AstrBot": 47374,
+    "alecthomas/chroma": 5087,
+    "ant-design/ant-design": 100353,
+    "apache/dubbo": 41570,
+    "astaxie/TokenHub": 1451,
+    "AstrBotDevs/AstrBot": 47400,
     "baomidou/mybatis-plus": 17484,
     "celery/kombu": 3156,
-    "chartjs/Chart.js": 67820,
-    "cvxpy/cvxpy": 6400,
-    "danielmiessler/Fabric": 44745,
-    "deepset-ai/haystack": 27082,
+    "chartjs/Chart.js": 67819,
+    "cvxpy/cvxpy": 6401,
+    "danielmiessler/Fabric": 44753,
+    "deepset-ai/haystack": 27087,
     "dotnet/BenchmarkDotNet": 11534,
+    "dotnet/runtime": 18458,
     "FasterXML/jackson-core": 2378,
     "FasterXML/jackson-databind": 3755,
     "FasterXML/jackson-dataformats-text": 454,
-    "google/gson": 24236,
+    "google/gson": 24235,
     "google/guava": 51925,
     "gptme/gptme": 4492,
     "greenmail-mail-test/greenmail": 756,
     "h2database/h2database": 4644,
     "harttle/liquidjs": 1890,
-    "immutable-js/immutable-js": 33016,
+    "immutable-js/immutable-js": 33014,
+    "jknack/handlebars.java": 1564,
     "kayak/pypika": 2924,
-    "koajs/koa": 35683,
-    "Leaflet/Leaflet": 45972,
-    "lich0821/ccNexus": 967,
+    "koajs/koa": 35682,
+    "Leaflet/Leaflet": 45975,
+    "lich0821/ccNexus": 966,
     "looplj/axonhub": 5485,
     "luben/zstd-jni": 1078,
     "madyankin/postcss-modules": 1623,
-    "mark3labs/mcp-go": 9246,
-    "microsoft/vscode": 195794,
+    "mark3labs/mcp-go": 9248,
+    "microsoft/vscode": 195665,
     "Mirascope/mirascope": 1535,
     "motdotla/dotenv": 20572,
     "mybatis/mybatis-3": 20430,
-    "neovim/nvim-lspconfig": 14019,
-    "netty/netty": 35068,
-    "oapi-codegen/oapi-codegen": 8668,
-    "OpenFeign/feign": 9795,
+    "neovim/nvim-lspconfig": 14018,
+    "netty/netty": 35070,
+    "oapi-codegen/oapi-codegen": 8670,
+    "OpenFeign/feign": 9796,
     "OWASP/www-community": 1426,
     "PebbleTemplates/pebble": 1199,
     "plantuml/plantuml": 13434,
-    "pmd/pmd": 5538,
-    "postcss/autoprefixer": 22197,
-    "postcss/postcss": 28980,
+    "pmd/pmd": 5540,
+    "postcss/autoprefixer": 22198,
+    "postcss/postcss": 28974,
     "postcss/postcss-nested": 1199,
     "postcss/postcss-selector-parser": 217,
-    "PrefectHQ/fastmcp": 28714,
+    "PrefectHQ/fastmcp": 28721,
     "prestodb/presto": 16777,
     "PyCQA/flake8-bugbear": 1126,
-    "react-hook-form/react-hook-form": 44927,
-    "recharts/recharts": 27737,
-    "reduxjs/redux-toolkit": 11246,
+    "react-hook-form/react-hook-form": 44926,
+    "recharts/recharts": 27739,
+    "redis/go-redis": 22292,
+    "redis/ioredis": 15363,
+    "reduxjs/redux-toolkit": 11248,
     "RoaringBitmap/RoaringBitmap": 3959,
     "robolectric/robolectric": 6103,
-    "router-for-me/CLIProxyAPI": 59279,
+    "router-for-me/CLIProxyAPI": 59330,
     "rspamd/rspamd": 2576,
-    "ruby/rbs": 2186,
-    "sirmalloc/ccstatusline": 13670,
-    "solidjs/solid": 36926,
+    "ruby/rbs": 2185,
+    "sirmalloc/ccstatusline": 13676,
+    "solidjs/solid": 36935,
     "tabulator-tables/tabulator": 7826,
     "testng-team/testng": 2058,
-    "The-OpenROAD-Project/OpenROAD": 3310,
-    "tlaplus/tlaplus": 3276,
-    "unicode-org/icu": 3649,
+    "The-OpenROAD-Project/OpenROAD": 3311,
+    "tlaplus/tlaplus": 3280,
+    "unicode-org/icu": 3650,
     "unicode-org/icu4x": 1881,
-    "valyala/fasthttp": 23525,
-    "Wei-Shaw/sub2api": 46482
+    "valyala/fasthttp": 23526,
+    "Wei-Shaw/sub2api": 46516
   }
 }
