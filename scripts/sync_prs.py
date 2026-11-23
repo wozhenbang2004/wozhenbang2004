@@ -226,10 +226,17 @@ def fetch_repo_stars(prs, adoptions, get=api):
     return stars
 
 
-def project_cell(repo, stars):
-    owner, name = repo.split('/')
-    return (f'**[{escape(name)}](https://github.com/{repo})**<br />'
-            f'<sub>{escape(owner)} · [⭐ {stars:,}](https://github.com/{repo}/stargazers)</sub>')
+def project_cell(repo, direct, adopted):
+    name = repo.split('/')[1]
+    refs = [
+        f'<a href="{p["url"]}">#{p["number"]}</a>'
+        for p in sorted(direct, key=lambda p: (p['merged_at'], p['number']), reverse=True)
+    ]
+    refs += [
+        f'<a href="{a["source"]}" title="Adopted by maintainer">#{a["source_number"]}†</a>'
+        for a in sorted(adopted, key=lambda a: a['source_number'], reverse=True)
+    ]
+    return f'**[{escape(name)}](https://github.com/{repo})** <sub>{" · ".join(refs)}</sub>'
 
 
 def search_link(extra=''):
@@ -252,23 +259,39 @@ def render(text, prs, adoptions, repo_stars):
     if (set(repo_stars) != all_repos
             or any(type(value) is not int or value < 0 for value in repo_stars.values())):
         raise ValueError('Every displayed repository needs verified stars')
-    summary = (f"**{len(prs) + len(adoptions)} 项贡献已被上游合入** · **{len(prs)} 条本人 PR 直接合并** · **{len(adoptions)} 项经维护者 PR / commit 采纳**  \n"
-               f"**覆盖 {len(all_repos)} 个公开上游仓库**\n\n"
-               f"[本人 PR 直接合并记录]({search_link()}) · [同步记录](https://github.com/{REPO}/actions/workflows/sync-pr-status.yml)")
+    summary = (
+        f"**Contributor to {len(all_repos)} upstream projects** · "
+        f"**{len(prs)} merged PRs** · **{len(adoptions)} maintainer-adopted changes**\n\n"
+        f'<sub><a href="{search_link()}">Merged PRs</a> · '
+        f'<a href="https://github.com/{REPO}/actions/workflows/sync-pr-status.yml">Sync history</a></sub>'
+    )
     text = replace_region(text, 'PR_SUMMARY', summary)
-    body = ['### 已合并 PR', '', '| 项目 / Stars | PR |', '| :--- | :--- |']
-    for p in sorted(prs, key=lambda p: (p['merged_at'], p['url']), reverse=True):
-        body.append(f"| {project_cell(p['repo'], repo_stars[p['repo']])} | **[#{p['number']}]({p['url']})**<br />{escape(p['title'])} |")
-    body += ['', '### 经维护者 PR / commit 采纳', '',
-             '<sub>原 PR 未直接合并，但有上游采纳证据。自动核对保留原 commit 的接续 PR / 分支；重写或 cherry-pick 的记录另行举证，且不重复计入本人已合并 PR。</sub>', '',
-             '| 项目 / Stars | 原 PR → 采纳记录 |', '| :--- | :--- |']
+    direct_by_repo = {repo: [] for repo in all_repos}
+    adopted_by_repo = {repo: [] for repo in all_repos}
+    for p in prs:
+        direct_by_repo[p['repo']].append(p)
     for a in adoptions:
-        target_label = ('PR #' + a['target'].rsplit('/', 1)[1] if a['target_kind'] == 'pull'
-                        else 'commit ' + a['target'].rsplit('/', 1)[1][:7])
-        description = ' '.join(a['description'].split()).replace('|', r'\|')
-        body.append(f"| {project_cell(a['source_repo'], repo_stars[a['source_repo']])} | 原 PR **[#{a['source_number']}]({a['source']})** ({a['source_state']}) → **[{target_label}]({a['target']})**<br />{description} |")
-    if not adoptions:
-        body.append('| — | 暂无已核实的接续采纳。 |')
+        adopted_by_repo[a['source_repo']].append(a)
+    projects = sorted(all_repos, key=lambda repo: (-repo_stars[repo], repo.lower()))
+    body = ['### Contributed projects', '',
+            '<sub>Small links are PR references. † = adopted by maintainers rather than directly merged.</sub>',
+            '', '| Project | Project |', '| :--- | :--- |']
+    for i in range(0, len(projects), 2):
+        cells = [project_cell(repo, direct_by_repo[repo], adopted_by_repo[repo])
+                 for repo in projects[i:i + 2]]
+        if len(cells) == 1:
+            cells.append('')
+        body.append('| ' + ' | '.join(cells) + ' |')
+    if adoptions:
+        body += ['', '<details>', f'<summary>Maintainer-adopted changes ({len(adoptions)})</summary>', '',
+                 'The original PRs were not directly merged; these changes were accepted via an upstream PR or commit.', '',
+                 '| Project | Original PR | Adopted via |', '| :--- | :--- | :--- |']
+        for a in sorted(adoptions, key=lambda a: (a['source_repo'].lower(), a['source_number'])):
+            target_label = ('PR #' + a['target'].rsplit('/', 1)[1] if a['target_kind'] == 'pull'
+                            else 'commit ' + a['target'].rsplit('/', 1)[1][:7])
+            body.append(f'| [{escape(a["source_repo"].split("/")[1])}](https://github.com/{a["source_repo"]}) '
+                        f'| [#{a["source_number"]}]({a["source"]}) | [{target_label}]({a["target"]}) |')
+        body += ['', '</details>']
     return replace_region(text, 'PR_LIST', '\n'.join(body))
 
 
