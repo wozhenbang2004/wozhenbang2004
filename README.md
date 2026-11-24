@@ -24,7 +24,7 @@
 ## 🌍 Open Source Contributor
 
 <!-- PR_SUMMARY_START -->
-**Contributor to 71 upstream projects**
+**Contributor to 77 upstream projects**
 <!-- PR_SUMMARY_END -->
 
 <!-- PR_LIST_START -->
@@ -49,20 +49,23 @@
 | **[ioredis](https://github.com/redis/ioredis)** | **[nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)** |
 | **[ccstatusline](https://github.com/sirmalloc/ccstatusline)** | **[plantuml](https://github.com/plantuml/plantuml)** |
 | **[BenchmarkDotNet](https://github.com/dotnet/BenchmarkDotNet)** | **[redux-toolkit](https://github.com/reduxjs/redux-toolkit)** |
-| **[feign](https://github.com/OpenFeign/feign)** | **[mcp-go](https://github.com/mark3labs/mcp-go)** |
-| **[oapi-codegen](https://github.com/oapi-codegen/oapi-codegen)** | **[tabulator](https://github.com/tabulator-tables/tabulator)** |
-| **[cvxpy](https://github.com/cvxpy/cvxpy)** | **[robolectric](https://github.com/robolectric/robolectric)** |
-| **[pmd](https://github.com/pmd/pmd)** | **[axonhub](https://github.com/looplj/axonhub)** |
+| **[feign](https://github.com/OpenFeign/feign)** | **[sinon](https://github.com/sinonjs/sinon)** |
+| **[mcp-go](https://github.com/mark3labs/mcp-go)** | **[oapi-codegen](https://github.com/oapi-codegen/oapi-codegen)** |
+| **[tabulator](https://github.com/tabulator-tables/tabulator)** | **[cvxpy](https://github.com/cvxpy/cvxpy)** |
+| **[robolectric](https://github.com/robolectric/robolectric)** | **[pmd](https://github.com/pmd/pmd)** |
+| **[axonhub](https://github.com/looplj/axonhub)** | **[maven](https://github.com/apache/maven)** |
 | **[chroma](https://github.com/alecthomas/chroma)** | **[h2database](https://github.com/h2database/h2database)** |
-| **[gptme](https://github.com/gptme/gptme)** | **[RoaringBitmap](https://github.com/RoaringBitmap/RoaringBitmap)** |
-| **[jackson-databind](https://github.com/FasterXML/jackson-databind)** | **[icu](https://github.com/unicode-org/icu)** |
+| **[gptme](https://github.com/gptme/gptme)** | **[dora](https://github.com/dora-rs/dora)** |
+| **[RoaringBitmap](https://github.com/RoaringBitmap/RoaringBitmap)** | **[jackson-databind](https://github.com/FasterXML/jackson-databind)** |
+| **[libarchive](https://github.com/libarchive/libarchive)** | **[icu](https://github.com/unicode-org/icu)** |
 | **[OpenROAD](https://github.com/The-OpenROAD-Project/OpenROAD)** | **[tlaplus](https://github.com/tlaplus/tlaplus)** |
 | **[kombu](https://github.com/celery/kombu)** | **[pypika](https://github.com/kayak/pypika)** |
 | **[rspamd](https://github.com/rspamd/rspamd)** | **[jackson-core](https://github.com/FasterXML/jackson-core)** |
 | **[rbs](https://github.com/ruby/rbs)** | **[testng](https://github.com/testng-team/testng)** |
 | **[liquidjs](https://github.com/harttle/liquidjs)** | **[icu4x](https://github.com/unicode-org/icu4x)** |
-| **[postcss-modules](https://github.com/madyankin/postcss-modules)** | **[handlebars.java](https://github.com/jknack/handlebars.java)** |
-| **[mirascope](https://github.com/Mirascope/mirascope)** | **[TokenHub](https://github.com/astaxie/TokenHub)** |
+| **[datafaker](https://github.com/datafaker-net/datafaker)** | **[postcss-modules](https://github.com/madyankin/postcss-modules)** |
+| **[handlebars.java](https://github.com/jknack/handlebars.java)** | **[mirascope](https://github.com/Mirascope/mirascope)** |
+| **[babel](https://github.com/python-babel/babel)** | **[TokenHub](https://github.com/astaxie/TokenHub)** |
 | **[www-community](https://github.com/OWASP/www-community)** | **[pebble](https://github.com/PebbleTemplates/pebble)** |
 | **[postcss-nested](https://github.com/postcss/postcss-nested)** | **[flake8-bugbear](https://github.com/PyCQA/flake8-bugbear)** |
 | **[zstd-jni](https://github.com/luben/zstd-jni)** | **[ccNexus](https://github.com/lich0821/ccNexus)** |

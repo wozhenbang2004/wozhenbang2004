@@ -1,5 +1,5 @@
 {
-  "changed_at": "2026-11-23T22:03:26-08:00",
+  "changed_at": "2026-11-24T09:45:30-08:00",
   "scope": "merged-and-evidenced-adoptions",
   "pull_requests": [
     {
@@ -291,6 +291,15 @@
       "merged_at": "2026-11-20T02:30:52Z"
     },
     {
+      "url": "https://github.com/apache/maven/pull/14115",
+      "repo": "apache/maven",
+      "number": 14115,
+      "title": "Test that the highest-version filter skips lower dependency POMs",
+      "state": "Merged",
+      "updated_at": "2026-11-24T12:20:30Z",
+      "merged_at": "2026-11-24T12:08:18Z"
+    },
+    {
       "url": "https://github.com/astaxie/TokenHub/pull/408",
       "repo": "astaxie/TokenHub",
       "number": 408,
@@ -363,6 +372,15 @@
       "merged_at": "2026-11-01T18:47:47Z"
     },
     {
+      "url": "https://github.com/datafaker-net/datafaker/pull/1992",
+      "repo": "datafaker-net/datafaker",
+      "number": 1992,
+      "title": "Add Simplified Chinese job data",
+      "state": "Merged",
+      "updated_at": "2026-11-24T09:50:54Z",
+      "merged_at": "2026-11-24T09:50:54Z"
+    },
+    {
       "url": "https://github.com/deepset-ai/haystack/pull/13471",
       "repo": "deepset-ai/haystack",
       "number": 13471,
@@ -372,6 +390,15 @@
       "merged_at": "2026-10-30T11:34:17Z"
     },
     {
+      "url": "https://github.com/dora-rs/dora/pull/4259",
+      "repo": "dora-rs/dora",
+      "number": 4259,
+      "title": "docs(debugging): explain how to install record and replay helpers",
+      "state": "Merged",
+      "updated_at": "2026-11-24T14:29:01Z",
+      "merged_at": "2026-11-24T14:28:58Z"
+    },
+    {
       "url": "https://github.com/dotnet/BenchmarkDotNet/pull/3346",
       "repo": "dotnet/BenchmarkDotNet",
       "number": 3346,
@@ -379,6 +406,15 @@
       "state": "Merged",
       "updated_at": "2026-11-21T01:18:37Z",
       "merged_at": "2026-11-21T01:18:34Z"
+    },
+    {
+      "url": "https://github.com/dotnet/runtime/pull/138059",
+      "repo": "dotnet/runtime",
+      "number": 138059,
+      "title": "Add EventSource logging package README",
+      "state": "Merged",
+      "updated_at": "2026-11-24T15:02:08Z",
+      "merged_at": "2026-11-24T15:02:08Z"
     },
     {
       "url": "https://github.com/dotnet/runtime/pull/138060",
@@ -487,6 +523,15 @@
       "state": "Merged",
       "updated_at": "2026-11-14T09:51:31Z",
       "merged_at": "2026-11-14T09:51:30Z"
+    },
+    {
+      "url": "https://github.com/libarchive/libarchive/pull/3879",
+      "repo": "libarchive/libarchive",
+      "number": 3879,
+      "title": "uu: support GNU encoded filenames",
+      "state": "Merged",
+      "updated_at": "2026-11-24T07:19:15Z",
+      "merged_at": "2026-11-24T07:19:15Z"
     },
     {
       "url": "https://github.com/lich0821/ccNexus/pull/157",
@@ -642,6 +687,15 @@
       "merged_at": "2026-11-19T09:50:16Z"
     },
     {
+      "url": "https://github.com/netty/netty/pull/18457",
+      "repo": "netty/netty",
+      "number": 18457,
+      "title": "Associate ALPN negotiation with the nearest preceding TLS handler",
+      "state": "Merged",
+      "updated_at": "2026-11-24T08:23:40Z",
+      "merged_at": "2026-11-24T07:30:59Z"
+    },
+    {
       "url": "https://github.com/netty/netty/pull/18491",
       "repo": "netty/netty",
       "number": 18491,
@@ -649,6 +703,15 @@
       "state": "Merged",
       "updated_at": "2026-11-20T15:38:57Z",
       "merged_at": "2026-11-20T15:34:45Z"
+    },
+    {
+      "url": "https://github.com/netty/netty/pull/18521",
+      "repo": "netty/netty",
+      "number": 18521,
+      "title": "Test nested TLS outer handshake failure",
+      "state": "Merged",
+      "updated_at": "2026-11-24T15:43:49Z",
+      "merged_at": "2026-11-24T14:16:02Z"
     },
     {
       "url": "https://github.com/oapi-codegen/oapi-codegen/pull/2678",
@@ -748,6 +811,15 @@
       "state": "Merged",
       "updated_at": "2026-11-11T21:39:06Z",
       "merged_at": "2026-11-11T21:39:06Z"
+    },
+    {
+      "url": "https://github.com/python-babel/babel/pull/1483",
+      "repo": "python-babel/babel",
+      "number": 1483,
+      "title": "Fix comparisons between messages and other types",
+      "state": "Merged",
+      "updated_at": "2026-11-24T16:06:42Z",
+      "merged_at": "2026-11-24T16:02:19Z"
     },
     {
       "url": "https://github.com/react-hook-form/react-hook-form/pull/13987",
@@ -939,6 +1011,15 @@
       "merged_at": "2026-11-23T01:55:19Z"
     },
     {
+      "url": "https://github.com/sinonjs/sinon/pull/2817",
+      "repo": "sinonjs/sinon",
+      "number": 2817,
+      "title": "Fix .value() on non-enumerable non-configurable properties",
+      "state": "Merged",
+      "updated_at": "2026-11-24T06:45:55Z",
+      "merged_at": "2026-11-24T06:45:55Z"
+    },
+    {
       "url": "https://github.com/sirmalloc/ccstatusline/pull/757",
       "repo": "sirmalloc/ccstatusline",
       "number": 757,
@@ -1109,76 +1190,82 @@
     }
   ],
   "repo_stars": {
-    "alecthomas/chroma": 5087,
-    "ant-design/ant-design": 100356,
-    "apache/dubbo": 41570,
-    "astaxie/TokenHub": 1451,
-    "AstrBotDevs/AstrBot": 47414,
+    "alecthomas/chroma": 5088,
+    "ant-design/ant-design": 100368,
+    "apache/dubbo": 41573,
+    "apache/maven": 5380,
+    "astaxie/TokenHub": 1453,
+    "AstrBotDevs/AstrBot": 47445,
     "baomidou/mybatis-plus": 17484,
     "celery/kombu": 3156,
-    "chartjs/Chart.js": 67822,
-    "cvxpy/cvxpy": 6401,
-    "danielmiessler/Fabric": 44756,
-    "deepset-ai/haystack": 27088,
-    "dotnet/BenchmarkDotNet": 11534,
-    "dotnet/runtime": 18460,
+    "chartjs/Chart.js": 67821,
+    "cvxpy/cvxpy": 6400,
+    "danielmiessler/Fabric": 44760,
+    "datafaker-net/datafaker": 1810,
+    "deepset-ai/haystack": 27102,
+    "dora-rs/dora": 4106,
+    "dotnet/BenchmarkDotNet": 11535,
+    "dotnet/runtime": 18462,
     "FasterXML/jackson-core": 2378,
-    "FasterXML/jackson-databind": 3755,
+    "FasterXML/jackson-databind": 3756,
     "FasterXML/jackson-dataformats-text": 454,
     "google/gson": 24235,
     "google/guava": 51925,
-    "gptme/gptme": 4492,
+    "gptme/gptme": 4494,
     "greenmail-mail-test/greenmail": 756,
     "h2database/h2database": 4645,
     "harttle/liquidjs": 1890,
-    "immutable-js/immutable-js": 33014,
+    "immutable-js/immutable-js": 33013,
     "jknack/handlebars.java": 1564,
     "kayak/pypika": 2924,
-    "koajs/koa": 35682,
-    "Leaflet/Leaflet": 45977,
+    "koajs/koa": 35680,
+    "Leaflet/Leaflet": 45981,
+    "libarchive/libarchive": 3681,
     "lich0821/ccNexus": 966,
-    "looplj/axonhub": 5485,
+    "looplj/axonhub": 5489,
     "luben/zstd-jni": 1078,
     "madyankin/postcss-modules": 1623,
-    "mark3labs/mcp-go": 9249,
-    "microsoft/vscode": 195672,
-    "Mirascope/mirascope": 1535,
-    "motdotla/dotenv": 20572,
+    "mark3labs/mcp-go": 9251,
+    "microsoft/vscode": 195658,
+    "Mirascope/mirascope": 1536,
+    "motdotla/dotenv": 20573,
     "mybatis/mybatis-3": 20430,
     "neovim/nvim-lspconfig": 14019,
-    "netty/netty": 35070,
-    "oapi-codegen/oapi-codegen": 8671,
-    "OpenFeign/feign": 9796,
+    "netty/netty": 35068,
+    "oapi-codegen/oapi-codegen": 8672,
+    "OpenFeign/feign": 9797,
     "OWASP/www-community": 1426,
     "PebbleTemplates/pebble": 1199,
-    "plantuml/plantuml": 13434,
-    "pmd/pmd": 5540,
-    "postcss/autoprefixer": 22197,
+    "plantuml/plantuml": 13435,
+    "pmd/pmd": 5541,
+    "postcss/autoprefixer": 22196,
     "postcss/postcss": 28972,
     "postcss/postcss-nested": 1199,
-    "postcss/postcss-selector-parser": 217,
-    "PrefectHQ/fastmcp": 28721,
+    "postcss/postcss-selector-parser": 216,
+    "PrefectHQ/fastmcp": 28734,
     "prestodb/presto": 16777,
     "PyCQA/flake8-bugbear": 1126,
-    "react-hook-form/react-hook-form": 44926,
-    "recharts/recharts": 27742,
-    "redis/go-redis": 22291,
-    "redis/ioredis": 15362,
+    "python-babel/babel": 1472,
+    "react-hook-form/react-hook-form": 44925,
+    "recharts/recharts": 27752,
+    "redis/go-redis": 22288,
+    "redis/ioredis": 15364,
     "reduxjs/redux-toolkit": 11247,
     "RoaringBitmap/RoaringBitmap": 3960,
     "robolectric/robolectric": 6105,
-    "router-for-me/CLIProxyAPI": 59360,
-    "rspamd/rspamd": 2576,
+    "router-for-me/CLIProxyAPI": 59400,
+    "rspamd/rspamd": 2577,
     "ruby/rbs": 2185,
-    "sirmalloc/ccstatusline": 13680,
-    "solidjs/solid": 36939,
+    "sinonjs/sinon": 9750,
+    "sirmalloc/ccstatusline": 13686,
+    "solidjs/solid": 36948,
     "tabulator-tables/tabulator": 7826,
-    "testng-team/testng": 2058,
+    "testng-team/testng": 2059,
     "The-OpenROAD-Project/OpenROAD": 3312,
-    "tlaplus/tlaplus": 3282,
-    "unicode-org/icu": 3650,
+    "tlaplus/tlaplus": 3285,
+    "unicode-org/icu": 3652,
     "unicode-org/icu4x": 1881,
-    "valyala/fasthttp": 23526,
-    "Wei-Shaw/sub2api": 46534
+    "valyala/fasthttp": 23527,
+    "Wei-Shaw/sub2api": 46562
   }
 }
