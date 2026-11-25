@@ -24,7 +24,7 @@
 ## 🌍 Open Source Contributor
 
 <!-- PR_SUMMARY_START -->
-**Contributor to 80 upstream projects**
+**Contributor to 81 upstream projects**
 <!-- PR_SUMMARY_END -->
 
 <!-- PR_LIST_START -->
@@ -58,20 +58,21 @@
 | **[gptme](https://github.com/gptme/gptme)** | **[dora](https://github.com/dora-rs/dora)** |
 | **[RoaringBitmap](https://github.com/RoaringBitmap/RoaringBitmap)** | **[jackson-databind](https://github.com/FasterXML/jackson-databind)** |
 | **[libarchive](https://github.com/libarchive/libarchive)** | **[icu](https://github.com/unicode-org/icu)** |
-| **[OpenROAD](https://github.com/The-OpenROAD-Project/OpenROAD)** | **[tlaplus](https://github.com/tlaplus/tlaplus)** |
-| **[spark-operator](https://github.com/kubeflow/spark-operator)** | **[kombu](https://github.com/celery/kombu)** |
-| **[pypika](https://github.com/kayak/pypika)** | **[rspamd](https://github.com/rspamd/rspamd)** |
-| **[jackson-core](https://github.com/FasterXML/jackson-core)** | **[rbs](https://github.com/ruby/rbs)** |
-| **[testng](https://github.com/testng-team/testng)** | **[liquidjs](https://github.com/harttle/liquidjs)** |
-| **[icu4x](https://github.com/unicode-org/icu4x)** | **[datafaker](https://github.com/datafaker-net/datafaker)** |
-| **[ModelingToolkit.jl](https://github.com/SciML/ModelingToolkit.jl)** | **[postcss-modules](https://github.com/madyankin/postcss-modules)** |
-| **[handlebars.java](https://github.com/jknack/handlebars.java)** | **[mirascope](https://github.com/Mirascope/mirascope)** |
-| **[babel](https://github.com/python-babel/babel)** | **[TokenHub](https://github.com/astaxie/TokenHub)** |
-| **[www-community](https://github.com/OWASP/www-community)** | **[pebble](https://github.com/PebbleTemplates/pebble)** |
-| **[postcss-nested](https://github.com/postcss/postcss-nested)** | **[flake8-bugbear](https://github.com/PyCQA/flake8-bugbear)** |
-| **[mina-sshd](https://github.com/apache/mina-sshd)** | **[zstd-jni](https://github.com/luben/zstd-jni)** |
-| **[ccNexus](https://github.com/lich0821/ccNexus)** | **[greenmail](https://github.com/greenmail-mail-test/greenmail)** |
-| **[jackson-dataformats-text](https://github.com/FasterXML/jackson-dataformats-text)** | **[postcss-selector-parser](https://github.com/postcss/postcss-selector-parser)** |
+| **[coveragepy](https://github.com/coveragepy/coveragepy)** | **[OpenROAD](https://github.com/The-OpenROAD-Project/OpenROAD)** |
+| **[tlaplus](https://github.com/tlaplus/tlaplus)** | **[spark-operator](https://github.com/kubeflow/spark-operator)** |
+| **[kombu](https://github.com/celery/kombu)** | **[pypika](https://github.com/kayak/pypika)** |
+| **[rspamd](https://github.com/rspamd/rspamd)** | **[jackson-core](https://github.com/FasterXML/jackson-core)** |
+| **[rbs](https://github.com/ruby/rbs)** | **[testng](https://github.com/testng-team/testng)** |
+| **[liquidjs](https://github.com/harttle/liquidjs)** | **[icu4x](https://github.com/unicode-org/icu4x)** |
+| **[datafaker](https://github.com/datafaker-net/datafaker)** | **[ModelingToolkit.jl](https://github.com/SciML/ModelingToolkit.jl)** |
+| **[postcss-modules](https://github.com/madyankin/postcss-modules)** | **[handlebars.java](https://github.com/jknack/handlebars.java)** |
+| **[mirascope](https://github.com/Mirascope/mirascope)** | **[babel](https://github.com/python-babel/babel)** |
+| **[TokenHub](https://github.com/astaxie/TokenHub)** | **[www-community](https://github.com/OWASP/www-community)** |
+| **[pebble](https://github.com/PebbleTemplates/pebble)** | **[postcss-nested](https://github.com/postcss/postcss-nested)** |
+| **[flake8-bugbear](https://github.com/PyCQA/flake8-bugbear)** | **[mina-sshd](https://github.com/apache/mina-sshd)** |
+| **[zstd-jni](https://github.com/luben/zstd-jni)** | **[ccNexus](https://github.com/lich0821/ccNexus)** |
+| **[greenmail](https://github.com/greenmail-mail-test/greenmail)** | **[jackson-dataformats-text](https://github.com/FasterXML/jackson-dataformats-text)** |
+| **[postcss-selector-parser](https://github.com/postcss/postcss-selector-parser)** |  |
 <!-- PR_LIST_END -->
 
 ## 🌱 GitHub Activity
