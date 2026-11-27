@@ -24,7 +24,7 @@
 ## 🌍 Open Source Contributor
 
 <!-- PR_SUMMARY_START -->
-**Contributor to 85 upstream projects**
+**Contributor to 87 upstream projects**
 <!-- PR_SUMMARY_END -->
 
 <!-- PR_LIST_START -->
@@ -37,21 +37,22 @@
 | **[guava](https://github.com/google/guava)** | **[AstrBot](https://github.com/AstrBotDevs/AstrBot)** |
 | **[sub2api](https://github.com/Wei-Shaw/sub2api)** | **[Leaflet](https://github.com/Leaflet/Leaflet)** |
 | **[react-hook-form](https://github.com/react-hook-form/react-hook-form)** | **[Fabric](https://github.com/danielmiessler/Fabric)** |
-| **[dubbo](https://github.com/apache/dubbo)** | **[solid](https://github.com/solidjs/solid)** |
-| **[koa](https://github.com/koajs/koa)** | **[netty](https://github.com/netty/netty)** |
-| **[immutable-js](https://github.com/immutable-js/immutable-js)** | **[postcss](https://github.com/postcss/postcss)** |
-| **[fastmcp](https://github.com/PrefectHQ/fastmcp)** | **[recharts](https://github.com/recharts/recharts)** |
-| **[haystack](https://github.com/deepset-ai/haystack)** | **[gson](https://github.com/google/gson)** |
-| **[fasthttp](https://github.com/valyala/fasthttp)** | **[go-redis](https://github.com/redis/go-redis)** |
-| **[autoprefixer](https://github.com/postcss/autoprefixer)** | **[dotenv](https://github.com/motdotla/dotenv)** |
-| **[mybatis-3](https://github.com/mybatis/mybatis-3)** | **[runtime](https://github.com/dotnet/runtime)** |
-| **[mybatis-plus](https://github.com/baomidou/mybatis-plus)** | **[presto](https://github.com/prestodb/presto)** |
-| **[ioredis](https://github.com/redis/ioredis)** | **[nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)** |
-| **[ccstatusline](https://github.com/sirmalloc/ccstatusline)** | **[plantuml](https://github.com/plantuml/plantuml)** |
-| **[BenchmarkDotNet](https://github.com/dotnet/BenchmarkDotNet)** | **[redux-toolkit](https://github.com/reduxjs/redux-toolkit)** |
-| **[feign](https://github.com/OpenFeign/feign)** | **[sinon](https://github.com/sinonjs/sinon)** |
-| **[mcp-go](https://github.com/mark3labs/mcp-go)** | **[shenyu](https://github.com/apache/shenyu)** |
-| **[oapi-codegen](https://github.com/oapi-codegen/oapi-codegen)** | **[tabulator](https://github.com/tabulator-tables/tabulator)** |
+| **[swiper](https://github.com/nolimits4web/swiper)** | **[dubbo](https://github.com/apache/dubbo)** |
+| **[solid](https://github.com/solidjs/solid)** | **[koa](https://github.com/koajs/koa)** |
+| **[netty](https://github.com/netty/netty)** | **[immutable-js](https://github.com/immutable-js/immutable-js)** |
+| **[postcss](https://github.com/postcss/postcss)** | **[fastmcp](https://github.com/PrefectHQ/fastmcp)** |
+| **[recharts](https://github.com/recharts/recharts)** | **[haystack](https://github.com/deepset-ai/haystack)** |
+| **[gson](https://github.com/google/gson)** | **[fasthttp](https://github.com/valyala/fasthttp)** |
+| **[go-redis](https://github.com/redis/go-redis)** | **[autoprefixer](https://github.com/postcss/autoprefixer)** |
+| **[dotenv](https://github.com/motdotla/dotenv)** | **[mybatis-3](https://github.com/mybatis/mybatis-3)** |
+| **[runtime](https://github.com/dotnet/runtime)** | **[mybatis-plus](https://github.com/baomidou/mybatis-plus)** |
+| **[presto](https://github.com/prestodb/presto)** | **[ioredis](https://github.com/redis/ioredis)** |
+| **[nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)** | **[ccstatusline](https://github.com/sirmalloc/ccstatusline)** |
+| **[plantuml](https://github.com/plantuml/plantuml)** | **[BenchmarkDotNet](https://github.com/dotnet/BenchmarkDotNet)** |
+| **[redux-toolkit](https://github.com/reduxjs/redux-toolkit)** | **[feign](https://github.com/OpenFeign/feign)** |
+| **[sinon](https://github.com/sinonjs/sinon)** | **[mcp-go](https://github.com/mark3labs/mcp-go)** |
+| **[shenyu](https://github.com/apache/shenyu)** | **[oapi-codegen](https://github.com/oapi-codegen/oapi-codegen)** |
+| **[tabulator](https://github.com/tabulator-tables/tabulator)** | **[ktlint](https://github.com/ktlint/ktlint)** |
 | **[iotdb](https://github.com/apache/iotdb)** | **[cvxpy](https://github.com/cvxpy/cvxpy)** |
 | **[robolectric](https://github.com/robolectric/robolectric)** | **[pmd](https://github.com/pmd/pmd)** |
 | **[axonhub](https://github.com/looplj/axonhub)** | **[maven](https://github.com/apache/maven)** |
