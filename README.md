@@ -24,7 +24,7 @@
 ## 🌍 Open Source Contributor
 
 <!-- PR_SUMMARY_START -->
-**Contributor to 83 upstream projects**
+**Contributor to 85 upstream projects**
 <!-- PR_SUMMARY_END -->
 
 <!-- PR_LIST_START -->
@@ -50,8 +50,9 @@
 | **[ccstatusline](https://github.com/sirmalloc/ccstatusline)** | **[plantuml](https://github.com/plantuml/plantuml)** |
 | **[BenchmarkDotNet](https://github.com/dotnet/BenchmarkDotNet)** | **[redux-toolkit](https://github.com/reduxjs/redux-toolkit)** |
 | **[feign](https://github.com/OpenFeign/feign)** | **[sinon](https://github.com/sinonjs/sinon)** |
-| **[mcp-go](https://github.com/mark3labs/mcp-go)** | **[oapi-codegen](https://github.com/oapi-codegen/oapi-codegen)** |
-| **[tabulator](https://github.com/tabulator-tables/tabulator)** | **[cvxpy](https://github.com/cvxpy/cvxpy)** |
+| **[mcp-go](https://github.com/mark3labs/mcp-go)** | **[shenyu](https://github.com/apache/shenyu)** |
+| **[oapi-codegen](https://github.com/oapi-codegen/oapi-codegen)** | **[tabulator](https://github.com/tabulator-tables/tabulator)** |
+| **[iotdb](https://github.com/apache/iotdb)** | **[cvxpy](https://github.com/cvxpy/cvxpy)** |
 | **[robolectric](https://github.com/robolectric/robolectric)** | **[pmd](https://github.com/pmd/pmd)** |
 | **[axonhub](https://github.com/looplj/axonhub)** | **[maven](https://github.com/apache/maven)** |
 | **[chroma](https://github.com/alecthomas/chroma)** | **[Crow](https://github.com/CrowCpp/Crow)** |
